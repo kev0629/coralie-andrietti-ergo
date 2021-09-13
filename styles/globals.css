@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+.nav{
+  background-color: #F7F7F7;
+  width: 90%;
+  height: 158px;
+}
+.nav-title{
+  display: inline;
+  text-align: right;
+  list-style-type: none;
+}
