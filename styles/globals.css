@@ -25,11 +25,24 @@ a {
   
 }
 .nav-titles {
+  position: absolute;
+  right: 0;
   text-align: right;
-  margin-top:70px;
+  width: 1000px;
   vertical-align: middle;
-  
+  padding: 0px;
+  display: inline-block;
+  margin-top: 70px;
 }
+
+.logo-nav{
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 10px;
+}
+
+
 .nav-title{
   display: inline;
   text-align: right;
