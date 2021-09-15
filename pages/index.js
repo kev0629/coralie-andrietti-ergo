@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Section from '../component/Intro'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'

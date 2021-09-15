@@ -34,12 +34,16 @@ a {
   display: inline-block;
   margin-top: 70px;
 }
+.burger{
+  visibility: hidden;
+}
 
 .logo-nav{
   display: inline-block;
   vertical-align: middle;
   position: absolute;
   left: 10px;
+  padding: 20px !important;
 }
 
 
@@ -47,8 +51,9 @@ a {
   display: inline;
   text-align: right;
   font-size: 16px ;
-  padding: 15px ;
+  padding: 15px ; 
 }
+
 .container{
   padding-top: 78px;
   width: 90%;
@@ -83,4 +88,33 @@ a {
   color: #ffffff;
   margin:50px;
   width: 90%;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .nav-title{
+    font-size: 14px ;
+    padding: 10px ;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .nav-title{
+    visibility: hidden;
+  }
+  .burger{
+    visibility: visible;
+    position: absolute !important;
+    top: 30px;
+    right: 0 !important;
+    text-align: right !important;
+    vertical-align: middle !important;
+    padding: 0px;
+    display: inline-block !important;
+    
+  }
+  .burger>svg{
+    width: 200px;
+    height: 100px;
+    color: #4D9393;
+  }
 }

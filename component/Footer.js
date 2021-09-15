@@ -3,17 +3,18 @@ import React from "react"
 export default function Footer (){
     return(
         <footer className="footer">
-            MENTIONS LÉGALES
-
-            Propriétaire du site
-            Mme Coralie ANDRIETTI
-            Adresse : 100 chemin de l'Olivet 06110 le Cannet
-            Tel : 06 64 43 62 60
-            Email : coralie.andrietti@gmail.com
-
-            Créateur du site
-            Site réalisé et géré par Kevin Saffioti
-            Hébergement chez o2switch
+            <div>MENTIONS LÉGALE</div>
+            <div>
+                <div>Propriétaire du site</div>
+                <div>Mme Coralie ANDRIETTI</div>
+                <div>Adresse : 100 chemin de l'Olivet 06110 le Cannet</div>
+                <div>Tel : 06 64 43 62 60</div>
+                <div>Email : coralie.andrietti@gmail.com</div>
+                <div></div>
+                <div>Créateur du site</div>
+                <div>Site réalisé et géré par Kevin Saffioti</div>
+                <div>Hébergement chez o2switch</div>
+            </div>
 
 
             CONTACT
