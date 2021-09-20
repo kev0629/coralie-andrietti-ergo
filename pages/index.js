@@ -1,8 +1,15 @@
 import Head from 'next/head'
-import Section from '../component/Intro'
+import Section from '../component/Section'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
 import styles from '../styles/Home.module.css'
+import Presentation from '../component/Presentation'
+import What from '../component/What'
+import Who from '../component/Who'
+import When from '../component/When'
+import Following from '../component/Following'
+import Localisation from '../component/Localisation'
+
 
 export default function Home() {
   return (
@@ -15,19 +22,25 @@ export default function Home() {
       <main className={styles.main}>
       <Navbar/>
       <div className="container">
-        <Section title="Présentation">  
+        <Section title="Présentation">
+          <Presentation/>
         </Section>
         <Section title="Acutalités">  
         </Section>
         <Section title="Qu'est-ce que l'ergothérapie ?">
+        <What/>
         </Section>
         <Section title="Pour qui ?">
+          <Who/>
         </Section>
         <Section title="Quand consulter">
+          <When/>
         </Section>
         <Section title="Accompagnement ergothérapeutique">
+          <Following/>
         </Section>
         <Section title="Localisation">
+          <Localisation/>
         </Section>
         <div className='bottom-section'></div>
       </div>
