@@ -22,6 +22,7 @@ a {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   /*opacity: 0.8;*/
+  z-index: 2;
   
 }
 .nav-titles {
@@ -63,6 +64,11 @@ a {
   border:solid 1px #F7F7F7;
   background-color: #ffffff;
 }
+.centered-content{
+  display: block;
+  text-align: center;
+
+}
 .title-section{
     text-align: center;
     font-size: 32px;
@@ -73,6 +79,20 @@ a {
   margin-top: 5px;
   height: 2px;
   width: 104px;
+}
+
+.button {
+   background-color: #4D9393; /* Green */
+   border: none; 
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  border-top-left-radius:35px;
+	border-top-right-radius:35px;
+	border-bottom-left-radius:35px;
+	border-bottom-right-radius:35px;
 }
 
 .text-section{
@@ -102,6 +122,7 @@ a {
 .two {
   grid-column: 2;
 }
+
 @media screen and (max-width: 1200px) {
   .nav-title{
     font-size: 14px ;

@@ -22,7 +22,7 @@ export default function Home() {
       <main className={styles.main}>
       <Navbar/>
       <div className="container">
-        <Section title="Présentation">
+        <Section >
           <Presentation/>
         </Section>
         <Section title="Acutalités">  
