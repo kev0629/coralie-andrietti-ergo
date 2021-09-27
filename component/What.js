@@ -2,7 +2,7 @@ import React from "react";
 
 export default function What (){
     return(
-        <div>
+        <>
             <p>L'ergothérapie est une profession paramédicale dont l'objectif est de maintenir, 
             de restaurer et de permettre les activités de manière sécurisée, autonome et efficace.</p>
             <p>Vos activités sont le reflet de ce que vous êtes et elles donnent du sens à la vie. 
@@ -26,6 +26,6 @@ export default function What (){
             Il recueille également des renseignements sur la manière dont vos activités se déroulent et sur le contexte environnemental dans lequel elles s'exercent.
             Enfin, il s'enquiert de vos rôles sociaux et tâches particulières en ce qui concerne les soins personnels, la vie domestique, l'école, les loisirs, la famille et le travail.</p>
             <p>D’après l’Association Nationale Française des Ergothérapeutes.</p>
-        </div>
+        </>
     )
 }

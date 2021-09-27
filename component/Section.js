@@ -13,8 +13,9 @@ export default function Section (props) {
                {props.title}
                {bar}
             </div>
-                {props.children}
-            
+                <div className='section-content'>
+                    {props.children}
+                </div>
         </div>
     )
 }

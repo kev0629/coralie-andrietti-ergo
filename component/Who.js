@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Who(){
     return(
-        <div>
+        <>
             L’ergothérapeute intervient à tous moments de la vie : enfants, adultes, personnes âgées.
             Il est conseillé de voir un ergothérapeute dès lors que certaines activités de la vie quotidienne sont difficiles à réaliser.
             Que ce soit pour :
@@ -18,6 +18,6 @@ export default function Who(){
             
             
             
-        </div>
+        </>
     )
 }

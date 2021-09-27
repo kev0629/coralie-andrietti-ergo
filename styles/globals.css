@@ -1,10 +1,11 @@
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
+
 html,
 body {
   padding: 0;
   margin: 0;
   background: linear-gradient(#4D9393, #86CC99);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
 a {
@@ -69,6 +70,9 @@ a {
   text-align: center;
 
 }
+.section-content{
+  padding: 50px 50px 0 50px;
+}
 .title-section{
     text-align: center;
     font-size: 32px;
@@ -108,6 +112,7 @@ a {
   color: #ffffff;
   margin:50px;
   width: 90%;
+  padding-left: 50px;
 }
 .wrapper {
   display: grid;

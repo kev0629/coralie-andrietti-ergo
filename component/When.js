@@ -2,7 +2,7 @@ import React from "react";
 
 export default function When(){
     return(
-        <div>
+        <>
             <u>Chez l’enfant :</u>
             Il est recommandé de consulter un ergothérapeute dès le repérage ou la suspicion :
             <ul>
@@ -23,6 +23,6 @@ export default function When(){
                     <li>De difficultés pour accéder à son domicile (difficultés pour rentrer dans la baignoire, pour se relever des toilettes …)</li>
                     <li>Des difficultés à accomplir ses rôles sociaux (tenir un bébé dans les bras, écrire une lettre à un proche …)</li>
                 </ul>
-        </div>
+        </>
     )
 }
