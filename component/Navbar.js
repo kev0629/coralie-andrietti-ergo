@@ -1,16 +1,20 @@
 import React from "react"
 import Image from "next/image"
-
+import Link from 'next/link'
 import logo_title from "../public/pictures/Logo_title.svg"
 import Burger from "../public/pictures/burger.svg"
 
 export default function Navbar (){
     return(
         <div className="nav">
-            <Image src={logo_title} className="logo-nav" width={200} height={170} alt='Coralie Andrietti logo'/>
+                <Link href="/">
+                    <a>
+                        <Image src={logo_title} className="logo-nav" width={200} height={170} alt='Coralie Andrietti logo'/>
+                    </a>
+                </Link>
                 <ul className="nav-titles">
                     <li id='Presentation' className="nav-title">Présentation</li>
-                    <li id='news' className="nav-title">Actualités</li>
+                    <li id='news' className="nav-title"><Link href='/actu'>Actualités</Link></li>
                     <li id='what' className="nav-title">Qu'est-ce que c'est ?</li>
                     <li id='who' className="nav-title">Pour qui ?</li>
                     <li id='when' className="nav-title">Quand consulter</li>

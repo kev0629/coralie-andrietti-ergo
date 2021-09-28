@@ -15,7 +15,11 @@ export default function ActuPage() {
     return (
         <Body>
             <Section title='Atcualités'>
-                {posts.map(post=>post.body)}
+                {posts.map((post)=>(
+                // <div key={post.id}>{post.body}</div>
+                <div key={post.id} dangerouslySetInnerHTML={{__html: post.body}}></div>
+                ))}
+                
             </Section>
         </Body>
     )}
