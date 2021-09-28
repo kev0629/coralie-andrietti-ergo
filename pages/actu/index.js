@@ -1,12 +1,21 @@
-
+import head from 'next/head'
+import { useState, useEffect } from 'react'
 import Body from '../../component/Body'
 import Section from '../../component/Section'
+import articles from '../api/articles.json'
 
 export default function ActuPage() {
+    const [posts, setPosts] = useState([])
+    useEffect(() => {
+        const data = fetch('http://localhost:3000/api/hello')
+            .then(r => r.json())
+            .then(setPosts)
+        
+    }, [])
     return (
         <Body>
             <Section title='Atcualités'>
-                Lorem sunt exercitation labore amet ullamco. Ullamco amet esse proident nulla ea ut nisi dolore laboris dolore laboris aute. Quis nostrud cillum incididunt mollit magna sint culpa sint non cillum ea dolore incididunt. Veniam et ullamco dolor ut non tempor duis consectetur. Sunt nisi proident occaecat labore et aute consequat officia sit eiusmod. Anim minim laborum fugiat laborum est duis nisi. Ut sit consectetur sunt pariatur qui.
+                {posts.map(post=>post.body)}
             </Section>
         </Body>
     )}
