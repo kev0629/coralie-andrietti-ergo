@@ -1,8 +1,15 @@
 [
     {"userId" : 1,
-     "id":0,
-     "title":"test",
+     "id":1,
+     "path":"/test_title",
+     "title":"test_title",
      "body":"<div><b>test</b></div>"
-    }
+    },
+    {"userId" : 1,
+        "id":2,
+        "path":"/test_title",
+        "title":"test_title2",
+        "body":"<div><b>test</b></div>"
+       }
 
 ]

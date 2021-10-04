@@ -1,25 +1,38 @@
 import head from 'next/head'
-import { useState, useEffect } from 'react'
 import Body from '../../component/Body'
 import Section from '../../component/Section'
-import articles from '../api/articles.json'
+import articles from '../api/articles'
 
+URLSearchParams
 export default function ActuPage() {
-    const [posts, setPosts] = useState([])
-    useEffect(() => {
-        const data = fetch('http://localhost:3000/api/hello')
-            .then(r => r.json())
-            .then(setPosts)
+    // const [posts, setPosts] = useState([])
+    // useEffect(() => {
+    //     const data = fetch('http://localhost:3000/api/hello')
+    //         .then(r => r.json())
+    //         .then(setPosts)
         
-    }, [])
+    // }, [])
     return (
         <Body>
             <Section title='Atcualités'>
-                {posts.map((post)=>(
-                // <div key={post.id}>{post.body}</div>
-                <div key={post.id} dangerouslySetInnerHTML={{__html: post.body}}></div>
+                <ul>
+                    {articles.map((post)=>(
+                <li key={post.id}>{post.title}</li>
                 ))}
+                </ul>
+                {/* {posts.map((post)=>(
+                <div key={post.id} dangerouslySetInnerHTML={{__html: post.body}}></div>
+                ))} */}
+                
                 
             </Section>
         </Body>
     )}
+
+// export async function getStaticProps(){
+//     return{
+//         props:{
+//             articles
+//         }
+//     }
+// }
