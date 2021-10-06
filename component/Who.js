@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Who(){
     return(
@@ -6,6 +7,8 @@ export default function Who(){
             L’ergothérapeute intervient à tous moments de la vie : enfants, adultes, personnes âgées.
             Il est conseillé de voir un ergothérapeute dès lors que certaines activités de la vie quotidienne sont difficiles à réaliser.
             Que ce soit pour :
+            <br/>
+            <Image src='/../public/pictures/img_who.png'alt='title coralie ergo' width={200} height={200}/>
             <ul>
                 <li>des personnes avançant en âge</li>
                 <li>des personnes pratiquant des activités à risque</li>

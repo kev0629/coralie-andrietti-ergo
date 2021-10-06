@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function When(){
     return(
@@ -12,10 +13,12 @@ export default function When(){
                 <li>De troubles de l’intégration sensorielle (hypo/hypersensibilité)</li>
                 <li>De difficultés d’acquisition des attendus scolaires et préscolaires (pré-graphisme, graphisme, utilisation des ustensiles de la trousse, géométrie …)</li>
             </ul>
+            <Image src='/../public/pictures/img_when.jpg'alt='title coralie ergo' width={150} height={100}/>
             <p>Chez l’adulte et la personne âgée :</p>
             <p>Il est recommandé de consulter un ergothérapeute dès le repérage ou l’arrivée de difficultés dans les activités de la vie quotidienne qui peuvent être liées à un handicap de naissance,
                 un handicap acquis,
                 l’apparition d’une maladie ou le vieillissement normal de la personne.</p>
+                <Image src='/../public/pictures/img_when_2.jpg'alt='title coralie ergo' width={180} height={100}/>
                 <ul>
                     <li>De difficultés dans les activités de la vie quotidienne (s’alimenter, s’habiller seul…)</li>
                     <li>De difficultés dans les activités productives (aller au travail, être bien positionné à son bureau, accomplir sa journée de travail…)</li>
