@@ -128,6 +128,10 @@ a {
   grid-column: 2;
 }
 
+.profile-pic{
+  box-shadow:10px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
 @media screen and (max-width: 1200px) {
   .nav-title{
     font-size: 14px ;

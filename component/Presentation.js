@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Presentation(){
     return(
         <div className='centered-content'>
-            <div>
-                <Image src='/../public/pictures/0.jpeg'alt='coralie Andrietti' className='profile-pic' width={175} height={203}/>
+            <div >
+                <Image src='/../public/pictures/0.jpeg'alt='coralie Andrietti'  width={175} height={203}/>
             </div>
             <div>
                 <Image src='/../public/pictures/Coralie_ergo_tittle.svg'alt='title coralie ergo' width={200} height={100}/>

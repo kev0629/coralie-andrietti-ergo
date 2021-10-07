@@ -1,8 +1,10 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Following(){
     return(
         <>
+            <Image src='/../public/pictures/img_follow.png'alt='coralie Andrietti'  width={150} height={170}/>
             <p> Le bilan d’ergothérapie a lieu au cabinet et a pour but de déterminer les objectifs d’accompagnement.<br />
 				Pour les bilans adultes, il faut compter environ 1h30 de bilan.<br />
 				Pour les bilans pédiatriques, la présence des parents est recommandée afin de déterminer ensemble les attentes de la famille et de l’enfant.<br />
