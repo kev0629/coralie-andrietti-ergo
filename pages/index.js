@@ -21,21 +21,21 @@ export default function Home() {
         <Section >
           <Presentation/>
         </Section>
-        <Section title="Acutalités">  
+        <Section title="Acutalités" id='actu'>  
         </Section>
-        <Section title="Qu'est-ce que l'ergothérapie ?">
+        <Section title="Qu'est-ce que l'ergothérapie ?" id="What">
         <What/>
         </Section>
-        <Section title="Pour qui ?">
+        <Section title="Pour qui ?" id='Who'>
           <Who/>
         </Section>
-        <Section title="Quand consulter">
+        <Section title="Quand consulter" id='When'>
           <When/>
         </Section>
-        <Section title="Accompagnement ergothérapeutique">
+        <Section title="Accompagnement ergothérapeutique" id='Follow'>
           <Following/>
         </Section>
-        <Section title="Localisation">
+        <Section title="Localisation" id='Localisation'>
           <Localisation/>
         </Section>
       </Body>

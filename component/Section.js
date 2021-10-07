@@ -8,7 +8,7 @@ export default function Section (props) {
         console.log(bar)
     }
     return(
-        <div className="section">
+        <div className="section" id={props.id}>
             <div className="title-section">
                {props.title}
                {bar}

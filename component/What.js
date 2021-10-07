@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function What (){
     return(
-        <>
+        <div>
             <p>L'ergothérapie est une profession paramédicale dont l'objectif est de maintenir, 
             de restaurer et de permettre les activités de manière sécurisée, autonome et efficace.</p>
             <Image src='/../public/pictures/img_what.png'alt='title coralie ergo' width={200} height={300}/>
@@ -28,6 +28,6 @@ export default function What (){
             Il recueille également des renseignements sur la manière dont vos activités se déroulent et sur le contexte environnemental dans lequel elles s'exercent.
             Enfin, il s'enquiert de vos rôles sociaux et tâches particulières en ce qui concerne les soins personnels, la vie domestique, l'école, les loisirs, la famille et le travail.</p>
             <p>D’après l’Association Nationale Française des Ergothérapeutes.</p>
-        </>
+        </div>
     )
 }

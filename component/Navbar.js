@@ -13,13 +13,13 @@ export default function Navbar (){
                     </a>
                 </Link>
                 <ul className="nav-titles">
-                    <li id='Presentation' className="nav-title">Présentation</li>
+                    <li id='Presentation' className="nav-title"><Link href='/'>Présentation</Link></li>
                     <li id='news' className="nav-title"><Link href='/actu'>Actualités</Link></li>
-                    <li id='what' className="nav-title">Qu'est-ce que c'est ?</li>
-                    <li id='who' className="nav-title">Pour qui ?</li>
-                    <li id='when' className="nav-title">Quand consulter</li>
-                    <li id='following' className="nav-title">Accompagnement</li>
-                    <li id='localisation' className="nav-title">Localisation</li>
+                    <li id='what' className="nav-title"><Link href='/#What'>Qu'est-ce que c'est ?</Link></li>
+                    <li id='who' className="nav-title"><Link href='/#Who'>Pour qui ?</Link></li>
+                    <li id='when' className="nav-title"><Link href='/#When'>Quand consulter</Link></li>
+                    <li id='following' className="nav-title"><Link href='/#Follow'>Accompagnement</Link></li>
+                    <li id='localisation' className="nav-title"><Link href='#Localisation'>Localisation</Link></li>
                 </ul>
                 <div className='burger'>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#4D9393">
