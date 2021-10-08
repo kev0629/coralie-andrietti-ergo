@@ -20,7 +20,6 @@ export default function Presentation(){
                     alt='title coralie ergo'
                     width={200}
                     height={100} 
-                    priority
                     />
             </div>
             <div>

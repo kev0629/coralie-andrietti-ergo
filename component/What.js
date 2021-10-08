@@ -6,18 +6,24 @@ export default function What (){
         <div>
             <p>L'ergothérapie est une profession paramédicale dont l'objectif est de maintenir, 
             de restaurer et de permettre les activités de manière sécurisée, autonome et efficace.</p>
-            <Image src='/../public/pictures/img_what.png'alt='title coralie ergo' width={200} height={300}/>
-            <p>Vos activités sont le reflet de ce que vous êtes et elles donnent du sens à la vie. 
-            Si vous êtes incapable d'accomplir les choses que vous souhaitez ou devez réaliser, votre bien-être général et donc votre santé en seront affectés. 
-            Les occupations d'une personne se retrouvent ainsi étroitement liées à sa qualité de vie et au sens donné à son existence !</p>
-            <p>L'ergothérapie (occupational therapy) vous permet de résoudre les problèmes qui vous empêchent d'accomplir les choses qui vous tiennent à cœur.
-            Si une blessure, une maladie, une déficience ou un autre problème limite vos capacités :</p>
-            <ul>
-            <li>de travailler, d'étudier</li>
-            <li>d'effectuer vos soins personnels</li>
-            <li>de vous déplacer, de communiquer, de vous divertir</li>
-            <li>de réaliser toutes les tâches qui vous sont propres</li>
-            </ul>
+            <div className='g03-1'>
+                <div><Image src='/../public/pictures/img_what.png'alt='title coralie ergo' width={200} height={300}/></div>
+                <div>
+                <p>Vos activités sont le reflet de ce que vous êtes et elles donnent du sens à la vie. 
+                    Si vous êtes incapable d'accomplir les choses que vous souhaitez ou devez réaliser, votre bien-être général et donc votre santé en seront affectés. 
+                    Les occupations d'une personne se retrouvent ainsi étroitement liées à sa qualité de vie et au sens donné à son existence !</p>
+                    <p>L'ergothérapie (occupational therapy) vous permet de résoudre les problèmes qui vous empêchent d'accomplir les choses qui vous tiennent à cœur.
+                    Si une blessure, une maladie, une déficience ou un autre problème limite vos capacités :</p>
+                    <ul>
+                    <li>de travailler, d'étudier</li>
+                    <li>d'effectuer vos soins personnels</li>
+                    <li>de vous déplacer, de communiquer, de vous divertir</li>
+                    <li>de réaliser toutes les tâches qui vous sont propres</li>
+                    </ul>
+                </div>    
+            </div>
+            
+            
             <p>Alors un ergothérapeute peut trouver avec vous des solutions pour relever le défi du quotidien, 
             faire disparaître les barrières et vous permettre d'agir, 
             de retrouver votre rôle social et ainsi de mener une vie satisfaisante.</p>

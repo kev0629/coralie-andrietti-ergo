@@ -132,6 +132,16 @@ a {
   box-shadow:10px 10px 4px rgba(0, 0, 0, 0.25) !important;
 }
 
+.g03-1 {
+  display: grid; 
+  grid-template-columns: 0.3fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+}
+
+
 @media screen and (max-width: 1200px) {
   .nav-title{
     font-size: 14px ;
