@@ -6,6 +6,8 @@ body {
   margin: 0;
   background: linear-gradient(#4D9393, #86CC99);
   font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
 }
 
 a {
@@ -16,6 +18,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.active{
+  
+}
+
 .nav{
   background-color: #F7F7F7;
   width: 90%;
@@ -128,13 +135,21 @@ a {
   grid-column: 2;
 }
 
-.profile-pic{
+/* .profile-pic{
   box-shadow:10px 10px 4px rgba(0, 0, 0, 0.25) !important;
-}
+} */
 
 .g03-1 {
   display: grid; 
   grid-template-columns: 0.3fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+}
+.g1-03 {
+  display: grid; 
+  grid-template-columns: 1fr 0.3fr; 
   grid-template-rows: 1fr; 
   gap: 0px 0px; 
   grid-template-areas: 

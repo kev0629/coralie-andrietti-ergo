@@ -13,7 +13,7 @@ export default function Navbar (){
                     </a>
                 </Link>
                 <ul className="nav-titles">
-                    <li id='Presentation' className="nav-title"><Link href='/'>Présentation</Link></li>
+                    <li id='Presentation' className="nav-title active"><Link href='/'>Présentation</Link></li>
                     <li id='news' className="nav-title"><Link href='/actu'>Actualités</Link></li>
                     <li id='what' className="nav-title"><Link href='/#What'>Qu'est-ce que c'est ?</Link></li>
                     <li id='who' className="nav-title"><Link href='/#Who'>Pour qui ?</Link></li>

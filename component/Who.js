@@ -9,7 +9,7 @@ export default function Who(){
             Que ce soit pour :
             <br/>
             <div className='g03-1'>
-                <div><Image src='/../public/pictures/img_who.png'alt='title coralie ergo' width={200} height={200}/></div>
+                <div className='centered-content'><Image src='/../public/pictures/img_who.png'alt='title coralie ergo' width={200} height={200}/></div>
                 <div>   
                     <ul>
                         <li>des personnes avançant en âge</li>
