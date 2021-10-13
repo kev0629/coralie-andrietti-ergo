@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Body>
-        <Section >
+        <Section id='home'>
           <Presentation/>
         </Section>
         <Section title="Acutalités" id='actu'>  
