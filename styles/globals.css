@@ -29,9 +29,10 @@ a {
   width: 90%;
   height: 158px;
   position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  top: 0;
+  overflow: hidden; /* Position the navbar at the top of the page */
   /*opacity: 0.8;*/
-  z-index: 2;
+  /* z-index: 1; */
   
 }
 .nav-titles {
