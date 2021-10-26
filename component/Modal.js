@@ -11,9 +11,10 @@ const customStyles = {
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
       zIndex:3,
-    backgroundColor:'transparent',
-
+      backgroundColor:'transparent',
+      border:'transparent'
     },
+    overlay: {zIndex: 1000}
   };
 
 export default function Modal(props) {
@@ -30,7 +31,7 @@ export default function Modal(props) {
 
     return (
     <ReactModal style={customStyles} isOpen={modalIsOpen} ariaHideApp={false}>
-        <button onClick={closeModal}>X</button>
+        <button className='modal-button' onClick={closeModal}>X</button>
         <div className="blackboard">
             <ul className="paper">
             {props.datas.map(data => (
