@@ -165,6 +165,25 @@ a {
     ". ."; 
 }
 
+.g1-1 {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+}
+
+.text-size-mid{
+  font-size: 28px;
+  margin: 0;
+}
+
+
+.text-size-high{
+  font-size: 34px;
+  margin: 0;
+}
 
 @media screen and (max-width: 1200px) {
   .nav-title{

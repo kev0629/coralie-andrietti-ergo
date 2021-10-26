@@ -1,18 +1,23 @@
 import React from "react";
 import Image from "next/image";
+import { Link } from "next/link";
 
 export default function Localisation(){
+
     return(
         <>  
 
-            <div className='g1-03'>
-                <div><Image src='/../public/pictures/office.png'alt='coralie Andrietti'  width={450} height={300}/></div>
-                <div>
-                    <p>Le cabinet se situe au :</p>
-                    <h4>Résidence l'Estérel entrée A</h4>
-                    <h4>100 chemin de l'Olivet</h4>
-                    <h4>06110 le Cannet</h4>
-                    <h4>France</h4>
+            <div className='g1-1'>
+                <div className='centered-content'><Image src='/../public/pictures/office.png'alt='coralie Andrietti'  width={450} height={300}/></div>
+                <div className='centered-content'>
+                    <p className='text-size-mid'>Le cabinet se situe au :</p>
+                    {/* <Link href={gmapLink} passHref={true}> */}
+                    <p className='text-size-high'>Résidence l'Estérel entrée A</p>
+                    <p className='text-size-high'>100 chemin de l'Olivet</p>
+                    <p className='text-size-high'>06110 le Cannet</p>
+                    <p className='text-size-high'>France</p>
+                    {/* </Link> */}
+                    <p>Petit coup de pouce : l'entrée se situe entre l'auto-école Colette et le salon de coiffure " le salon d'Élodie"</p>
                 </div>
             </div>
             
