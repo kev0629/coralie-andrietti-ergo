@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Link } from "next/link";
+import cabinetPicture from '../public/pictures/office.png'
+import map from '../public/pictures/map.png'
 
 export default function Localisation(){
 
@@ -8,7 +10,13 @@ export default function Localisation(){
         <>  
 
             <div className='g1-1'>
-                <div className='centered-content'><Image src='/../public/pictures/office.png'alt='coralie Andrietti'  width={450} height={300}/></div>
+                <div className='centered-content'>
+                    <Image src={cabinetPicture}
+                           alt='coralie Andrietti'
+                           width={450}
+                           height={300}
+                           placeholder='blur'/>
+                </div>
                 <div className='centered-content'>
                     <p className='text-size-mid'>Le cabinet se situe au :</p>
                     {/* <Link href={gmapLink} passHref={true}> */}
@@ -19,6 +27,13 @@ export default function Localisation(){
                     {/* </Link> */}
                     <p>Petit coup de pouce : l'entrée se situe entre l'auto-école Colette et le salon de coiffure " le salon d'Élodie"</p>
                 </div>
+            </div>
+            <div className='centered-content'>
+                <Image src={map} 
+                       alt='map'
+                       width={2800}
+                       height={1000}
+                       placeholder='blur'/>
             </div>
             
             
