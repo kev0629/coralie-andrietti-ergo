@@ -8,6 +8,7 @@ import When from '../component/When'
 import Following from '../component/Following'
 import Localisation from '../component/Localisation'
 import Modal from '../component/Modal'
+import News from '../component/News'
 
 import {Client} from '@notionhq/client'
 
@@ -27,7 +28,8 @@ export default function Home({datas}) {
         <Section id='home'>
           <Presentation/>
         </Section>
-        <Section title="Acutalités" id='actu'>  
+        <Section title="Acutalités" id='actu'>
+          <News/> 
         </Section>
         <Section title="Qu'est-ce que l'ergothérapie ?" id="What">
         <What/>
