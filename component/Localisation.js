@@ -11,11 +11,11 @@ export default function Localisation(){
 
             <div className='g1-1'>
                 <div className='centered-content'>
-                    <Image src={cabinetPicture}
+                    {/* <Image src={cabinetPicture}
                            alt='coralie Andrietti'
                            width={450}
                            height={300}
-                           placeholder='blur'/>
+                           placeholder='blur'/> */}
                 </div>
                 <div className='centered-content'>
                     <p className='text-size-mid'>Le cabinet se situe au :</p>
