@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import profilePic from '../public/pictures/0.jpeg'
-import title from '../public/pictures/Coralie_ergo_tittle.svg'
+import title from '../public/pictures/Coralie_ergo_tittle.png'
 
 export default function Presentation(){
     return(
@@ -21,8 +21,8 @@ export default function Presentation(){
                 <Image 
                     src={title}
                     alt='title coralie ergo'
-                    width={200}
-                    height={100} 
+                    width={350}
+                    height={90} 
                     />
             </div>
             <div>

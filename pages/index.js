@@ -37,7 +37,7 @@ export default function Home({datas}) {
         <Section title="Pour qui ?" id='Who'>
           <Who/>
         </Section>
-        <Section title="Quand consulter" id='When'>
+        <Section title="Quand consulter ?" id='When'>
           <When/>
         </Section>
         <Section title="Accompagnement ergothérapeutique" id='Follow'>

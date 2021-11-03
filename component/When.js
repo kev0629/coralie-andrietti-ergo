@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function When(){
     return(
         <>
-            <u>Chez l’enfant :</u>
-            Il est recommandé de consulter un ergothérapeute dès le repérage ou la suspicion :
+            <p><u>Chez l’enfant : </u></p>
+             Il est recommandé de consulter un ergothérapeute dès le repérage ou la suspicion :
             <div className='g1-03'>
                 
                 <div>
@@ -22,7 +22,7 @@ export default function When(){
                 </div>
             </div>
         
-            <p>Chez l’adulte et la personne âgée :</p>
+            <p><u>Chez l’adulte et la personne âgée:</u> </p>
             <p>Il est recommandé de consulter un ergothérapeute dès le repérage ou l’arrivée de difficultés dans les activités de la vie quotidienne qui peuvent être liées à un handicap de naissance,
                 un handicap acquis,
                 l’apparition d’une maladie ou le vieillissement normal de la personne.</p>

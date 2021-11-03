@@ -22,9 +22,9 @@ export default function Footer (){
                 <div className='two'>
                     <div>CONTACT</div>
                     <div>
-                        <div>Addresse   100 chemin de l'Olivet, 06110 le Cannet, France</div>
-                        <div>Phone      06.64.43.62.60</div>
-                        <div>Email      coralie.andrietti@gmail.com</div>
+                        <div>Adresse :   100 chemin de l'Olivet, 06110 le Cannet, France</div>
+                        <div>Téléphone :     06.64.43.62.60</div>
+                        <div>Email :     coralie.andrietti@gmail.com</div>
                     </div>
                 </div>
             </div>

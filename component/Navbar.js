@@ -39,7 +39,7 @@ export default function Navbar (){
                     </Route>
                     <Route to='When' link='/#When' nav={true}>
                         <li id='when' className='nav-title'>
-                            Quand consulter   
+                            Quand consulter ?  
                         </li>
                     </Route>
                     <Route to='Follow' link='/#Follow' nav={true}>
