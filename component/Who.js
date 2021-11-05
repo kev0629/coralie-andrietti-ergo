@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import who_pic from '../public/pictures/img_who.png'
 
 export default function Who(){
     return(
@@ -9,7 +10,7 @@ export default function Who(){
             Que ce soit pour :
             <br/>
             <div className='g03-1'>
-                <div className='centered-content'><Image src='/../public/pictures/img_who.png'alt='title coralie ergo' width={200} height={200}/></div>
+                <div className='centered-content'><Image src={who_pic} alt='title coralie ergo' placeholder='blur' width={200} height={200}/></div>
                 <div>   
                     <ul>
                         <li>des personnes avançant en âge</li>

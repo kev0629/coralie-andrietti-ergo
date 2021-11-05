@@ -19,6 +19,10 @@ a {
   box-sizing: border-box;
 }
 
+.profile_pic{
+  box-shadow:10px 10px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
 .active{
   background-color: #ffffff;
   border-radius: 8px;
@@ -81,6 +85,10 @@ a {
 .centered-content{
   display: block;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 
 }
 .section-content{

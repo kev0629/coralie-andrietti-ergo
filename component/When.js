@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import when_pic_1 from '../public/pictures/img_when.jpg'
+import when_pic_2 from '../public/pictures/img_when_2.jpg'
 
 export default function When(){
     return(
@@ -18,7 +20,7 @@ export default function When(){
                     </ul>
                 </div>
                 <div className='centered-content'>
-                    <Image src='/../public/pictures/img_when.jpg'alt='title coralie ergo' width={150} height={100}/>
+                    <Image src={when_pic_1} alt='title coralie ergo' width={150} height={100}/>
                 </div>
             </div>
         
@@ -27,7 +29,7 @@ export default function When(){
                 un handicap acquis,
                 l’apparition d’une maladie ou le vieillissement normal de la personne.</p>
                 <div className='g03-1'>
-                    <div className='centered-content'><Image src='/../public/pictures/img_when_2.jpg'alt='title coralie ergo' width={180} height={100}/></div>
+                    <div className='centered-content'><Image src={when_pic_2} alt='title coralie ergo' width={180} height={100}/></div>
                     <div>
                         <ul>
                             <li>De difficultés dans les activités de la vie quotidienne (s’alimenter, s’habiller seul…)</li>

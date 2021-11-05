@@ -14,6 +14,7 @@ export default function Presentation(){
                     width={175}
                     height={203}
                     placeholder='blur'
+                    className='profile_pic'
                     //placeholder='blur'
                     />
             </div>

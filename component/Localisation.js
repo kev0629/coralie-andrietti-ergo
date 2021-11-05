@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Link } from "next/link";
-//import cabinetPicture from './../public/pictures/office.png'
+import cabinet_picture from '../public/pictures/office.png'
 import map from '../public/pictures/map.png'
 
 export default function Localisation(){
@@ -11,11 +11,11 @@ export default function Localisation(){
 
             <div className='g1-1'>
                 <div className='centered-content'>
-                    {/* <Image src={cabinetPicture}
+                    <Image src={cabinet_picture}
                            alt='coralie Andrietti'
                            width={450}
                            height={300}
-                           placeholder='blur'/> */}
+                           placeholder='blur'/>
                 </div>
                 <div className='centered-content'>
                     <p className='text-size-mid'>Le cabinet se situe au :</p>
