@@ -7,19 +7,17 @@ export default function Presentation(){
     return(
         <div className='centered-content'>
             <div className="profile-pic" style={{height: "auto"}}>
-                <Image  
-                    //blurDataURL='"data:image/jpeg;base64,/9j/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAFAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAdEAACAQQDAAAAAAAAAAAAAAAAAQQCAwUSBjGR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAWEQEBAQAAAAAAAAAAAAAAAAABABL/2gAMAwEAAhEDEQA/AJiFyamPaW+Mj3KEutmn6ABVaXJf/9k="'
+                <Image
                     src={profilePic}
                     alt='coralie Andrietti'
                     width={175}
                     height={203}
                     placeholder='blur'
-                    className='profile_pic'
-                    //placeholder='blur'
+                    className='profile-pic'
                     />
             </div>
             <div>
-                <Image 
+                    <Image 
                     src={title}
                     alt='title coralie ergo'
                     width={350}
