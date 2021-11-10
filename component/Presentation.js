@@ -16,7 +16,7 @@ export default function Presentation(){
                     className='profile-pic'
                     />
             </div>
-            <div>
+            <div className='title'>
                     <Image 
                     src={title}
                     alt='title coralie ergo'
