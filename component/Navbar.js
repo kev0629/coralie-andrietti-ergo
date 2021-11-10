@@ -2,7 +2,7 @@ import React from "react"
 import Image from "next/image"
 import Link from 'next/link'
 import { useRouter } from "next/router"
-import logo_title from "../public/pictures/Logo_title.svg"
+import logo_title from "../public/pictures/Logo_title.png"
 import Burger from "../public/pictures/burger.svg"
 import {Link as ScrollLink} from 'react-scroll'
 import Route from "./Route"
@@ -13,7 +13,7 @@ export default function Navbar (){
     return(
         <div className="nav">
                 <Route to='home' link='/#home' nav={false}>
-                    <Image src={logo_title} className="logo-nav" width={200} height={170} alt='Coralie Andrietti logo'/>
+                    <Image src={logo_title} className="logo-nav" width={200} height={150} alt='Coralie Andrietti logo'/>
                 </Route>    
                 <ul className="nav-titles">
 
