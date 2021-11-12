@@ -13,8 +13,10 @@ import News from '../component/News'
 import {Client} from '@notionhq/client'
 
 
+
+
 export default function Home({datas}) {
-  console.log(datas)
+  // console.log(href.substring(this.href.lastIndexOf('/') + 1))
   return (
     <div >
       <Head>
@@ -51,6 +53,7 @@ export default function Home({datas}) {
     </div>
   )
 }
+
 
 export async function getStaticProps (){
   const notion = new Client({ auth: process.env.NOTION_API_KEY });

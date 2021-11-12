@@ -3,36 +3,42 @@
         "id":1,
         "path":"/le_repere_des_3",
         "title":"Le repère du 3, 6, 9, 12 de Serge Tisseron",
+        "imgPath":"'/public/pictures/img_when_2.jpg'",
         "body":""
     },
     {"userId" : 1,
         "id":2,
         "path":"/timer",
         "title":"Le minuteur à rebourds",
+        "imgPath":"img0",
         "body":"<div><b>test</b></div>"
     },
     {"userId" : 1,
         "id":3,
         "path":"/quand_consulter",
         "title":"Quand consulter un ergothérapeute",
+        "imgPath":"img0",
         "body":"<div><b>test</b></div>"
     },
     {"userId" : 1,
         "id":4,
         "path":"/pap_pps",
         "title":"PAP ou PPS : quèsaco ?",
+        "imgPath":"img0",
         "body":"<div><b>test</b></div>"
     },
     {"userId" : 1,
         "id":5,
         "path":"/placer_sa_feuille",
         "title":"Placer sa feuille",
+        "imgPath":"img0",
         "body":"<div><b>test</b></div>"
     },
     {"userId" : 1,
         "id":6,
         "path":"/equilibre_occupationnel",
         "title":"Equilibre occupationnel",
+        "imgPath":"img0",
         "body":"<div><b>test</b></div>"
     }
 
