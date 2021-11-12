@@ -4,7 +4,6 @@ import Section from '../../component/Section'
 import articles from '../api/articles'
 
 export default function LeRepereDes3() {
-    console.log(articles)
     return (
         <Body>
             <Section title={articles[0].title}>

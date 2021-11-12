@@ -122,6 +122,7 @@ a {
 	border-top-right-radius:35px;
 	border-bottom-left-radius:35px;
 	border-bottom-right-radius:35px;
+  cursor: pointer;
 }
 
 .text-section{
@@ -177,6 +178,10 @@ a {
     ". ."; 
 }
 
+.link{
+  cursor: pointer;
+}
+
 .g1-1 {
   display: grid; 
   grid-template-columns: 1fr 1fr; 
@@ -189,7 +194,7 @@ a {
 .g1-1-r2 {
   display: grid; 
   grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 2fr; 
+  grid-template-rows: 1000fr; 
   gap: 0px 0px; 
   grid-template-areas: 
     ". ."; 
