@@ -24,13 +24,15 @@ export default function News() {
                 <div key={post.id} style={{margin:20}}>
                     {/* <p>{post.title}</p> */}
                     {console.log(post)}
+                    <Link href='/News' passHref>
                     <Card title={post.title} date={post.date} img={img0}/>
+                    </Link>
                 </div>
                 
                 ))}
                </div> 
             <div>
-                <Link href='/actu' passHref><button type="button" name="myButton" className='button'>Actualités</button></Link>
+                <Link href='/News' passHref><button type="button" name="myButton" className='button'>Actualités</button></Link>
             </div>
         </div>
     )
