@@ -9,7 +9,7 @@
     {"userId" : 1,
         "id":2,
         "path":"/timer",
-        "title":"Le minuteur à rebourds",
+        "title":"Qu’est-ce que le Minuteur à rebours ?",
         "imgPath":"img0",
         "body":"<div><b>test</b></div>"
     },
@@ -30,7 +30,7 @@
     {"userId" : 1,
         "id":5,
         "path":"/placer_sa_feuille",
-        "title":"Placer sa feuille",
+        "title":"COMMENT PLACER SA FEUILLE OU SON CAHIER POUR ECRIRE ?",
         "imgPath":"img0",
         "body":"<div><b>test</b></div>"
     },

@@ -274,9 +274,7 @@ a {
 padding: 15px 20px; /*2*/
 box-sizing: border-box; /*3*/
 }
-.card-date {
-  /* font-family: 'Source Sans Pro', sans-serif; */
-}
+
 
 /* .card-title, .card-excerpt {
    /* font-family: 'Playfair Display', serif; */
@@ -290,4 +288,8 @@ box-sizing: border-box; /*3*/
 
 .card-date, .card-excerpt {
   color: #777;
+}
+
+.note{
+  color: #808080
 }
