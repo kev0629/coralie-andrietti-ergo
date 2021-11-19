@@ -4,11 +4,11 @@ import Section from '../../component/Section'
 import articles from '../api/articles'
 
 export default function LeRepereDes3() {
-    console.log(articles)
+    var articleIndex = 0
     return (
         <Body>
-            <Section title={articles[0].title}>
-            <div dangerouslySetInnerHTML={{__html: articles[0].body}}></div>
+            <Section title={articles[articleIndex].title}>
+            <div dangerouslySetInnerHTML={{__html: articles[articleIndex].body}}></div>
             </Section>
         </Body>
     )}

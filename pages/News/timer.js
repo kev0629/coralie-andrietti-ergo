@@ -3,11 +3,12 @@ import Body from '../../component/Body'
 import Section from '../../component/Section'
 import articles from '../api/articles'
 
-export default function LeRepereDes3() {
+export default function Timer() {
+    var articleIndex = 1
     return (
         <Body>
-            <Section title={articles[4].title}>
-            <div dangerouslySetInnerHTML={{__html: articles[4].body}}></div>
+            <Section title={articles[articleIndex].title}>
+            <div dangerouslySetInnerHTML={{__html: articles[articleIndex].body}}></div>
             </Section>
         </Body>
     )}
