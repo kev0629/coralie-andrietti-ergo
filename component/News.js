@@ -4,12 +4,12 @@ import Link from 'next/link'
 import Card from './Card'
 import articles from '../pages/api/articles'
 
-import img0 from '/public/pictures/img_when_2.jpg'
-import img1 from '/public/pictures/img_when.jpg'
-import img2 from '/public/pictures/img_when_2.jpg'
-import img3 from '/public/pictures/img_when_2.jpg'
-import img4 from '/public/pictures/img_when_2.jpg'
-import img5 from '/public/pictures/img_when.jpg'
+import img0 from '/public/pictures/articles/cards/screen.jpg'
+import img1 from '/public/pictures/articles/cards/timer.png'
+import img2 from '/public/pictures/articles/cards/Qaund_consulter.jpg'
+import img3 from '/public/pictures/articles/cards/pap_pps_picture.jpg'
+import img4 from '/public/pictures/articles/cards/placer sa feuille.png'
+import img5 from '/public/pictures/articles/cards/equilibre_vignetet.jpg'
 
 var imgCardList = [img0, img1, img2, img3, img4, img5]
 

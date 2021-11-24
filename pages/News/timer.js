@@ -2,12 +2,23 @@
 import Body from '../../component/Body'
 import Section from '../../component/Section'
 import articles from '../api/articles'
+import Image from 'next/image'
+import timer from '../../public/pictures/articles/timer_coco.png'
 
 export default function Timer() {
     var articleIndex = 1
     return (
         <Body>
             <Section title={articles[articleIndex].title}>
+                <div className='centered-content'>
+                    <Image
+                    src={timer}
+                        alt='timer'
+                        width={1920/2}
+                        height={1080/2}
+                        placeholder='blur'/>
+                </div>
+            <br/>
             Sûrement un de mes outils préférés, le minuteur à rebours ou timer est 
             une minuterie visuelle qui permet de montrer le temps restant à l’enfant.<br/>
             <br/>

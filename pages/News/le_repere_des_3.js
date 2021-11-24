@@ -2,12 +2,22 @@
 import Body from '../../component/Body'
 import Section from '../../component/Section'
 import articles from '../api/articles'
+import Image from 'next/image'
+import repere from '../../public/pictures/articles/reperes.png'
 
 export default function LeRepereDes3() {
     var articleIndex = 0
     return (
         <Body>
             <Section title={articles[articleIndex].title}>
+            <div className='centered-content'>
+                    <Image
+                        src={repere}
+                        alt='le repère des 3-6-9-12'
+                        width={2474/2}
+                        height={1750/2}
+                        placeholder='blur'/>
+                </div>
                 <b>Pas d’écran avant 3 ans :</b><br/>
                 Éviter le plus possible les contacts de l’enfant avec les écrans. Privilégiez plutôt les jeux ou les livres. Préférez les activités qui stimulent les sens et la découverte. Si l’utilisation d’un écran a tout de même lieu, alors ce sera de façon conjointe avec vous.
                 <br/><br/>

@@ -2,12 +2,24 @@
 import Body from '../../component/Body'
 import Section from '../../component/Section'
 import articles from '../api/articles'
+import Image from 'next/image'
+import papPps from '../../public/pictures/articles/pap_pps.png'
 
 export default function papPpps() {
     var articleIndex = 3
     return (
         <Body>
             <Section title={articles[articleIndex].title}>
+                <div className='centered-content'>
+                    <Image
+                        src={papPps}
+                        alt='what_plan'
+                        width={565*1.3}
+                        height={679*1.3}
+                        placeholder='blur'
+                        className='profile-pic'
+                        />
+                </div>
             Mon enfant rencontre des difficultés à l’école, il faut adapter sa scolarité et lui apporter de l’aide. Que dois-je faire ?<br/>
             <br/>
             Le PAP (Plan d’Accompagnement Personnalisé) et le PPS (projet Personnalisé de Scolarisation) sont des dispositifs qui peuvent être 
