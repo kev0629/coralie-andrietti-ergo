@@ -30,7 +30,7 @@ export default function Home({datas}) {
         <Section id='home'>
           <Presentation/>
         </Section>
-        <Section title="Acutalités" id='actu'>
+        <Section title="Actualités" id='actu'>
           <News/> 
         </Section>
         <Section title="Qu'est-ce que l'ergothérapie ?" id="What">
