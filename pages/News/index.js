@@ -19,7 +19,7 @@ news = news.reverse()
 export default function ActuPage() {
     return (
         <Body>
-            <Section title='Atcualités'>
+            <Section title='Actualités'>
             <Link href='/#actu' passHref><button type="button" name="myButton" className='button'>{'Retour'}</button></Link>
             <div className='centered-content'>
              <div className="g1-1-r2">
