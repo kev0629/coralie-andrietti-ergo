@@ -35,7 +35,7 @@ export default function News() {
                 ))}
                </div> 
             <div>
-                <Link href='/News' passHref><button type="button" name="myButton" className='button'>Actualités</button></Link>
+                <Link href='/News' passHref><button type="button" name="myButton" className='button'>Voir plus</button></Link>
             </div>
         </div>
     )
