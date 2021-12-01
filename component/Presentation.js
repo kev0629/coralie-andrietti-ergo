@@ -3,7 +3,7 @@ import Image from "next/image";
 import profilePic from '../public/pictures/0.jpeg'
 import title from '../public/pictures/Coralie_ergo_tittle.png'
 
-export default function Presentation(){
+export default function Presentation(props){
     return(
         <div className='centered-content'>
             <div className="profile-pic" style={{height: "auto"}}>
@@ -25,7 +25,7 @@ export default function Presentation(){
                     />
             </div>
             <div>
-                <button type="button" name="myButton" className='button'>Mon Parcours</button>
+                <button type="button" name="myButton" onClick={props.openModalPres} className='button'>Mon Parcours</button>
             </div>
             <div style={{fontSize:'20px'}}>
                 <div style={{marginBottom:"25px",marginTop:"25px"}}>

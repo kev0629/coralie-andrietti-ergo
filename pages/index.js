@@ -9,6 +9,8 @@ import Following from '../component/Following'
 import Localisation from '../component/Localisation'
 import Modal from '../component/Modal'
 import News from '../component/News'
+import ModalPres from '../component/ModalPres'
+import React from 'react'
 
 import {Client} from '@notionhq/client'
 
@@ -17,6 +19,15 @@ import {Client} from '@notionhq/client'
 
 export default function Home({datas}) {
   // console.log(href.substring(this.href.lastIndexOf('/') + 1))
+  const [modalPresIsOpen, setPresIsOpen] = React.useState(false);
+
+    function openModalPres() {
+    setPresIsOpen(true);
+    }
+
+    function closeModalPres() {
+    setPresIsOpen(false);
+    }
   return (
     <div >
       <Head>
@@ -26,9 +37,10 @@ export default function Home({datas}) {
         
       </Head>
       <Modal datas={datas}/>
+      <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres}/>
       <Body>
         <Section id='home'>
-          <Presentation/>
+          <Presentation openModalPres={openModalPres}/>
         </Section>
         <Section title="Actualités" id='actu'>
           <News/> 
