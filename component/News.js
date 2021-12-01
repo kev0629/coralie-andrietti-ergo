@@ -17,18 +17,19 @@ var imgCardList = [img0, img1, img2, img3, img4, img5]
 // var news = articles
 var news = Object.values(articles)
 var news4 = news.reverse().slice(0,4)
-var i = 0
 export default function News() {
 
     return (
         <div className='centered-content'>
              <div className="g1-1-r2">
-                    {news4.map((post)=>(
+                    {news4.map((post, index)=>(
                 <Link key={post.id} href={'/News'+post.path} passHref>
-                    <div  style={{margin:20}}>
+                    
+                    <div  style={{margin:20}} className={'div'+(index+1)}>
                         {console.log(post.id)}
                         <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
                     </div>
+                    
                 </Link>
                     
                 

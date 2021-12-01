@@ -211,34 +211,6 @@ a {
   margin: 0;
 }
 
-@media screen and (max-width: 1200px) {
-  .nav-title{
-    font-size: 14px ;
-    padding: 10px ;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .nav-title{
-    visibility: hidden;
-  }
-  .burger{
-    visibility: visible;
-    position: absolute !important;
-    top: 30px;
-    right: 0 !important;
-    text-align: right !important;
-    vertical-align: middle !important;
-    padding: 0px;
-    display: inline-block !important;
-    
-  }
-  .burger>svg{
-    width: 200px;
-    height: 100px;
-    color: #4D9393;
-  }
-}
-
 .card {
   width: 400px; /*1*/
   margin: 0px auto; /*2*/
@@ -292,4 +264,50 @@ box-sizing: border-box; /*3*/
 
 .note{
   color: #808080
+}``
+
+
+@media screen and (max-width: 1200px) {
+  .nav-title{
+    font-size: 14px ;
+    padding: 10px ;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .nav-title{
+    visibility: hidden;
+  }
+  .burger{
+    visibility: visible;
+    position: absolute !important;
+    top: 30px;
+    right: 0 !important;
+    text-align: right !important;
+    vertical-align: middle !important;
+    padding: 0px;
+    display: inline-block !important;
+    
+  }
+  .burger>svg{
+    width: 200px;
+    height: 100px;
+    color: #4D9393;
+  }
+  .g1-1-r2 {
+    display: grid;
+    grid-template-columns: 0;
+    grid-template-rows: repeat(4, 1000fr);
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". ."; 
+  }
+  .div1 { grid-area: 1 / 1 / 2 / 2; }
+  .div2 { grid-area: 2 / 1 / 3 / 2; }
+  .div3 { grid-area: 3 / 1 / 4 / 2; }
+  .div4 { grid-area: 4 / 1 / 5 / 2; }
+}
+@media screen and (max-width: 1080px) {
+  .card {
+    width: 200px; /*1*/
+  }
 }
