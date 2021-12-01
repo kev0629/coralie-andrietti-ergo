@@ -2,6 +2,9 @@
 import Body from '../../component/Body'
 import Section from '../../component/Section'
 import articles from '../api/articles'
+import Image from 'next/image'
+import equilibre1 from '../../public/pictures/articles/equilibre1.jpg'
+import equilibre2 from '../../public/pictures/articles/equilibre2.jpg'
 
 export default function EquilibreOccupationnel() {
     var articleIndex = 5
@@ -24,6 +27,7 @@ export default function EquilibreOccupationnel() {
                 Mais attention, il ne s’agit pas simplement de faire un certain nombre d’activité. 
                 Il s’agit de faire un nombre d’activité suffisant certes mais surtout variées et qui permettent d’augmenter notre sentiment d’efficacité et notre estime de nous-même. 
                 C’est ce que l’on appelle : <b style={{fontSize:18}}>l’équilibre occupationnel.</b><br/>
+                <Image src={equilibre1} alt='balance' />
                 L’équilibre occupationnel est <b>un équilibre entre le temps consacré à nos différentes activités </b>
                 (quotidiennes, de productions, de loisirs et surtout de repos) <b>et la satisfaction que cela nous apporte.</b><br/>
                 <br/>
@@ -38,6 +42,7 @@ export default function EquilibreOccupationnel() {
 
                 <b style={{fontSize:18}}>Et bien sûr, quand des difficultés dans les activités sont constatées, il est vivement conseillé d’aller consulter un ergothérapeute.</b><br/>
                 <br/>
+                <Image src={equilibre2} alt='pierre equilibre' />
                 <div className='note'>
                     Sources :<br/>
                     Ay-Woan, Sarah, Lyinn, Tsyr-Jang &amp; Ping-Chuan, 2006; Glass, de Leon, Marottoli &amp; Berkman, 1999; Rudman, 2006 <br/>
