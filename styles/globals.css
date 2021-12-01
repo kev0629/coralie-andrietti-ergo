@@ -140,12 +140,7 @@ a {
   width: 90%;
   padding-left: 50px;
 }
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
+
 
 .one {
   grid-column: 1;
@@ -309,5 +304,12 @@ box-sizing: border-box; /*3*/
 @media screen and (max-width: 1080px) {
   .card {
     width: 200px; /*1*/
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 0;
+    grid-template-rows: repeat(1, 1000fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
   }
 }
