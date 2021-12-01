@@ -1,6 +1,7 @@
 
-import ReactModal from 'react-modal'
+import ReactModal from 'react-modal';
 import Image from 'next/image';
+import { motion } from "framer-motion";
 import parcours from '../public/pictures/parcours.png'
 
 
@@ -25,10 +26,12 @@ export default function ModalPres(props) {
 
     return (
     <ReactModal style={customStyles} isOpen={props.isOpen} ariaHideApp={false}>
+      <motion.div animate={{ x: 1000 }}>
         <button className='modal-button' onClick={props.closeModalPres}>X</button>
         <div style={{backgroundColor:'white',padding:10}}>
             <Image src={parcours} alt='parcours' width={1390/2} height={901/2}/>
         </div>
+      </motion.div>
     </ReactModal>
     )
 }

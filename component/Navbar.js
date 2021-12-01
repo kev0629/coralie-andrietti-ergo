@@ -6,6 +6,7 @@ import logo_title from "../public/pictures/Logo_title.png"
 import Burger from "../public/pictures/burger.svg"
 import {Link as ScrollLink} from 'react-scroll'
 import Route from "./Route"
+import motion from "framer-motion"
 
 export default function Navbar (){
     const router = useRouter()

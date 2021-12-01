@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import profilePic from '../public/pictures/0.jpeg'
 import title from '../public/pictures/Coralie_ergo_tittle.png'
 
@@ -25,7 +26,7 @@ export default function Presentation(props){
                     />
             </div>
             <div>
-                <button type="button" name="myButton" onClick={props.openModalPres} className='button'>Mon Parcours</button>
+                <motion.button type="button" name="myButton" onClick={props.openModalPres} className='button' whileHover={{scale:1.1}}>Mon Parcours</motion.button>
             </div>
             <div style={{fontSize:'20px'}}>
                 <div style={{marginBottom:"25px",marginTop:"25px"}}>

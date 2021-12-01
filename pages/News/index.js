@@ -5,6 +5,7 @@ import articles from '../api/articles'
 import Card from '../../component/Card'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 import img0 from '/public/pictures/articles/cards/screen.jpg'
 import img1 from '/public/pictures/articles/cards/timer.png'
@@ -20,16 +21,16 @@ export default function ActuPage() {
     return (
         <Body>
             <Section title='Actualités'>
-            <Link href='/#actu' passHref><button type="button" name="myButton" className='button'>{'Retour'}</button></Link>
+            <Link href='/#actu' passHref><motion.button type="button" name="myButton" className='button' whileHover={{scale:1.1}}>{'Retour'}</motion.button></Link>
             <div className='centered-content'>
              <div className="g1-1-r2">
                     {news.map((post)=>(
                         // console.log(post)
                 <Link key={post.id} href={'/News'+post.path} passHref>
-                    <div key={post.id} style={{margin:20}}>
+                    <motion.div key={post.id} style={{margin:20}} whileHover={{scale:1.1}}>
                         {console.log(post.imgPath)}
                         <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
-                    </div>
+                    </motion.div>
                 </Link>
                 ))}
                </div> 

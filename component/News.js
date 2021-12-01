@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import Card from './Card'
 import articles from '../pages/api/articles'
+import { motion } from 'framer-motion'
 
 import img0 from '/public/pictures/articles/cards/screen.jpg'
 import img1 from '/public/pictures/articles/cards/timer.png'
@@ -25,10 +26,10 @@ export default function News() {
                     {news4.map((post, index)=>(
                 <Link key={post.id} href={'/News'+post.path} passHref>
                     
-                    <div  style={{margin:20}} className={'div'+(index+1)}>
+                    <motion.div whileHover={{scale:1.1}} style={{margin:20}} className={'div'+(index+1)}>
                         {console.log(post.id)}
                         <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
-                    </div>
+                    </motion.div>
                     
                 </Link>
                     
@@ -36,7 +37,7 @@ export default function News() {
                 ))}
                </div> 
             <div>
-                <Link href='/News' passHref><button type="button" name="myButton" className='button'>Voir plus</button></Link>
+                <Link href='/News' passHref><motion.button type="button" name="myButton" className='button' whileHover={{scale:1.1}}>Voir plus</motion.button></Link>
             </div>
         </div>
     )

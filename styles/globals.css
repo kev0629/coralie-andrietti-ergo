@@ -259,7 +259,14 @@ box-sizing: border-box; /*3*/
 
 .note{
   color: #808080
-}``
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1, 1000fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
 
 
 @media screen and (max-width: 1200px) {
