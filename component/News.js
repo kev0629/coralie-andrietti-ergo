@@ -26,10 +26,10 @@ export default function News() {
                     {news4.map((post, index)=>(
                 <Link key={post.id} href={'/News'+post.path} passHref>
                     
-                    <motion.div whileHover={{scale:1.1}} style={{margin:20}} className={'div'+(index+1)}>
+                    <div  style={{margin:20}} className={'div'+(index+1)}>
                         {console.log(post.id)}
                         <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
-                    </motion.div>
+                    </div>
                     
                 </Link>
                     

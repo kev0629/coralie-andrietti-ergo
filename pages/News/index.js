@@ -27,10 +27,10 @@ export default function ActuPage() {
                     {news.map((post)=>(
                         // console.log(post)
                 <Link key={post.id} href={'/News'+post.path} passHref>
-                    <motion.div key={post.id} style={{margin:20}} whileHover={{scale:1.1}}>
+                    <div key={post.id} style={{margin:20}} >
                         {console.log(post.imgPath)}
                         <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
-                    </motion.div>
+                    </div>
                 </Link>
                 ))}
                </div> 

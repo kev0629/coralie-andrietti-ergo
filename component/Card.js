@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import articles from '../pages/api/articles'
+import { motion } from 'framer-motion'
 
 
 
 export default function Card(props) {
     return (
-        <div>
+        <motion.div whileHover={{scale:1.1}}>
             <div className="card">
                 {/* Image à la une */}
                 <div className="card-image">
@@ -35,7 +36,7 @@ export default function Card(props) {
                 </div>
                 {/* <!-- Fin du corp de notre carte --> */}
             </div>
-        </div>
+        </motion.div>
         
     )
 }
