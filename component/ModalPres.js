@@ -26,12 +26,12 @@ export default function ModalPres(props) {
 
     return (
     <ReactModal style={customStyles} isOpen={props.isOpen} ariaHideApp={false}>
-      <motion.div animate={{ x: 1000 }}>
+      <div >
         <button className='modal-button' onClick={props.closeModalPres}>X</button>
         <div style={{backgroundColor:'white',padding:10}}>
             <Image src={parcours} alt='parcours' width={1390/2} height={901/2}/>
         </div>
-      </motion.div>
+      </div>
     </ReactModal>
     )
 }
