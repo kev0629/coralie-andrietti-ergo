@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import cabinet_picture from '../public/pictures/office_pic.png'
+import cabinet_picture from '../public/pictures/office_pic.jpg'
 import map from '../public/pictures/map.png'
 
 export default function Localisation(){
