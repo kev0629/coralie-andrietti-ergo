@@ -10,7 +10,6 @@ import motion from "framer-motion"
 
 export default function Navbar (){
     const router = useRouter()
-    console.log(router)
     return(
         <div className="nav">
                 <Route to='home' link='/#home' nav={false}>

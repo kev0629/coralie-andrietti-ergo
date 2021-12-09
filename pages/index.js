@@ -18,7 +18,6 @@ import {Client} from '@notionhq/client'
 
 
 export default function Home({datas}) {
-  // console.log(href.substring(this.href.lastIndexOf('/') + 1))
   const [modalPresIsOpen, setPresIsOpen] = React.useState(false);
 
     function openModalPres() {

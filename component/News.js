@@ -27,7 +27,6 @@ export default function News() {
                 <Link key={post.id} href={'/News'+post.path} passHref>
                     
                     <div  style={{margin:20}} className={'div'+(index+1)}>
-                        {console.log(post.id)}
                         <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
                     </div>
                     
