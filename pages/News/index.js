@@ -26,7 +26,7 @@ export default function ActuPage() {
              <div className="g1-1-r2">
                     {news.map((post)=>(
                 <Link key={post.id} href={'/News'+post.path} passHref>
-                    <div key={post.id} style={{margin:20}} >
+                    <div key={post.id} style={{margin:20}} className='link'>
                         <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
                     </div>
                 </Link>

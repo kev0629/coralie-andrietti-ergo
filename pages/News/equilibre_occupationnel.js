@@ -50,7 +50,9 @@ export default function EquilibreOccupationnel() {
 
                 <b style={{fontSize:18}}>Et bien sûr, quand des difficultés dans les activités sont constatées, il est vivement conseillé d’aller consulter un ergothérapeute.</b><br/>
                 <br/>
-                <Image src={equilibre1} alt='pierre equilibre' placeholder='blur'/>
+                <Image src={equilibre1} 
+                    alt='pierre equilibre' 
+                    placeholder='blur'/>
                 <div className='note'>
                     Sources :<br/>
                     Ay-Woan, Sarah, Lyinn, Tsyr-Jang &amp; Ping-Chuan, 2006; Glass, de Leon, Marottoli &amp; Berkman, 1999; Rudman, 2006 <br/>
