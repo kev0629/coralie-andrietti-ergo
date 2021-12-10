@@ -14,8 +14,7 @@ const customStyles = {
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
       zIndex:3,
-      backgroundColor:'transparent',
-      border:'transparent'
+      backgroundColor:"transparent"
     },
     overlay: {zIndex: 1000}
   };
@@ -25,7 +24,7 @@ export default function ModalPres(props) {
     
 
     return (
-    <ReactModal style={customStyles} isOpen={props.isOpen} ariaHideApp={false}>
+    <ReactModal style={customStyles} className='transparent' isOpen={props.isOpen} ariaHideApp={false}>
       <div >
         <button className='modal-button' onClick={props.closeModalPres}>X</button>
         <div style={{backgroundColor:'white',padding:10}}>
