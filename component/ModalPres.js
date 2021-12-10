@@ -14,7 +14,8 @@ const customStyles = {
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
       zIndex:3,
-      backgroundColor:"transparent"
+      backgroundColor:"transparent",
+      borderStyle:'solid',
     },
     overlay: {zIndex: 1000}
   };
@@ -27,7 +28,7 @@ export default function ModalPres(props) {
     <ReactModal style={customStyles} isOpen={props.isOpen} ariaHideApp={false}>
       <div >
         <button className='modal-button' onClick={props.closeModalPres}>X</button>
-        <div style={{backgroundColor:'white',padding:10}}>
+        <div style={{backgroundColor:'white'}}>
             <Image src={parcours} alt='parcours' width={1390/2} height={901/2}/>
         </div>
       </div>
