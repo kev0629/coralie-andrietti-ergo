@@ -80,7 +80,7 @@ body {
   {
     position: relative;
     width: 150px;
-    height: 100px;
+    /* height: 100px; */
     padding: 50px;
     list-style-type: none;
     background: #ffff66;
