@@ -24,7 +24,7 @@ export default function ModalPres(props) {
     
 
     return (
-    <ReactModal style={customStyles} className='transparent' isOpen={props.isOpen} ariaHideApp={false}>
+    <ReactModal style={customStyles} isOpen={props.isOpen} ariaHideApp={false}>
       <div >
         <button className='modal-button' onClick={props.closeModalPres}>X</button>
         <div style={{backgroundColor:'white',padding:10}}>
