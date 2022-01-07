@@ -11,8 +11,9 @@ import img2 from '/public/pictures/articles/cards/Qaund_consulter.jpg'
 import img3 from '/public/pictures/articles/cards/pap_pps_picture.jpg'
 import img4 from '/public/pictures/articles/cards/placer sa feuille.png'
 import img5 from '/public/pictures/articles/cards/equilibre_vignetet.jpg'
+import img6 from '/public/pictures/articles/cards/equilibre_vignetet.jpg'
 
-var imgCardList = [img0, img1, img2, img3, img4, img5]
+var imgCardList = [img0, img1, img2, img3, img4, img5, img6]
 
 
 // var news = articles
@@ -27,6 +28,7 @@ export default function News() {
                 <Link key={post.id} href={'/News'+post.path} passHref>
                     
                     <div  style={{margin:20}} className={'div'+(index+1)+' link'}>
+                        {console.log(imgCardList[post.id - 1])}
                         <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
                     </div>
                     

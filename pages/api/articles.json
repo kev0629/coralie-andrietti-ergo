@@ -40,6 +40,13 @@
         "title":"Equilibre occupationnel",
         "imgPath":"img0",
         "body":"<div><b>test</b></div>"
+    },
+    {"userId" : 1,
+        "id":7,
+        "path":"/Les_troubles_neuro_visuels",
+        "title":"Les troubles neuro-visuels",
+        "imgPath":"img0",
+        "body":"<div><b>test</b></div>"
     }
 
 ]
