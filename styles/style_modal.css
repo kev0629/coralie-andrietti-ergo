@@ -101,6 +101,15 @@ body {
     color: gray;
     text-decoration: line-through;
   }
+
+  .modal-button{
+    background: #fff;
+    border-radius: 20px;
+    position: relative;
+    top: 30px;
+    right: 7px;
+    z-index: 1;
+  }
   
   /* Media queries */
   
