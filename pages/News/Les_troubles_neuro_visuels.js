@@ -59,7 +59,8 @@ export default function Les_troubles_neuro_visuels() {
             <br/>
             -> En bilan, l’ergothérapeute va, par exemple, demander à l’enfant (selon l’âge), de recopier une figure complexe depuis un modèle, de construire des figures avec des cubes … <br/>
             <br/>
-            Quels indices pour les familles ?
+            Quels indices pour les familles ? <br/>
+            <br/>
 •	L’enfant a du mal à fixer ou à suivre des yeux quelqu’un ou quelque chose qui se déplace.
 •	L’enfant a du mal à trouver ses affaires alors qu’elles se trouvent à un endroit « logique et visible». 
 •	Difficultés de lecture
