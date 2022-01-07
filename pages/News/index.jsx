@@ -13,7 +13,8 @@ import img2 from '/public/pictures/articles/cards/Qaund_consulter.jpg'
 import img3 from '/public/pictures/articles/cards/pap_pps_picture.jpg'
 import img4 from '/public/pictures/articles/cards/placer sa feuille.png'
 import img5 from '/public/pictures/articles/cards/equilibre_vignetet.jpg'
-var imgCardList = [img0, img1, img2, img3, img4, img5]
+import img6 from '/public/pictures/articles/cards/equilibre_vignetet.jpg'
+var imgCardList = [img0, img1, img2, img3, img4, img5, img6]
 
 var news = Object.values(articles)
 news = news.reverse()

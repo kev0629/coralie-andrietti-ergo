@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactModal from 'react-modal'
+import { useContext } from 'react';
+import AppContext from "../pages/AppContext";
 
 
 const customStyles = {
@@ -19,18 +21,19 @@ const customStyles = {
 
 export default function Modal(props) {
 
-    const [modalIsOpen, setIsOpen] = React.useState(true);
+    const value = useContext(AppContext)
+    // const [modalIsOpen, setIsOpen] = React.useState(true);
 
     function openModal() {
-    setIsOpen(true);
+        value.setMainModalIsOpen(true);
     }
 
     function closeModal() {
-    setIsOpen(false);
+        value.setMainModalIsOpen(false);
     }
 
     return (
-    <ReactModal style={customStyles} isOpen={modalIsOpen} ariaHideApp={false}>
+    <ReactModal style={customStyles} isOpen={value.mainModalIsOpen} ariaHideApp={false}>
         <button className='modal-button' onClick={closeModal}>X</button>
         <div className="blackboard">
             <ul className="paper">
