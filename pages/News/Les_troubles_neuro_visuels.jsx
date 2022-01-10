@@ -15,9 +15,10 @@ export default function Les_troubles_neuro_visuels() {
             <Section title={articles[articleIndex].title}>
                 <div className='g03-1'>
                 <div>
-                        <Image src={trouble1} layout='responsive'/>
-                    </div>
-                    <div style={{padding:'7%'}}>
+                    <div className='centered-content' style={{paddingTop:'20%'}}><Image src={trouble1} width={461/3} height={681/3} /></div>
+                    
+                </div>
+                    <p style={{padding:20}}>
                         Les troubles neuro-visuels sont souvent méconnus par les enfants eux-mêmes et leurs familles. 
                         Ces troubles sont en effet « invisibles » pour les enfants car ces derniers grandissent sans savoir 
                         que leur vision est déficitaire puisqu’ils n’ont pas de point de comparaison. 
@@ -27,7 +28,7 @@ export default function Les_troubles_neuro_visuels() {
                         En ergothérapie pédiatrique, ce sont des troubles que nous observons beaucoup lors des bilans. 
                         Par exemple, cela est très fréquent chez les enfants présentant des troubles « dys », 
                         des TSA (troubles du spectre de l’autisme) ou TDAH (trouble déficit de l’attention +/- hyperactivité et impulsivité) etc.<br/>
-                    </div>
+                    </p>
                 </div>
             
                 <br/>
@@ -87,7 +88,7 @@ export default function Les_troubles_neuro_visuels() {
                         Par exemple : les capacités à dessiner spontanément ou à partir d’un modèle, à construite avec des pièces de bois ou des cubes, à réaliser des puzzles.</div>
                     </div>
                     <div>
-                        <Image src={trouble2} style={{verticalAlign:'middle'}}></Image>
+                        <Image src={trouble2} width={482/3} height={323/3}></Image>
                     </div>
                 </div>
                 <br/>
