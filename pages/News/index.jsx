@@ -7,13 +7,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-import img0 from '/public/pictures/articles/cards/screen.jpg'
+import img0 from '/public/pictures/articles/cards/screen.png'
 import img1 from '/public/pictures/articles/cards/timer.png'
-import img2 from '/public/pictures/articles/cards/Qaund_consulter.jpg'
-import img3 from '/public/pictures/articles/cards/pap_pps_picture.jpg'
+import img2 from '/public/pictures/articles/cards/Qaund_consulter.png'
+import img3 from '/public/pictures/articles/cards/pap_pps_picture.png'
 import img4 from '/public/pictures/articles/cards/placer sa feuille.png'
-import img5 from '/public/pictures/articles/cards/equilibre_vignetet.jpg'
-import img6 from '/public/pictures/articles/cards/equilibre_vignetet.jpg'
+import img5 from '/public/pictures/articles/cards/equilibre_vignetet.png'
+import img6 from '/public/pictures/articles/cards/troubles.png'
 var imgCardList = [img0, img1, img2, img3, img4, img5, img6]
 
 var news = Object.values(articles)
