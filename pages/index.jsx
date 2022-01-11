@@ -73,7 +73,7 @@ export async function getStaticProps (){
   });
   return {
     props: {
-      datas:response.results,
+      datas:response.results.slice(0).reverse(),
     },
     revalidate :1
   };

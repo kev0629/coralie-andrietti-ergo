@@ -84,7 +84,7 @@ body {
     padding: 50px;
     list-style-type: none;
     background: #ffff66;
-    overflow-wrap: break-word;
+  /* overflow-wrap: break-word; */
     overflow: hidden;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
