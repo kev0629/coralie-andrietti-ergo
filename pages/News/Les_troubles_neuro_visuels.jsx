@@ -91,8 +91,6 @@ export default function Les_troubles_neuro_visuels() {
                         <Image src={trouble2} width={482/3} height={323/3}></Image>
                     </div>
                 </div>
-                <br/>
-                <br/>
                 <Image width={16} height={16} alt='arrow' src={arrow}/> En bilan, l’ergothérapeute va, par exemple, 
                 demander à l’enfant (selon l’âge), de recopier une figure complexe depuis un modèle, de construire des figures avec des cubes … <br/>
                 <br/>
