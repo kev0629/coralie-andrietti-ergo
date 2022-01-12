@@ -84,7 +84,7 @@ export default function Les_troubles_neuro_visuels() {
                 </ul>
                 <div className='g1-03'>
                     <div >
-                        <div style={{padding:'5%'}}>Le visuo-constructif consiste à intégrer un ensemble d’éléments perçus visuellement en un tout cohérent par le biais d’une réponse motrice. 
+                        <div >Le visuo-constructif consiste à intégrer un ensemble d’éléments perçus visuellement en un tout cohérent par le biais d’une réponse motrice. 
                         Par exemple : les capacités à dessiner spontanément ou à partir d’un modèle, à construite avec des pièces de bois ou des cubes, à réaliser des puzzles.</div>
                     </div>
                     <div>
