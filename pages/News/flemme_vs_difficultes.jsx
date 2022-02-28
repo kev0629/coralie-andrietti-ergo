@@ -76,7 +76,6 @@ export default function FlemmeVsDif() {
                 </div>
                 <p style={{fontStyle:"italic"}}></p>
                 <p>
-                <Image width={16} height={16} alt='arrow' src={arrow}/>
                     {"Lorenzo et Sarah-Lou ne sont que 2 exemples parmi tant d'autres."} 
                     {"En effet inconsciemment l'enfant développe souvent des systèmes de défense, des"} 
                     {"systèmes d'échappatoires pour éviter de faire les activités dans lesquelles il a du mal."} 
@@ -85,7 +84,6 @@ export default function FlemmeVsDif() {
                     {"chose qui ne va pas pour lui : "}<b>{"il y a toujours une raison derrière le comportement de l'enfant."}</b> 
                 </p>
                 <p>
-                <Image width={16} height={16} alt='arrow' src={arrow}/>
 	            {"Parfois, ces comportements difficiles peuvent même être liés à des troubles encore non diagnostiqués"} 
                 {"tel que le TDAH, le TSA, le haut potentiel, les troubles sensoriels, les troubles des apprentissages etc."} 
                 {"Dans d'autres cas, les comportements difficiles seront peut-être juste liés à un tout petit retard de "}
