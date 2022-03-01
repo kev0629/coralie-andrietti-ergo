@@ -29,7 +29,7 @@ export default function Navbar (){
                     </Route>
                     <Route to='What' link='/#What' nav={true}>
                         <li id='what' className='nav-title'>
-                            Qu'est-ce que c'est ?
+                            {"Qu'est-ce que c'est ?"}
                         </li>
                     </Route>
                     <Route to='Who' link='/#Who' nav={true}>

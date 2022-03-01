@@ -47,6 +47,13 @@
         "title":"Les troubles neuro-visuels",
         "imgPath":"img0",
         "body":"<div><b>test</b></div>"
+    },
+    {"userId" : 1,
+        "id":8,
+        "path":"/flemme_vs_difficultes",
+        "title":"Flemme VS difficultés",
+        "imgPath":"img0",
+        "body":"<div><b>test</b></div>"
     }
 
 ]
