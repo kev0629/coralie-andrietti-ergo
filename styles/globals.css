@@ -258,7 +258,8 @@ box-sizing: border-box; /*3*/
 }
 
 .note{
-  color: #808080
+  color: #808080;
+  font-size: 12px;
 }
 .wrapper {
   display: grid;
