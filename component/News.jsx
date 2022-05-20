@@ -14,8 +14,9 @@ import img5 from '/public/pictures/articles/cards/equilibre_vignetet.png'
 import img6 from '/public/pictures/articles/cards/troubles.png'
 import img7 from '/public/pictures/articles/cards/flemme_vs_difficutes.png'
 import img8 from '/public/pictures/articles/cards/autonomy.png'
+import img9 from '/public/pictures/articles/cards/inclusion.png'
 
-var imgCardList = [img0, img1, img2, img3, img4, img5, img6, img7, img8]
+var imgCardList = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9]
 
 
 // var news = articles

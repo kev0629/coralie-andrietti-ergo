@@ -61,6 +61,13 @@
         "title":"Autonomie et indépendance : quèsaco ?",
         "imgPath":"img0",
         "body":"<div><b>test</b></div>"
+    },
+    {"userId" : 1,
+        "id":10,
+        "path":"/inclusion",
+        "title":"Inclusion, intégration, séparation ou exclusion ?",
+        "imgPath":"img0",
+        "body":"<div><b>test</b></div>"
     }
 
 ]
