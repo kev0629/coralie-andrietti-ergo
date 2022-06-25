@@ -2,7 +2,7 @@
 import ReactModal from 'react-modal';
 import Image from 'next/image';
 import { motion } from "framer-motion";
-import parcours from '../public/pictures/parcours.png'
+import parcours from '../public/pictures/parcours_.png'
 
 
 const customStyles = {
@@ -29,7 +29,7 @@ export default function ModalPres(props) {
       <div >
         <button className='modal-button' onClick={props.closeModalPres}>X</button>
         <div style={{backgroundColor:'white'}}>
-            <Image src={parcours} alt='parcours' width={1390/2} height={901/2}/>
+            <Image src={parcours} alt='parcours' width={1842/2} height={901/2}/>
         </div>
       </div>
     </ReactModal>
