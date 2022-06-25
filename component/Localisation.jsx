@@ -18,16 +18,16 @@ export default function Localisation(){
                            placeholder='blur'/>
                 </div>
                 <div className='centered-content'>
-                    <p className='text-size-mid'>Le cabinet se situe au :</p>
+                    <p className='text-size-mid'>Le cabinet se situe :</p>
                     {/* <Link href="https://www.google.com/maps/place/Coralie+ANDRIETTI+Ergoth%C3%A9rapeute/data=!3m1!4b1!4m2!3m1!1s0x12cdd58e043b1ed1:0x51932fb1d3a7312e" passHref={true}> */}
                     <Link href={gmapLink} passHref={true}>
-                        <p className='text-size-high link'>Résidence Le Parc Victoria, Batiment B</p>
+                        <p className='text-size-high link'>Résidence Le Parc Victoria, Bâtiment B</p>
                     </Link>
                     <Link href={gmapLink} passHref={true}>
                     <p className='text-size-high link'>5 chemin de Garibondy</p>
                     </Link>
                     <Link href={gmapLink} passHref={true}>
-                    <p className='text-size-high link'>06110 le Cannet</p>
+                    <p className='text-size-high link'>06110 Le Cannet</p>
                     </Link>
                     <Link href={gmapLink} passHref={true}>
                     <p className='text-size-high link'>France</p>
