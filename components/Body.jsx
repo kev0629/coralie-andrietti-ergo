@@ -1,6 +1,6 @@
 
-import Navbar from '../component/Navbar'
-import Footer from '../component/Footer'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import React, { Children } from "react";
 import styles from '../styles/Home.module.css'
 

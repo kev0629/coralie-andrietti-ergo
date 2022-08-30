@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import '../styles/style_modal.css'
 import React, { useState } from "react";
-import AppContext from "../component/AppContext";
+import AppContext from "../components/AppContext";
 
 function MyApp({ Component, pageProps }) {
   const [mainModalIsOpen, setMainModalIsOpen] = React.useState(true);

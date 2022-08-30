@@ -38,9 +38,9 @@ export default function Modal(props) {
         <div className="blackboard">
             <ul className="paper">
             {props.datas.map(data => (
-                console.log(props.datas),
-                console.log(data.properties.Name.title[0]),
-                data.properties.Name.title[0]?<li key={data.id}>{data.properties.Name.title[0].plain_text}</li>:''
+                // console.log(props.datas),
+                // console.log(data.properties.Name.title[0]),
+                data?<li key={data.id}>{data.text}</li>:''
             ))}
             </ul>
         </div>
