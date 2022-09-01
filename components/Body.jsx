@@ -13,7 +13,7 @@ export default function Body(props) {
                 {props.children}
                 <div className='bottom-section'></div>
              </div>
-            <Footer/>
+            {/* <Footer/> */}
         </main>
         </>
     )}

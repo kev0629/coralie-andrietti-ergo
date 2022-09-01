@@ -4,7 +4,7 @@ import markdownStyles from './markdown-styles.module.css'
 
 export default function RichTextAsset({ id, assets }) {
   const asset = assets?.find((asset) => asset.sys.id === id)
-  console.log(asset.width)
+  // console.log(asset.width)
   
 
   if (asset?.url) {

@@ -45,7 +45,8 @@ export default function Home({allInfos}) {
           <Presentation openModalPres={openModalPres}/>
         </Section>
         <Section title="Actualités" id='actu'>
-          <News/> 
+          {/* <News/>  */}
+          
         </Section>
         <Section title="Qu'est-ce que l'ergothérapie ?" id="What">
         <What/>

@@ -11,6 +11,8 @@ import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import { CMS_NAME } from '../../lib/constants'
+import Body from '../../components/Body'
+import Section from '../../components/Section'
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
@@ -20,36 +22,41 @@ export default function Post({ post, morePosts, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.coverImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
+    // <Layout preview={preview}>
+    //   <Container>
+    //     <Header />
+    //     {router.isFallback ? (
+    //       <PostTitle>Loading…</PostTitle>
+    //     ) : (
+    //       <>
+    //         <article>
+    //           <Head>
+    //             <title>
+    //               {post.title} | Next.js Blog Example with {CMS_NAME}
+    //             </title>
+    //             <meta property="og:image" content={post.coverImage.url} />
+    //           </Head>
+    //           <PostHeader
+    //             title={post.title}
+    //             coverImage={post.coverImage}
+    //             date={post.date}
+    //             author={post.author}
+    //           />
+    //           <PostBody content={post.content} />
+    //         </article>
+    //         <SectionSeparator />
+    //         {morePosts && morePosts.length > 0 && (
+    //           <MoreStories posts={morePosts} />
+    //         )}
+    //       </>
+    //     )}
+    //   </Container>
+    // </Layout>
+    <Body>
+            <Section title={post.title}>
               <PostBody content={post.content} />
-            </article>
-            <SectionSeparator />
-            {morePosts && morePosts.length > 0 && (
-              <MoreStories posts={morePosts} />
-            )}
-          </>
-        )}
-      </Container>
-    </Layout>
+            </Section>
+    </Body>
   )
 }
 
