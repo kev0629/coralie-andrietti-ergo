@@ -1,6 +1,6 @@
 
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Footer from './Footer'
 import React, { Children } from "react";
 import styles from '../styles/Home.module.css'
 
@@ -13,7 +13,7 @@ export default function Body(props) {
                 {props.children}
                 <div className='bottom-section'></div>
              </div>
-            {/* <Footer/> */}
+            <Footer/>
         </main>
         </>
     )}

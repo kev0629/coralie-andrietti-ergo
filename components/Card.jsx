@@ -12,7 +12,9 @@ export default function Card(props) {
                 {/* Image à la une */}
                 <div className="card-image">
                     {/* <img src="https://damienflandrin.fr/storage/tutoriel-realiser-une-carte-en-css/card-image.jpg" alt="Image" /> */}
-                    <Image src={props.img} alt='ímg' placeholder='blur' />
+                    <Image src={props.img} alt='ímg' layout='fill'
+                            // placeholder='blur' 
+                            />
                 </div>
                 {/* Fin de l'image à la une  */}
 
