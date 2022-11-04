@@ -21,10 +21,10 @@ export default function Localisation(){
                     <p className='text-size-mid'>Le cabinet se situe au :</p>
                     {/* <Link href="https://www.google.com/maps/place/Coralie+ANDRIETTI+Ergoth%C3%A9rapeute/data=!3m1!4b1!4m2!3m1!1s0x12cdd58e043b1ed1:0x51932fb1d3a7312e" passHref={true}> */}
                     <Link href={gmapLink} passHref={true}>
-                        <p className='text-size-high link'>Résidence l'Estérel entrée A</p>
+                        <p className='text-size-high link'>Le Parc Victoria Bat B - Etage 1</p>
                     </Link>
                     <Link href={gmapLink} passHref={true}>
-                    <p className='text-size-high link'>100 chemin de l'Olivet</p>
+                    <p className='text-size-high link'>5 Chemin de Garibondy</p>
                     </Link>
                     <Link href={gmapLink} passHref={true}>
                     <p className='text-size-high link'>06110 le Cannet</p>
