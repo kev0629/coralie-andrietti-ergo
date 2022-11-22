@@ -34,8 +34,8 @@ export default function Presentation(props){
                     <div>En cabinet ou à domicile</div>
                 </div>
                 <div style={{marginBottom:"25px",marginTop:"25px"}}>
-                    <div>Résidence l’Estérel</div>
-                    <div> Bat A 100 chemin de l’Olivet</div>
+                    <div>Le Parc Victoria Bat B - Etage 1</div>
+                    <div>5 Chemin de Garibondy</div>
                     <div>06110 Le Cannet </div>
                 </div>
                 <div style={{marginBottom:"25px",marginTop:"25px"}}>coralie.andrietti@gmail.com 06.64.43.62.60</div>
