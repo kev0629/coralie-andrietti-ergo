@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import cabinet_picture from '../public/pictures/office_pic.jpg'
+import cabinet_picture from '../public/pictures/office.png'
 import map from '../public/pictures/map.png'
 
 export default function Localisation(){
@@ -33,7 +33,7 @@ export default function Localisation(){
                     <p className='text-size-high link'>France</p>
                     </Link>
                     {/* </Link> */}
-                    <p>Petit coup de pouce : l'entrée se situe entre l'auto-école Colette et le salon de coiffure " le salon d'Élodie"</p>
+                    {/* <p>Petit coup de pouce : l'entrée se situe entre l'auto-école Colette et le salon de coiffure " le salon d'Élodie"</p> */}
                 </div>
             </div>
             
@@ -41,8 +41,8 @@ export default function Localisation(){
                 <Link href={gmapLink} passHref={true}>
                     <Image src={map} 
                         alt='map'
-                        width={2800}
-                        height={1000}
+                        width={1900}
+                        height={800}
                         placeholder='blur'/>
                 </Link>
                 
