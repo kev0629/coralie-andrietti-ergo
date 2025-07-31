@@ -60,7 +60,7 @@ export default function Modal({ datas }) {
             onClick={closeModal}
             className="bg-primary text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all"
           >
-            J'ai compris
+            J&apos;ai compris
           </button>
         </div>
       </motion.div>

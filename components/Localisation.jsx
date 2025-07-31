@@ -68,7 +68,7 @@ export default function Localisation() {
           rel="noopener noreferrer"
           className="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all"
         >
-          Obtenir l'itinéraire
+          Obtenir l&apos;itinéraire
         </a>
       </div>
     </div>
