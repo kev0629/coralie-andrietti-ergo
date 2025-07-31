@@ -5,7 +5,7 @@ export default function When() {
   return (
     <div className="max-w-4xl mx-auto">
       <p className="text-center text-gray-600 mb-8">
-        Il est recommandé de consulter un ergothérapeute dès le repérage ou la suspicion de difficultés. Voici quelques exemples de situations où l'ergothérapie peut aider.
+        Il est recommandé de consulter un ergothérapeute dès le repérage ou la suspicion de difficultés. Voici quelques exemples de situations où l&apos;ergothérapie peut aider.
       </p>
       <div className="bg-white rounded-xl shadow-sm overflow-hidden">
         <AccordionItem title="Chez l’enfant">
