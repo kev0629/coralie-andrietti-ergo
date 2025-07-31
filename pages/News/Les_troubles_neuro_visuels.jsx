@@ -15,7 +15,7 @@ export default function Les_troubles_neuro_visuels() {
             <Section title={articles[articleIndex].title}>
                 <div className='g03-1'>
                 <div>
-                    <div className='centered-content' style={{paddingTop:'20%'}}><Image src={trouble1} width={461/3} height={681/3} /></div>
+                    <div className='centered-content' style={{paddingTop:'20%'}}><Image src={trouble1} width={461/3} height={681/3} alt="" /></div>
                     
                 </div>
                     <p style={{padding:20}}>
@@ -88,7 +88,7 @@ export default function Les_troubles_neuro_visuels() {
                         Par exemple : les capacités à dessiner spontanément ou à partir d’un modèle, à construite avec des pièces de bois ou des cubes, à réaliser des puzzles.</div>
                     </div>
                     <div>
-                        <Image src={trouble2} width={482/3} height={323/3}></Image>
+                        <Image src={trouble2} width={482/3} height={323/3} alt=""></Image>
                     </div>
                 </div>
                 <Image width={16} height={16} alt='arrow' src={arrow}/> En bilan, l’ergothérapeute va, par exemple, 
