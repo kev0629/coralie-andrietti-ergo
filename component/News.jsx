@@ -30,7 +30,7 @@ export default function News() {
               style={{ margin: 20 }}
               className={"div" + (index + 1) + " link"}
             >
-              {console.log(imgCardList[post.id - 1])}
+              {/* {console.log(imgCardList[post.id - 1])} */}
               <Card
                 title={post.title}
                 date={post.date}
