@@ -1,6 +1,6 @@
 
-import Body from '../../component/Body'
-import Section from '../../component/Section'
+import Body from '../../components/Body'
+import Section from '../../components/Section'
 import articles from '../api/articles'
 import Image from 'next/image'
 import quand1 from '../../public/pictures/articles/quand1.jpeg'

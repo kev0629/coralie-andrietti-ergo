@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-import Body from '../../component/Body';
-import Section from '../../component/Section';
+import Body from '../../components/Body';
+import Section from '../../components/Section';
 import articles from '../api/articles.json';
-import ArticleCard from '../../component/ArticleCard';
+import ArticleCard from '../../components/ArticleCard';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 

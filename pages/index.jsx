@@ -1,15 +1,15 @@
 import Head from "next/head";
-import Section from "../component/Section";
-import Body from "../component/Body";
-import Presentation from "../component/Presentation";
-import What from "../component/What";
-import Who from "../component/Who";
-import When from "../component/When";
-import Following from "../component/Following";
-import Localisation from "../component/Localisation";
-import Modal from "../component/Modal";
-import News from "../component/News";
-import ModalPres from "../component/ModalPres";
+import Section from "../components/Section";
+import Body from "../components/Body";
+import Presentation from "../components/Presentation";
+import What from "../components/What";
+import Who from "../components/Who";
+import When from "../components/When";
+import Following from "../components/Following";
+import Localisation from "../components/Localisation";
+import Modal from "../components/Modal";
+import News from "../components/News";
+import ModalPres from "../components/ModalPres";
 import React from "react";
 
 import { Client } from "@notionhq/client";
