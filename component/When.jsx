@@ -1,92 +1,41 @@
-import React from "react";
-import Image from "next/image";
-import when_pic_1 from "../public/pictures/img_when.jpg";
-import when_pic_2 from "../public/pictures/img_when_2.jpg";
+import React from 'react';
+import AccordionItem from './AccordionItem';
 
 export default function When() {
   return (
-    <>
-      <p>
-        <u>Chez l’enfant : </u>
+    <div className="max-w-4xl mx-auto">
+      <p className="text-center text-gray-600 mb-8">
+        Il est recommandé de consulter un ergothérapeute dès le repérage ou la suspicion de difficultés. Voici quelques exemples de situations où l'ergothérapie peut aider.
       </p>
-      Il est recommandé de consulter un ergothérapeute dès le repérage ou la
-      suspicion :
-      <div className="g1-03">
-        <div>
-          <ul>
-            <li>
-              De difficultés dans les activités de la vie quotidienne (repas,
-              toilette, habillage…)
-            </li>
-            <li>
-              De difficultés dans le comportement ludique, d’exploration et dans
-              les interactions (peu d’intérêt pour les activités proposées, jeux
-              atypiques…)
-            </li>
-            <li>
-              De retard des acquisitions motrices (difficultés de préhension, de
-              gestualité, de dextérité…)
-            </li>
-            <li>
-              De troubles de l’intégration sensorielle (hypo/hypersensibilité)
-            </li>
-            <li>
-              De difficultés d’acquisition des attendus scolaires et
-              préscolaires (pré-graphisme, graphisme, utilisation des ustensiles
-              de la trousse, géométrie …)
-            </li>
+      <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+        <AccordionItem title="Chez l’enfant">
+          <p className="mb-2 font-semibold">Dès l’apparition de difficultés dans :</p>
+          <ul className="list-disc list-inside pl-4 space-y-2">
+            <li>Les activités de la vie quotidienne (repas, toilette, habillage…).</li>
+            <li>Le comportement ludique, d’exploration et les interactions (peu d’intérêt pour les activités, jeux atypiques…).</li>
+            <li>Les acquisitions motrices (difficultés de préhension, de gestualité, de dextérité…).</li>
+            <li>L’intégration sensorielle (hypo ou hypersensibilité à certains stimuli).</li>
+            <li>Les apprentissages scolaires et préscolaires (graphisme, utilisation des outils, géométrie…).</li>
           </ul>
-        </div>
-        <div className="centered-content">
-          <Image
-            src={when_pic_1}
-            alt="title coralie ergo"
-            width={150}
-            height={100}
-          />
-        </div>
-      </div>
-      <p>
-        <u>Chez l’adulte et la personne âgée:</u>{" "}
-      </p>
-      <p>
-        Il est recommandé de consulter un ergothérapeute dès le repérage ou
-        l’arrivée de difficultés dans les activités de la vie quotidienne qui
-        peuvent être liées à un handicap de naissance, un handicap acquis,
-        l’apparition d’une maladie ou le vieillissement normal de la personne.
-      </p>
-      <div className="g03-1">
-        <div className="centered-content">
-          <Image
-            src={when_pic_2}
-            alt="title coralie ergo"
-            width={180}
-            height={100}
-          />
-        </div>
-        <div>
-          <ul>
-            <li>
-              De difficultés dans les activités de la vie quotidienne
-              (s’alimenter, s’habiller seul…)
-            </li>
-            <li>
-              De difficultés dans les activités productives (aller au travail,
-              être bien positionné à son bureau, accomplir sa journée de
-              travail…)
-            </li>
-            <li>De difficultés dans les activités de loisirs</li>
-            <li>
-              De difficultés pour accéder à son domicile (difficultés pour
-              rentrer dans la baignoire, pour se relever des toilettes …)
-            </li>
-            <li>
-              Des difficultés à accomplir ses rôles sociaux (tenir un bébé dans
-              les bras, écrire une lettre à un proche …)
-            </li>
+        </AccordionItem>
+
+        <AccordionItem title="Chez l’adulte et la personne âgée">
+          <p className="mb-2 font-semibold">En cas de difficultés dans les activités quotidiennes liées à :</p>
+          <ul className="list-disc list-inside pl-4 space-y-2">
+            <li>Un handicap de naissance ou un handicap acquis.</li>
+            <li>L’apparition d’une maladie (neurologique, rhumatismale, etc.).</li>
+            <li>Le vieillissement naturel de la personne.</li>
           </ul>
-        </div>
+          <p className="mt-4 mb-2 font-semibold">Exemples de difficultés :</p>
+          <ul className="list-disc list-inside pl-4 space-y-2">
+            <li>S’alimenter, s’habiller seul, ou réaliser sa toilette.</li>
+            <li>Les activités productives (aller au travail, être bien positionné à son bureau, accomplir sa journée de travail…).</li>
+            <li>Les activités de loisirs.</li>
+            <li>L’aménagement du domicile (entrer dans la baignoire, se relever des toilettes…).</li>
+            <li>Tenir son rôle social (s’occuper d’un proche, écrire une lettre, etc.).</li>
+          </ul>
+        </AccordionItem>
       </div>
-    </>
+    </div>
   );
 }

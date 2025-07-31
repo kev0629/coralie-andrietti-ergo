@@ -1,17 +1,17 @@
-import React, { Children } from "react";
+import React from 'react';
 
-export default function Section(props) {
-  let bar;
-  if (props.title !== undefined) {
-    bar = <div className="under-title"></div>;
-  }
+export default function Section({ id, title, children }) {
   return (
-    <div className="section" id={props.id}>
-      <div className="title-section">
-        {props.title}
-        {bar}
+    <section id={id} className="py-12 md:py-16">
+      {title && (
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark">{title}</h2>
+          <div className="mt-2 w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+      )}
+      <div>
+        {children}
       </div>
-      <div className="section-content">{props.children}</div>
-    </div>
+    </section>
   );
 }

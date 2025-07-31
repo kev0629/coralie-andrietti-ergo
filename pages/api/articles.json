@@ -1,73 +1,82 @@
 [
-    {"userId" : 1,
-        "id":1,
-        "path":"/le_repere_des_3",
-        "title":"Le repère du 3, 6, 9, 12 de Serge Tisseron",
-        "imgPath":"'/public/pictures/img_when_2.jpg'",
-        "body":""
-    },
-    {"userId" : 1,
-        "id":2,
-        "path":"/timer",
-        "title":"Qu’est-ce que le Minuteur à rebours ?",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    },
-    {"userId" : 1,
-        "id":3,
-        "path":"/quand_consulter",
-        "title":"Quand consulter un ergothérapeute",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    },
-    {"userId" : 1,
-        "id":4,
-        "path":"/pap_pps",
-        "title":"PAP ou PPS : quèsaco ?",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    },
-    {"userId" : 1,
-        "id":5,
-        "path":"/placer_sa_feuille",
-        "title":"COMMENT PLACER SA FEUILLE OU SON CAHIER POUR ECRIRE ?",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    },
-    {"userId" : 1,
-        "id":6,
-        "path":"/equilibre_occupationnel",
-        "title":"Equilibre occupationnel",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    },
-    {"userId" : 1,
-        "id":7,
-        "path":"/Les_troubles_neuro_visuels",
-        "title":"Les troubles neuro-visuels",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    },
-    {"userId" : 1,
-        "id":8,
-        "path":"/flemme_vs_difficultes",
-        "title":"Flemme VS difficultés",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    },
-    {"userId" : 1,
-        "id":9,
-        "path":"/autonomie",
-        "title":"Autonomie et indépendance : quèsaco ?",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    },
-    {"userId" : 1,
-        "id":10,
-        "path":"/inclusion",
-        "title":"Inclusion, intégration, séparation ou exclusion ?",
-        "imgPath":"img0",
-        "body":"<div><b>test</b></div>"
-    }
-
+  {
+    "id": 1,
+    "slug": "le_repere_des_3",
+    "title": "Le repère du 3, 6, 9, 12 de Serge Tisseron",
+    "date": "2023-05-15",
+    "imageUrl": "/pictures/articles/cards/screen.png",
+    "description": "Découvrez les recommandations de Serge Tisseron pour un usage raisonné des écrans chez les enfants."
+  },
+  {
+    "id": 2,
+    "slug": "timer",
+    "title": "Qu’est-ce que le Minuteur à rebours ?",
+    "date": "2023-06-02",
+    "imageUrl": "/pictures/articles/cards/timer.png",
+    "description": "Un outil simple mais puissant pour aider à la gestion du temps et des tâches quotidiennes."
+  },
+  {
+    "id": 3,
+    "slug": "quand_consulter",
+    "title": "Quand consulter un ergothérapeute ?",
+    "date": "2023-06-20",
+    "imageUrl": "/pictures/articles/cards/Qaund_consulter.png",
+    "description": "Identifiez les signes qui indiquent qu’une consultation en ergothérapie pourrait être bénéfique."
+  },
+  {
+    "id": 4,
+    "slug": "pap_pps",
+    "title": "PAP ou PPS : quèsaco ?",
+    "date": "2023-07-11",
+    "imageUrl": "/pictures/articles/cards/pap_pps_picture.png",
+    "description": "Comprendre les différences entre un Plan d’Accompagnement Personnalisé et un Projet Personnalisé de Scolarisation."
+  },
+  {
+    "id": 5,
+    "slug": "placer_sa_feuille",
+    "title": "Comment placer sa feuille pour écrire ?",
+    "date": "2023-08-01",
+    "imageUrl": "/pictures/articles/cards/placer sa feuille.png",
+    "description": "Des astuces pour améliorer la posture et la lisibilité de l’écriture chez l’enfant."
+  },
+  {
+    "id": 6,
+    "slug": "equilibre_occupationnel",
+    "title": "L’équilibre occupationnel",
+    "date": "2023-08-22",
+    "imageUrl": "/pictures/articles/cards/equilibre_vignetet.png",
+    "description": "Trouver le juste milieu entre les activités productives, de loisirs et de repos pour une vie saine."
+  },
+  {
+    "id": 7,
+    "slug": "les_troubles_neuro_visuels",
+    "title": "Les troubles neuro-visuels",
+    "date": "2023-09-14",
+    "imageUrl": "/pictures/articles/cards/troubles.png",
+    "description": "Mieux comprendre ces troubles qui affectent la perception visuelle et leur impact au quotidien."
+  },
+  {
+    "id": 8,
+    "slug": "flemme_vs_difficultes",
+    "title": "Flemme VS difficultés d’initiation ?",
+    "date": "2023-10-05",
+    "imageUrl": "/pictures/articles/cards/flemme_vs_difficutes.png",
+    "description": "Distinguer un simple manque de motivation de réelles difficultés à démarrer une tâche."
+  },
+  {
+    "id": 9,
+    "slug": "autonomie",
+    "title": "Autonomie et indépendance : quèsaco ?",
+    "date": "2023-10-26",
+    "imageUrl": "/pictures/articles/cards/autonomy.png",
+    "description": "Deux concepts clés en ergothérapie, souvent confondus mais pourtant bien distincts."
+  },
+  {
+    "id": 10,
+    "slug": "inclusion",
+    "title": "Inclusion, intégration, séparation ?",
+    "date": "2023-11-16",
+    "imageUrl": "/pictures/articles/cards/inclusion.png",
+    "description": "Clarifions ces termes pour mieux comprendre les enjeux de la participation sociale."
+  }
 ]

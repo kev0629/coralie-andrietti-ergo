@@ -1,57 +1,31 @@
-import React from "react";
-import Link from "next/link";
-import Card from "./Card";
-import articles from "../pages/api/articles";
-import { motion } from "framer-motion";
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import articles from '../pages/api/articles.json';
+import ArticleCard from './ArticleCard';
 
-import img0 from "/public/pictures/articles/cards/screen.png";
-import img1 from "/public/pictures/articles/cards/timer.png";
-import img2 from "/public/pictures/articles/cards/Qaund_consulter.png";
-import img3 from "/public/pictures/articles/cards/pap_pps_picture.png";
-import img4 from "/public/pictures/articles/cards/placer sa feuille.png";
-import img5 from "/public/pictures/articles/cards/equilibre_vignetet.png";
-import img6 from "/public/pictures/articles/cards/troubles.png";
-import img7 from "/public/pictures/articles/cards/flemme_vs_difficutes.png";
-import img8 from "/public/pictures/articles/cards/autonomy.png";
-import img9 from "/public/pictures/articles/cards/inclusion.png";
-
-var imgCardList = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9];
-
-// var news = articles
-var news = Object.values(articles);
-var news4 = news.reverse().slice(0, 4);
 export default function News() {
+  // Sort articles by date in descending order and take the 4 most recent
+  const recentArticles = [...articles]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 4);
+
   return (
-    <div className="centered-content">
-      <div className="g1-1-r2 ">
-        {news4.map((post, index) => (
-          <Link key={post.id} href={"/News" + post.path} passHref>
-            <div
-              style={{ margin: 20 }}
-              className={"div" + (index + 1) + " link"}
-            >
-              {/* {console.log(imgCardList[post.id - 1])} */}
-              <Card
-                title={post.title}
-                date={post.date}
-                img={imgCardList[post.id - 1]}
-              />
-            </div>
-          </Link>
+    <div className="text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        {recentArticles.map((article) => (
+          <ArticleCard key={article.id} article={article} />
         ))}
       </div>
-      <div>
-        <Link href="/News" passHref>
-          <motion.button
-            type="button"
-            name="myButton"
-            className="button"
-            whileHover={{ scale: 1.1 }}
-          >
-            Voir plus
-          </motion.button>
-        </Link>
-      </div>
+      <Link href="/News" passHref legacyBehavior>
+        <motion.a
+          className="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all"
+          whileHover={{ y: -3, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
+          whileTap={{ scale: 0.98 }}
+        >
+          Voir toutes les actualités
+        </motion.a>
+      </Link>
     </div>
   );
 }

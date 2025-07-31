@@ -1,10 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
 
 html,
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(#4D9393, #86CC99);
+  background-color: #F7F7F7; /* Use a neutral background */
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.65;
@@ -19,82 +23,16 @@ a {
   box-sizing: border-box;
 }
 
-.profile-pic>div{
-  box-shadow:10px 10px 4px rgba(0, 0, 0, 0.25) !important;
-}
-
-.title{
-  padding: 10px;
-}
-
-.active{
-  background-color: #ffffff;
-  border-radius: 8px;
-}
-
-.nav{
-  background-color: #F7F7F7;
-  width: 90%;
-  height: 158px;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0;
-  overflow: hidden; /* Position the navbar at the top of the page */
-  /*opacity: 0.8;*/
-  z-index: 1;
-  
-}
-.nav-titles {
-  position: absolute;
-  right: 0;
-  text-align: right;
-  width: 1500px;
-  vertical-align: middle;
-  padding: 0px;
-  display: inline-block;
-  margin-top: 70px;
-}
-
-.burger{
-  visibility: hidden;
-}
-
-.logo-nav{
-  display: inline-block;
-  vertical-align: middle;
-  position: absolute;
-  left: 10px;
-  padding: 20px !important;
-}
 
 
-.nav-title{
-  display: inline;
-  text-align: right;
-  font-size: 16px ;
-  padding: 15px 10px 15px 10px;
-}
-.nav-title:hover{
-  background-color: #f0f0f0;
-  border-radius: 8px;
-}
-.container{
-  padding-top: 78px;
-  width: 90%;
-}
+
+
 .section{
   padding: 50px 0 50px 0;
   border:solid 1px #F7F7F7;
   background-color: #ffffff;
 }
-.centered-content{
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
 
-}
 .section-content{
   padding: 50px 50px 0 50px;
 }
@@ -110,20 +48,7 @@ a {
   width: 104px;
 }
 
-.button {
-   background-color: #4D9393; /* Green */
-   border: none; 
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 22px;
-  border-top-left-radius:35px;
-	border-top-right-radius:35px;
-	border-bottom-left-radius:35px;
-	border-bottom-right-radius:35px;
-  cursor: pointer;
-}
+
 
 .text-section{
   margin-top: 50px;
@@ -134,20 +59,7 @@ a {
   height :100px;
   border-radius: 0 0 25px 25px;
 }
-.footer{
-  color: #ffffff;
-  margin:50px;
-  width: 90%;
-  padding-left: 50px;
-}
 
-
-.one {
-  grid-column: 1;
-}
-.two {
-  grid-column: 2;
-}
 
 .modal-button{
   margin-left: 99%;
@@ -261,54 +173,10 @@ box-sizing: border-box; /*3*/
   color: #808080;
   font-size: 12px;
 }
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(1, 1000fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
 
 
-@media screen and (max-width: 1200px) {
-  .nav-title{
-    font-size: 14px ;
-    padding: 10px ;
-  }
-}
-@media screen and (max-width: 1080px) {
-  .nav-title{
-    visibility: hidden;
-  }
-  .burger{
-    visibility: visible;
-    position: absolute !important;
-    top: 30px;
-    right: 0 !important;
-    text-align: right !important;
-    vertical-align: middle !important;
-    padding: 0px;
-    display: inline-block !important;
-    
-  }
-  .burger>svg{
-    width: 200px;
-    height: 100px;
-    color: #4D9393;
-  }
-  .g1-1-r2 {
-    display: grid;
-    grid-template-columns: 0;
-    grid-template-rows: repeat(4, 1000fr);
-    gap: 0px 0px; 
-    grid-template-areas: 
-      ". ."; 
-  }
-  .div1 { grid-area: 1 / 1 / 2 / 2; }
-  .div2 { grid-area: 2 / 1 / 3 / 2; }
-  .div3 { grid-area: 3 / 1 / 4 / 2; }
-  .div4 { grid-area: 4 / 1 / 5 / 2; }
-}
+
+
 @media screen and (max-width: 1080px) {
   .card {
     width: 200px; /*1*/
