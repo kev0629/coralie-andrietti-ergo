@@ -1,42 +1,40 @@
-import head from 'next/head'
-import Body from '../../component/Body'
-import Section from '../../component/Section'
-import articles from '../api/articles'
-import Card from '../../component/Card'
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import React from 'react';
+import Head from 'next/head';
+import Body from '../../component/Body';
+import Section from '../../component/Section';
+import articles from '../api/articles.json';
+import ArticleCard from '../../component/ArticleCard';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-import img0 from '/public/pictures/articles/cards/screen.png'
-import img1 from '/public/pictures/articles/cards/timer.png'
-import img2 from '/public/pictures/articles/cards/Qaund_consulter.png'
-import img3 from '/public/pictures/articles/cards/pap_pps_picture.png'
-import img4 from '/public/pictures/articles/cards/placer sa feuille.png'
-import img5 from '/public/pictures/articles/cards/equilibre_vignetet.png'
-import img6 from '/public/pictures/articles/cards/troubles.png'
-import img7 from '/public/pictures/articles/cards/flemme_vs_difficutes.png'
-import img8 from '/public/pictures/articles/cards/autonomy.png'
-import img9 from '/public/pictures/articles/cards/inclusion.png'
-var imgCardList = [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9]
+export default function AllNewsPage() {
+  // Sort articles by date in descending order
+  const sortedArticles = [...articles].sort((a, b) => new Date(b.date) - new Date(a.date));
 
-var news = Object.values(articles)
-news = news.reverse()
-export default function ActuPage() {
-    return (
-        <Body>
-            <Section title='Actualités'>
-            <Link href='/#actu' passHref><motion.button type="button" name="myButton" className='button' whileHover={{scale:1.1}}>{'Retour'}</motion.button></Link>
-            <div className='centered-content'>
-             <div className="g1-1-r2">
-                    {news.map((post)=>(
-                <Link key={post.id} href={'/News'+post.path} passHref>
-                    <div key={post.id} style={{margin:20}} className='link'>
-                        <Card title={post.title} date={post.date} img={imgCardList[post.id - 1]}/>
-                    </div>
-                </Link>
-                ))}
-               </div> 
-            </div>
-            </Section>
-        </Body> 
-    )}
+  return (
+    <Body>
+      <Head>
+        <title>Toutes les actualités - Coralie Andrietti</title>
+        <meta name="description" content="Parcourez toutes les actualités et articles publiés par Coralie Andrietti, ergothérapeute." />
+      </Head>
+      <Section title="Toutes les actualités">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {sortedArticles.map((article) => (
+            <ArticleCard key={article.id} article={article} />
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <Link href="/#actu" passHref legacyBehavior>
+            <motion.a
+              className="inline-block bg-gray-200 text-dark font-semibold py-3 px-8 rounded-full shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 transition-all"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              &larr; Retour à l'accueil
+            </motion.a>
+          </Link>
+        </div>
+      </Section>
+    </Body>
+  );
+}
