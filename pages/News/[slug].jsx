@@ -18,7 +18,7 @@ export default function ArticlePage() {
     return (
       <Body>
         <Section title="Article non trouvé">
-          <p>Désolé, cet article n'a pas pu être trouvé.</p>
+          <p>Désolé, cet article n&apos;a pas pu être trouvé.</p>
           <div className="text-center mt-8">
             <Link href="/News" passHref legacyBehavior>
               <motion.a className="inline-block bg-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90">
@@ -44,8 +44,8 @@ export default function ArticlePage() {
             {/* This is where you would render the actual article content */}
             {/* For now, it just shows a placeholder */}
             <div className="prose lg:prose-xl max-w-none mx-auto">
-                <p>Le contenu de l'article pour "{article.title}" sera affiché ici.</p>
-                <p>Pour l'instant, les anciennes pages comme <code>{article.slug}.jsx</code> sont toujours utilisées. Il faudra migrer leur contenu ici.</p>
+                <p>Le contenu de l&apos;article pour &quot;{article.title}&quot; sera affiché ici.</p>
+                <p>Pour l&apos;instant, les anciennes pages comme <code>{article.slug}.jsx</code> sont toujours utilisées. Il faudra migrer leur contenu ici.</p>
             </div>
 
             <div className="text-center mt-12">

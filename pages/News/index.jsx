@@ -30,7 +30,7 @@ export default function AllNewsPage() {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
-              &larr; Retour à l'accueil
+              &larr; Retour à l&apos;accueil
             </motion.a>
           </Link>
         </div>
