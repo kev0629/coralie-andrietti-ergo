@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Body from '../../component/Body';
-import Section from '../../component/Section';
+import Body from '../../components/Body';
+import Section from '../../components/Section';
 import articles from '../api/articles.json';
 import Image from 'next/image';
 import Link from 'next/link';

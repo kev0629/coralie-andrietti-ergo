@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import "../styles/style_modal.css";
 import React from "react";
-import AppContext from "../component/AppContext";
+import AppContext from "../components/AppContext";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
