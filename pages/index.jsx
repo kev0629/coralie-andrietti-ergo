@@ -32,7 +32,7 @@ export default function Home({ datas }) {
       <Modal datas={datas} />
       <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres} />
       <Body>
-        <Section id="home">
+        <Section id="home" backgroundImage="/pictures/presentation-background.png">
           <Presentation openModalPres={openModalPres} />
         </Section>
         <Section title="Actualités" id="actu">
