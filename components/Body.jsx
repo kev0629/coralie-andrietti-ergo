@@ -7,7 +7,7 @@ export default function Body(props) {
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Navbar />
       <main className="flex-grow mx-auto py-8">
-        <div className="bg-white shadow-sm p-8">{props.children}</div>
+        <div className="bg-white shadow-sm">{props.children}</div>
       </main>
       <Footer />
     </div>

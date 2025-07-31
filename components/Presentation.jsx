@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import profilePic from '../public/pictures/0.jpeg';
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import profilePic from "../public/pictures/0.jpeg";
 
 export default function Presentation({ openModalPres }) {
   return (
@@ -24,18 +24,17 @@ export default function Presentation({ openModalPres }) {
       </div>
 
       {/* Name and Title */}
-      <h1 className="text-4xl font-bold text-dark mb-1">
-        Coralie Andrietti
-      </h1>
-      <p className="text-xl text-gray-600 mb-8">
-        Ergothérapeute D.E
-      </p>
+      <h1 className="text-4xl font-bold text-dark mb-1">Coralie Andrietti</h1>
+      <p className="text-xl text-gray-600 mb-8">Ergothérapeute D.E</p>
 
       {/* Contact Information */}
       <div className="text-base text-gray-500 mb-8 space-y-2">
         <p>Séance sur RDV, en cabinet ou à domicile</p>
         <p>
-          <a href="mailto:coralie.andrietti@gmail.com" className="hover:text-primary transition-colors">
+          <a
+            href="mailto:coralie.andrietti@gmail.com"
+            className="hover:text-primary transition-colors"
+          >
             coralie.andrietti@gmail.com
           </a>
           <span className="mx-2">|</span>
@@ -48,7 +47,11 @@ export default function Presentation({ openModalPres }) {
       <motion.button
         onClick={openModalPres}
         className="bg-primary text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all"
-        whileHover={{ y: -3, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
+        whileHover={{
+          y: -3,
+          boxShadow:
+            "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+        }}
         whileTap={{ scale: 0.98 }}
       >
         Découvrir mon parcours
