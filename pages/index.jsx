@@ -60,7 +60,7 @@ export default function Home({ datas }) {
 
 export async function getStaticProps() {
   const notion = new Client({ auth: process.env.NOTION_API_KEY });
-  const databaseId = process.env.DATABASE_ID;
+  // const databaseId = process.env.DATABASE_ID;
   const response = await notion.databases.query({
     database_id: process.env.DATABASE_ID,
   });
