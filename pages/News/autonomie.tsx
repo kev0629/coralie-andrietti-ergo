@@ -13,6 +13,7 @@ interface Article {
 
 export default function Autonomie() {
   let articleIndex = 8;
+  console.log(articles);
   return (
     <Body>
       <Section title={articles[articleIndex].title}>
