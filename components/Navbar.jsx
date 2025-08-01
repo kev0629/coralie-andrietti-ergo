@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Link as ScrollLink } from 'react-scroll';
-import logo_title from '../public/pictures/Logo_title.png';
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Link as ScrollLink } from "react-scroll";
+import logo_title from "../public/pictures/Logo_title.png";
 
 // Custom NavLink to handle smooth scroll on home page vs. regular links on other pages
 const NavLink = ({ to, href, children }) => {
   const router = useRouter();
-  const isHomePage = router.pathname === '/';
+  const isHomePage = router.pathname === "/";
 
-  const linkClasses = "relative text-gray-700 hover:text-primary font-medium py-2 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-primary after:transform after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100";
-  const activeLinkClasses = "relative text-primary font-medium py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-primary after:transform after:scale-x-100 after:origin-left";
+  const linkClasses =
+    "relative text-gray-700 hover:text-primary font-medium py-2 transition-colors duration-300 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-primary after:transform after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100";
+  const activeLinkClasses =
+    "relative text-primary font-medium py-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-primary after:transform after:scale-x-100 after:origin-left";
 
   if (isHomePage) {
     return (
@@ -20,7 +22,7 @@ const NavLink = ({ to, href, children }) => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-80} // Adjust offset for the sticky navbar height
+        offset={-80}
         className={linkClasses}
         activeClass={activeLinkClasses}
       >
@@ -31,9 +33,7 @@ const NavLink = ({ to, href, children }) => {
 
   return (
     <Link href={href} legacyBehavior>
-      <a className={linkClasses}>
-        {children}
-      </a>
+      <a className={linkClasses}>{children}</a>
     </Link>
   );
 };
@@ -41,36 +41,48 @@ const NavLink = ({ to, href, children }) => {
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
 
-  // Handle navbar background change on scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { to: 'home', href: '/#home', label: 'Présentation' },
-    { to: 'actu', href: '/#actu', label: 'Actualités' },
+    { to: "home", href: "/#home", label: "Présentation" },
+    { to: "actu", href: "/#actu", label: "Actualités" },
     { to: "What", href: "/#What", label: "Qu'est-ce que c'est ?" },
-    { to: 'Who', href: '/#Who', label: 'Pour qui ?' },
-    { to: 'When', href: '/#When', label: 'Quand consulter ?' },
-    { to: 'Follow', href: '/#Follow', label: 'Accompagnement' },
-    { to: 'Localisation', href: '/#Localisation', label: 'Localisation' },
+    { to: "Who", href: "/#Who", label: "Pour qui ?" },
+    { to: "When", href: "/#When", label: "Quand consulter ?" },
+    { to: "Follow", href: "/#Follow", label: "Accompagnement" },
+    { to: "Localisation", href: "/#Localisation", label: "Localisation" },
   ];
 
+  const isHomePageTop = !isScrolled && router.pathname === "/";
+
+  const navContainerClasses = `z-50 w-full transition-all duration-300 ${
+    isHomePageTop ? "absolute" : "sticky top-0"
+  }`;
+  const navVisualClasses = `bg-gray-100/40 backdrop-blur-lg ${
+    isScrolled ? "shadow-xl rounded-full" : ""
+  }`;
+
   return (
-    <nav 
-      className={`sticky top-0 z-50 transition-all duration-300`}>
-      <div className={`flex justify-between items-center transition-all duration-500 ease-in-out ${isScrolled ? 'container mx-auto bg-white/95 backdrop-blur-lg shadow-xl rounded-full mt-2 px-6 py-1' : 'px-6 py-4'}`}>
+    <nav className={`${navContainerClasses} ${navVisualClasses}`}>
+      <div
+        className={`flex justify-between items-center container mx-auto transition-all duration-500 ease-in-out ${
+          isScrolled ? "mt-2 px-6 py-1" : "px-6 py-4"
+        }`}
+      >
         <Link href="/#home" legacyBehavior>
           <a className="cursor-pointer">
             <Image
               src={logo_title}
-              width={isScrolled ? 150 : 180}
-              height={isScrolled ? 45 : 55}
+              width={150}
+              height={45}
               alt="Coralie Andrietti logo"
               className="transition-all duration-500"
             />
@@ -88,29 +100,63 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-dark focus:outline-none">
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-dark focus:outline-none"
+          >
+            <svg
+              className="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
             </svg>
           </button>
         </div>
       </div>
 
       {/* Mobile Menu (Drawer) */}
-      <div className={`md:hidden absolute top-0 left-0 w-full bg-white shadow-lg transition-transform duration-300 ease-in-out ${menuOpen ? 'transform-none' : '-translate-y-full'}`}>
+      <div
+        className={`md:hidden absolute top-0 left-0 w-full bg-white shadow-lg transition-transform duration-300 ease-in-out ${
+          menuOpen ? "transform-none" : "-translate-y-full"
+        }`}
+      >
         <ul className="flex flex-col items-center space-y-6 p-8 pt-24">
           {navLinks.map((link) => (
             <li key={link.to}>
               <NavLink to={link.to} href={link.href}>
-                <span onClick={() => setMenuOpen(false)} className="text-lg">{link.label}</span>
+                <span onClick={() => setMenuOpen(false)} className="text-lg">
+                  {link.label}
+                </span>
               </NavLink>
             </li>
           ))}
         </ul>
-        <button onClick={() => setMenuOpen(false)} className="absolute top-6 right-6 text-dark focus:outline-none">
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
+        <button
+          onClick={() => setMenuOpen(false)}
+          className="absolute top-6 right-6 text-dark focus:outline-none"
+        >
+          <svg
+            className="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
         </button>
       </div>
     </nav>

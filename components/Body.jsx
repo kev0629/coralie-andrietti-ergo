@@ -4,9 +4,9 @@ import React from "react";
 
 export default function Body(props) {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="relative flex flex-col min-h-screen bg-gray-100">
       <Navbar />
-      <main className="flex-grow mx-auto py-8">
+      <main className="flex-grow mx-auto">
         <div className="bg-white shadow-sm">{props.children}</div>
       </main>
       <Footer />
