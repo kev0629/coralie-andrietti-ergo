@@ -5,7 +5,7 @@ import Image from "next/image";
 import repere from "../../public/pictures/articles/reperes.png";
 
 export default function LeRepereDes3() {
-  var articleIndex = 0;
+  let articleIndex = 0;
   return (
     <Body>
       <Section title={articles[articleIndex].title}>
