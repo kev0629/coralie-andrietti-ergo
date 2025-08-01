@@ -7,7 +7,7 @@ import quand2 from "../../public/pictures/articles/quand2.jpeg";
 import quand3 from "../../public/pictures/articles/quand3.jpeg";
 
 export default function QuandConsulter() {
-  var articleIndex = 2;
+  let articleIndex = 2;
   return (
     <Body>
       <Section title={articles[articleIndex].title}>

@@ -18,7 +18,7 @@ interface Article {
 }
 
 export default function Inclusion() {
-  var articleIndex = 9;
+  let articleIndex = 9;
   return (
     <Body>
       <Section title={articles[articleIndex].title}>

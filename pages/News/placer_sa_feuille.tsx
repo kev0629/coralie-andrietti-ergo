@@ -9,7 +9,7 @@ import feuille3 from "../../public/pictures/articles/feuille3.png";
 import feuille4 from "../../public/pictures/articles/feuille4.png";
 
 export default function placerSaFeuilles() {
-  var articleIndex = 4;
+  let articleIndex = 4;
   return (
     <Body>
       <Section title={articles[articleIndex].title}>

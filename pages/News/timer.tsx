@@ -5,7 +5,7 @@ import Image from "next/image";
 import timer from "../../public/pictures/articles/timer_coco.png";
 
 export default function Timer() {
-  var articleIndex = 1;
+  let articleIndex = 1;
   return (
     <Body>
       <Section title={articles[articleIndex].title}>

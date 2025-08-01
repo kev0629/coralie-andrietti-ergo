@@ -9,7 +9,7 @@ import trouble2 from "../../public/pictures/articles/trouble2.jpg";
 import React from "react";
 
 export default function Les_troubles_neuro_visuels() {
-  var articleIndex = 6;
+  let articleIndex = 6;
   return (
     <Body>
       <Section title={articles[articleIndex].title}>

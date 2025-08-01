@@ -5,7 +5,7 @@ import Image from "next/image";
 import papPps from "../../public/pictures/articles/pap_pps.png";
 
 export default function papPpps() {
-  var articleIndex = 3;
+  let articleIndex = 3;
   return (
     <Body>
       <Section title={articles[articleIndex].title}>
