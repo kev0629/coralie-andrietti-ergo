@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Section({ id, title, children, backgroundImage }) {
+export default function Section({ id, title, children, backgroundImage, className }) {
   const style = backgroundImage
     ? { backgroundImage: `url(${backgroundImage})` }
     : {};
@@ -8,7 +8,7 @@ export default function Section({ id, title, children, backgroundImage }) {
   return (
     <section
       id={id}
-      className="py-12 md:py-16 bg-cover bg-center"
+      className={`py-12 md:py-16 bg-cover bg-center ${className}`}
       style={style}
     >
       {title && (
