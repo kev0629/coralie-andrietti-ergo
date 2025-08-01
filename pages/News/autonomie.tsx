@@ -1,10 +1,6 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
 import articles from "../../pages/api/articles.json";
-import Image from "next/image";
-import quand1 from "../../public/pictures/articles/quand1.jpeg";
-import quand2 from "../../public/pictures/articles/quand2.jpeg";
-import quand3 from "../../public/pictures/articles/quand3.jpeg";
 
 interface Article {
   id: number;
