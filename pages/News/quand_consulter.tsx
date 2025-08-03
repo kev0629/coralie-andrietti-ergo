@@ -42,7 +42,7 @@ export default function QuandConsulter({ article }: QuandConsulterProps) {
         Systématiquement, l’enseignant me demande mon avis sur la pertinence
         d’envoyer cet enfant consulter un ergothérapeute.
         <br />
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={quand1}
             alt="maternelle"

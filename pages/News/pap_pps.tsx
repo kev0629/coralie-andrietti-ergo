@@ -31,7 +31,7 @@ export default function papPpps({ article }: PapPppsProps) {
   return (
     <Body>
       <Section title={article.title}>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={papPps}
             alt="what_plan"

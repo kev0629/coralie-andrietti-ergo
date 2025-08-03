@@ -71,7 +71,7 @@ export default function EquilibreOccupationnel({ article }: EquilibreOccupationn
         l’on appelle :{" "}
         <b style={{ fontSize: 18 }}>l’équilibre occupationnel.</b>
         <br />
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={equilibre2}
             alt="balance"
@@ -86,13 +86,13 @@ export default function EquilibreOccupationnel({ article }: EquilibreOccupationn
         <b>et la satisfaction que cela nous apporte.</b>
         <br />
         <br />
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           Plus facile à dire qu’à faire bien sûr !
         </div>
-        <div className="centered-content" style={{ fontSize: 18 }}>
+        <div className="flex justify-center my-4" style={{ fontSize: 18 }}>
           A votre avis, avez-vous un bon équilibre occupationnel ?
         </div>
-        <div className="centered-content" style={{ fontSize: 18 }}>
+        <div className="flex justify-center my-4" style={{ fontSize: 18 }}>
           Ou traversez-vous une période de déséquilibre occupationnel ?
         </div>
         <br />A l’inverse, on peut parler de{" "}
@@ -110,7 +110,9 @@ export default function EquilibreOccupationnel({ article }: EquilibreOccupationn
         </b>
         <br />
         <br />
-        <Image src={equilibre1} alt="pierre equilibre" placeholder="blur" />
+        <div className="flex justify-center my-4">
+          <Image src={equilibre1} alt="pierre equilibre" placeholder="blur" />
+        </div>
         <div className="note">
           Sources :<br />
           Ay-Woan, Sarah, Lyinn, Tsyr-Jang &amp; Ping-Chuan, 2006; Glass, de

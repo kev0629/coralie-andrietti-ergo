@@ -35,7 +35,7 @@ export default function placerSaFeuilles({ article }: PlacerSaFeuillesProps) {
   return (
     <Body>
       <Section title={article.title}>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           Petit truc et astuce facile à mettre en place pour faciliter le geste
           graphique N°1
         </div>
@@ -43,7 +43,7 @@ export default function placerSaFeuilles({ article }: PlacerSaFeuillesProps) {
         Lorsque j’étais à l’école primaire, ma maîtresse m’avait appris à placer
         ma feuille bien droite devant moi pour écrire (cf photo ci-dessous).
         <br />
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={feuille1}
             alt="feuille droite"
@@ -78,7 +78,7 @@ export default function placerSaFeuilles({ article }: PlacerSaFeuillesProps) {
         envoyer la balle à droite du coup la jambe gauche va croiser la ligne
         médiane et tirer à droite.
         <br />
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={feuille2}
             alt="football"
@@ -114,7 +114,7 @@ export default function placerSaFeuilles({ article }: PlacerSaFeuillesProps) {
         <br />
         <br />
         Placer sa feuille dans le prolongement du bras :
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={feuille3}
             alt="feuille angle"
@@ -123,7 +123,7 @@ export default function placerSaFeuilles({ article }: PlacerSaFeuillesProps) {
             placeholder="blur"
           />
         </div>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={feuille4}
             alt="feuille angle 2"

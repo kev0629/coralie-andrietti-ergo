@@ -35,7 +35,7 @@ export default function FlemmeVsDif({ article }: FlemmeVsDifProps) {
   return (
     <Body>
       <Section title={article.title}>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={flemme1}
             alt="flemme vs difficulté"
@@ -44,7 +44,7 @@ export default function FlemmeVsDif({ article }: FlemmeVsDifProps) {
             placeholder="blur"
           />
         </div>
-        <p className="centered-content">
+        <p className="flex justify-center my-4">
           En tant qu’ergo, je suis très souvent confrontée à des enfants qui
           semblent « avoir la flemme » ou « freiner des quatre fers » quand je
           leur présente une activité. Parfois même, ces réactions peuvent aller
@@ -53,7 +53,7 @@ export default function FlemmeVsDif({ article }: FlemmeVsDifProps) {
           eux-mêmes …
         </p>
         <br />
-        <p className="centered-content" style={{ fontSize: 18 }}>
+        <p className="flex justify-center my-4" style={{ fontSize: 18 }}>
           Et si ces comportements étaient en fait un signal d’alarme de
           difficultés ?
         </p>
@@ -63,7 +63,7 @@ export default function FlemmeVsDif({ article }: FlemmeVsDifProps) {
         </p>
         <p>Par exemple:</p>
         <div className="g03-1">
-          <div className="centered-content">
+          <div className="flex justify-center my-4">
             <Image
               src={flemme2}
               alt="flemme vs difficulté"
@@ -100,7 +100,7 @@ export default function FlemmeVsDif({ article }: FlemmeVsDifProps) {
               }
             </p>
           </div>
-          <div className="centered-content">
+          <div className="flex justify-center my-4">
             <Image
               src={flemme3}
               alt="flemme vs difficulté"
@@ -144,7 +144,7 @@ export default function FlemmeVsDif({ article }: FlemmeVsDifProps) {
             "développement de certaines compétences sans qu'il y ait forcément de pathologie sous-jacente."
           }
         </p>
-        <p className="centered-content" style={{ fontSize: 18 }}>
+        <p className="flex justify-center my-4" style={{ fontSize: 18 }}>
           <b>
             {
               "Parents, c'est vous qui connaissez le mieux votre enfant. Si vous avez le moindre questionnement sur un "
@@ -155,7 +155,7 @@ export default function FlemmeVsDif({ article }: FlemmeVsDifProps) {
           </b>
         </p>
         <br />
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={flemme4}
             alt="flemme vs difficulté"

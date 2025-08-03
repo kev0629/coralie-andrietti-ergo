@@ -80,7 +80,7 @@ export default function Autonomie({ article }: AutonomieProps) {
           rééduquer certaines capacités physiques, c’est adapter l’environnement
           etc.
         </p>
-        <p className="centered-content" style={{ fontSize: 25 }}>
+        <p className="flex justify-center my-4" style={{ fontSize: 25 }}>
           <b>PETIT QUIZZ :</b>
         </p>
         <p>
@@ -90,7 +90,7 @@ export default function Autonomie({ article }: AutonomieProps) {
           sa toilette seule. En revanche, si son fils ne l’appelle pas à l’heure
           des repas, parfois elle oublie de manger.
         </p>
-        <p className="centered-content">
+        <p className="flex justify-center my-4">
           <b>Est-elle autonome ? Est-elle indépendante ?</b>
         </p>
         <p>
@@ -104,7 +104,7 @@ export default function Autonomie({ article }: AutonomieProps) {
           rentrer en institution car il comprend qu’il lui est maintenant
           difficile de vivre seul à son domicile.
         </p>
-        <p className="centered-content">
+        <p className="flex justify-center my-4">
           <b>Est-elle autonome ? Est-elle indépendante ?</b>
         </p>
         <p>
