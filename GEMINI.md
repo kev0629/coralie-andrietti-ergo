@@ -5,3 +5,4 @@
 - le style se fait avec tailwind.
 - c'est un site web pour une ergothérapeute
 - c'est un site vitrine qui fait aussi des articles
+- chaque choses qui te permettent de comprendre mieux le contexte du projet tu peux les rajouter dans GEMINI.MD

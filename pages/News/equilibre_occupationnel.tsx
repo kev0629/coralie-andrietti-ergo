@@ -1,6 +1,6 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
-import articles from "../../pages/api/articles.json";
+import articlesData from "../../pages/api/articles.json";
 import Image from "next/image";
 import equilibre1 from "../../public/pictures/articles/equilibre1.jpg";
 import equilibre2 from "../../public/pictures/articles/equilibre2.jpg";
@@ -14,11 +14,24 @@ interface Article {
   description: string;
 }
 
-export default function EquilibreOccupationnel() {
-  let articleIndex = 5;
+interface EquilibreOccupationnelProps {
+  article: Article;
+}
+
+export default function EquilibreOccupationnel({ article }: EquilibreOccupationnelProps) {
+  if (!article) {
+    return (
+      <Body>
+        <Section title="Article non trouvé">
+          <p>Désolé, cet article n&apos;a pas pu être trouvé.</p>
+        </Section>
+      </Body>
+    );
+  }
+
   return (
     <Body>
-      <Section title={articles[articleIndex].title}>
+      <Section title={article.title}>
         Bébé, enfant, ado, adultes ou personnes âgées, toutes nos journées sont
         rythmées par un grand nombre d’activités. Ainsi, prendre son petit
         déjeuner, se brosser les dents, conduire, aller à l’école, aller au
@@ -109,3 +122,21 @@ export default function EquilibreOccupationnel() {
     </Body>
   );
 }
+
+export async function getStaticProps() {
+  const article = articlesData.find((a) => a.slug === "equilibre_occupationnel");
+
+  if (!article) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
+}
+
+

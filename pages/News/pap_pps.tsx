@@ -1,14 +1,36 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
-import articles from "../api/articles.json";
+import articlesData from "../../pages/api/articles.json";
 import Image from "next/image";
 import papPps from "../../public/pictures/articles/pap_pps.png";
 
-export default function papPpps() {
-  let articleIndex = 3;
+interface Article {
+  id: number;
+  slug: string;
+  title: string;
+  date: string;
+  imageUrl: string;
+  description: string;
+}
+
+interface PapPppsProps {
+  article: Article;
+}
+
+export default function papPpps({ article }: PapPppsProps) {
+  if (!article) {
+    return (
+      <Body>
+        <Section title="Article non trouvé">
+          <p>Désolé, cet article n&apos;a pas pu être trouvé.</p>
+        </Section>
+      </Body>
+    );
+  }
+
   return (
     <Body>
-      <Section title={articles[articleIndex].title}>
+      <Section title={article.title}>
         <div className="centered-content">
           <Image
             src={papPps}
@@ -94,4 +116,20 @@ export default function papPpps() {
       </Section>
     </Body>
   );
+}
+
+export async function getStaticProps() {
+  const article = articlesData.find((a) => a.slug === "pap_pps");
+
+  if (!article) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
 }

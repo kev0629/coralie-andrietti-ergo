@@ -1,6 +1,6 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
-import articles from "../api/articles.json";
+import articlesData from "../../pages/api/articles.json";
 import Image from "next/image";
 
 import feuille1 from "../../public/pictures/articles/feuille1.jpg";
@@ -8,11 +8,33 @@ import feuille2 from "../../public/pictures/articles/feuille2.png";
 import feuille3 from "../../public/pictures/articles/feuille3.png";
 import feuille4 from "../../public/pictures/articles/feuille4.png";
 
-export default function placerSaFeuilles() {
-  let articleIndex = 4;
+interface Article {
+  id: number;
+  slug: string;
+  title: string;
+  date: string;
+  imageUrl: string;
+  description: string;
+}
+
+interface PlacerSaFeuillesProps {
+  article: Article;
+}
+
+export default function placerSaFeuilles({ article }: PlacerSaFeuillesProps) {
+  if (!article) {
+    return (
+      <Body>
+        <Section title="Article non trouvé">
+          <p>Désolé, cet article n&apos;a pas pu être trouvé.</p>
+        </Section>
+      </Body>
+    );
+  }
+
   return (
     <Body>
-      <Section title={articles[articleIndex].title}>
+      <Section title={article.title}>
         <div className="centered-content">
           Petit truc et astuce facile à mettre en place pour faciliter le geste
           graphique N°1
@@ -116,4 +138,20 @@ export default function placerSaFeuilles() {
       </Section>
     </Body>
   );
+}
+
+export async function getStaticProps() {
+  const article = articlesData.find((a) => a.slug === "placer_sa_feuille");
+
+  if (!article) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
 }
