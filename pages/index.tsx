@@ -27,7 +27,10 @@ interface HomeProps {
   datas: DataItem[];
 }
 
+import { useModal } from "../components/ModalContext";
+
 export default function Home({ datas }: HomeProps) {
+  const { toggleContactModal } = useModal();
   const [modalPresIsOpen, setPresIsOpen] = React.useState(false);
 
   function openModalPres() {
@@ -46,7 +49,7 @@ export default function Home({ datas }: HomeProps) {
       <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres} />
       <Body>
         <Section id="home" backgroundImage="/pictures/presentation-background.png" className="h-screen">
-          <Presentation openModalPres={openModalPres} />
+          <Presentation openModalPres={toggleContactModal} />
         </Section>
         <Section title="Actualités" id="actu">
           <News />

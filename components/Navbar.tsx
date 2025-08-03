@@ -44,7 +44,10 @@ const NavLink = ({ to, href, children }: NavLinkProps) => {
   );
 };
 
-export default function Navbar() {
+import { useModal } from "./ModalContext";
+
+const Navbar = () => {
+  const { toggleContactModal } = useModal();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
@@ -102,6 +105,12 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
+          <button
+            onClick={toggleContactModal}
+            className="bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-dark transition-colors"
+          >
+            Me contacter
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -144,6 +153,17 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <button
+              onClick={() => {
+                toggleContactModal();
+                setMenuOpen(false);
+              }}
+              className="bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-dark transition-colors w-full"
+            >
+              Me contacter
+            </button>
+          </li>
         </ul>
         <button
           onClick={() => setMenuOpen(false)}
@@ -167,4 +187,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
