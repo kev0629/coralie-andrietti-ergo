@@ -1,6 +1,6 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
-import articles from "../../pages/api/articles.json";
+import articlesData from "../../pages/api/articles.json"; // Renamed to avoid conflict with 'articles' prop
 
 interface Article {
   id: number;
@@ -11,12 +11,24 @@ interface Article {
   description: string;
 }
 
-export default function Autonomie() {
-  let articleIndex = 8;
-  console.log(articles);
+interface AutonomieProps {
+  article: Article;
+}
+
+export default function Autonomie({ article }: AutonomieProps) {
+  if (!article) {
+    return (
+      <Body>
+        <Section title="Article non trouvé">
+          <p>Désolé, cet article n&apos;a pas pu être trouvé.</p>
+        </Section>
+      </Body>
+    );
+  }
+
   return (
     <Body>
-      <Section title={articles[articleIndex].title}>
+      <Section title={article.title}>
         <p style={{ textIndent: 20 }}>
           Dans la vie de tous les jours, nous utilisons ces termes sans
           réellement les distinguer, et pourtant … En ergothérapie, ces deux
@@ -114,4 +126,20 @@ export default function Autonomie() {
       </Section>
     </Body>
   );
+}
+
+export async function getStaticProps() {
+  const article = articlesData.find((a) => a.slug === "autonomie");
+
+  if (!article) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
 }

@@ -1,16 +1,38 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
-import articles from "../api/articles.json";
+import articlesData from "../../pages/api/articles.json";
 import Image from "next/image";
 import quand1 from "../../public/pictures/articles/quand1.jpeg";
 import quand2 from "../../public/pictures/articles/quand2.jpeg";
 import quand3 from "../../public/pictures/articles/quand3.jpeg";
 
-export default function QuandConsulter() {
-  let articleIndex = 2;
+interface Article {
+  id: number;
+  slug: string;
+  title: string;
+  date: string;
+  imageUrl: string;
+  description: string;
+}
+
+interface QuandConsulterProps {
+  article: Article;
+}
+
+export default function QuandConsulter({ article }: QuandConsulterProps) {
+  if (!article) {
+    return (
+      <Body>
+        <Section title="Article non trouvé">
+          <p>Désolé, cet article n&apos;a pas pu être trouvé.</p>
+        </Section>
+      </Body>
+    );
+  }
+
   return (
     <Body>
-      <Section title={articles[articleIndex].title}>
+      <Section title={article.title}>
         Ce sont sûrement les questions les plus fréquentes qui me sont posées
         lorsque je dois intervenir dans les écoles.
         <br />
@@ -54,4 +76,20 @@ export default function QuandConsulter() {
       </Section>
     </Body>
   );
+}
+
+export async function getStaticProps() {
+  const article = articlesData.find((a) => a.slug === "quand_consulter");
+
+  if (!article) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
 }

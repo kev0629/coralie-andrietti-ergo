@@ -1,6 +1,6 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
-import articles from "../../pages/api/articles.json";
+import articlesData from "../../pages/api/articles.json";
 
 interface Article {
   id: number;
@@ -17,11 +17,24 @@ import flemme2 from "../../public/pictures/articles/flemme2.jpg";
 import flemme3 from "../../public/pictures/articles/flemme3.jpg";
 import flemme4 from "../../public/pictures/articles/flemme4.png";
 
-export default function FlemmeVsDif() {
-  let articleIndex = 7;
+interface FlemmeVsDifProps {
+  article: Article;
+}
+
+export default function FlemmeVsDif({ article }: FlemmeVsDifProps) {
+  if (!article) {
+    return (
+      <Body>
+        <Section title="Article non trouvé">
+          <p>Désolé, cet article n&apos;a pas pu être trouvé.</p>
+        </Section>
+      </Body>
+    );
+  }
+
   return (
     <Body>
-      <Section title={articles[articleIndex].title}>
+      <Section title={article.title}>
         <div className="centered-content">
           <Image
             src={flemme1}
@@ -154,4 +167,20 @@ export default function FlemmeVsDif() {
       </Section>
     </Body>
   );
+}
+
+export async function getStaticProps() {
+  const article = articlesData.find((a) => a.slug === "flemme_vs_difficultes");
+
+  if (!article) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
 }

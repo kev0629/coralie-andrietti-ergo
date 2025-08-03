@@ -1,7 +1,7 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
 import Image from "next/image";
-import articles from "../../pages/api/articles.json";
+import articlesData from "../../pages/api/articles.json";
 
 import inclusion from "../../public/pictures/articles/inclusion.png";
 import exclusion from "../../public/pictures/articles/exclusion.png";
@@ -17,11 +17,24 @@ interface Article {
   description: string;
 }
 
-export default function Inclusion() {
-  let articleIndex = 9;
+interface InclusionProps {
+  article: Article;
+}
+
+export default function Inclusion({ article }: InclusionProps) {
+  if (!article) {
+    return (
+      <Body>
+        <Section title="Article non trouvé">
+          <p>Désolé, cet article n&apos;a pas pu être trouvé.</p>
+        </Section>
+      </Body>
+    );
+  }
+
   return (
     <Body>
-      <Section title={articles[articleIndex].title}>
+      <Section title={article.title}>
         <div className="centered-content">
           <p>
             <b style={{ fontSize: 20 }}>
@@ -182,4 +195,20 @@ export default function Inclusion() {
       </Section>
     </Body>
   );
+}
+
+export async function getStaticProps() {
+  const article = articlesData.find((a) => a.slug === "inclusion");
+
+  if (!article) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
 }
