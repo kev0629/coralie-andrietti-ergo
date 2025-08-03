@@ -60,7 +60,7 @@ export default function Modal({ datas }: ModalProps) {
 
         <div className="text-gray-600 space-y-3">
           <ul className="list-disc list-inside space-y-2">
-            {datas.map((data) =>
+            {Array.isArray(datas) && datas.map((data) =>
               data.properties.Name.title[0] ? (
                 <li key={data.id}>{data.properties.Name.title[0].plain_text}</li>
               ) : null
