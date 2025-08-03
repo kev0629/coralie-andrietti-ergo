@@ -31,7 +31,7 @@ export default function LeRepereDes3({ article }: LeRepereDes3Props) {
   return (
     <Body>
       <Section title={article.title}>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={repere}
             alt="le repère des 3-6-9-12"

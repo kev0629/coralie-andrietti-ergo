@@ -1,6 +1,6 @@
 import Body from "../../components/Body";
 import Section from "../../components/Section";
-import articlesData from "../../pages/api/articles.json";
+import articlesData from "../api/articles.json";
 import Image from "next/image";
 import arrow from "../../public/pictures/arrow-right.svg";
 import trouble1 from "../../public/pictures/articles/trouble1.jpg";
@@ -21,7 +21,9 @@ interface Les_troubles_neuro_visuelsProps {
   article: Article;
 }
 
-export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neuro_visuelsProps) {
+export default function Les_troubles_neuro_visuels({
+  article,
+}: Les_troubles_neuro_visuelsProps) {
   if (!article) {
     return (
       <Body>
@@ -37,7 +39,10 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
       <Section title={article.title}>
         <div className="g03-1">
           <div>
-            <div className="centered-content" style={{ paddingTop: "20%" }}>
+            <div
+              className="flex justify-center my-4"
+              style={{ paddingTop: "20%" }}
+            >
               <Image src={trouble1} width={461 / 3} height={681 / 3} alt="" />
             </div>
           </div>
@@ -65,7 +70,7 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
         topo pourra vous éclairer !<br />
         <br />
         <u>
-          <b className="centered-content">
+          <b className="flex justify-center my-4">
             Concrètement qu’est-ce que c’est ?{" "}
           </b>
         </u>
@@ -91,7 +96,9 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
         mouvement.
         <br />
         <br />
-        <Image width={16} height={16} alt="arrow" src={arrow} />
+        <div className="flex justify-center my-4">
+          <Image width={16} height={16} alt="arrow" src={arrow} />
+        </div>
         En bilan, l’ergothérapeute va, par exemple, v érifier que l’enfant
         (selon l’âge) peut suivre un objet en mouvement devant ses yeux, qu’il
         peut passer d’un objet à un autre avec son regard…
@@ -104,7 +111,9 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
           la reconnaissance des objets, des formes, des couleurs et des tailles.
         </b>{" "}
         <br />
-        <Image width={16} height={16} alt="arrow" src={arrow} />
+        <div className="flex justify-center my-4">
+          <Image width={16} height={16} alt="arrow" src={arrow} />
+        </div>
         En bilan, l’ergothérapeute va , par exemple, demander à l’enfant (selon
         l’âge) de reconnaître des formes et de les désigner, de retrouver des
         formes géométriques parmi plusieurs figures enchevêtrées …
@@ -119,10 +128,12 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
         plus éloigné de nous.
         <br />
         <br />
-        <Image width={16} height={16} alt="arrow" src={arrow} /> En bilan,
-        l’ergothérapeute va, par exemple, demander à l’enfant (selon l’âge) de
-        situer des éléments visuels les uns par rapport aux autres, vérifier les
-        notions de rotation mentale … <br />
+        <div className="flex justify-center my-4">
+          <Image width={16} height={16} alt="arrow" src={arrow} />
+        </div>{" "}
+        En bilan, l’ergothérapeute va, par exemple, demander à l’enfant (selon
+        l’âge) de situer des éléments visuels les uns par rapport aux autres,
+        vérifier les notions de rotation mentale … <br />
         <br />
         <u>
           <b style={{ fontSize: 20 }}>2{")"} Certains items plutôt moteurs :</b>
@@ -133,7 +144,9 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
         mouvements adaptés. Exemple : quand nous surlignons un groupe de mot
         dans un texte avec un surligneur. <br />
         <br />
-        <Image width={16} height={16} alt="arrow" src={arrow} />
+        <div className="flex justify-center my-4">
+          <Image width={16} height={16} alt="arrow" src={arrow} />
+        </div>
         En bilan, l’ergothérapeute va, par exemple, demander à l’enfant (selon
         l’âge) de réaliser un tracé sans dépasser avec un stylo, d’enfiler une
         perle …
@@ -165,7 +178,9 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
         avec des cubes … <br />
         <br />
         <u>
-          <b className="centered-content">Quels indices pour les familles ?</b>{" "}
+          <b className="flex justify-center my-4">
+            Quels indices pour les familles ?
+          </b>{" "}
         </u>
         <br />
         <ul>
@@ -190,7 +205,7 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
           <li>...</li>
         </ul>
         <u>
-          <b className="centered-content">Que faire ?</b>
+          <b className="flex justify-center my-4">Que faire ?</b>
         </u>
         <br />
         Si vous avez l’impression de repérer des difficultés chez votre enfant,
@@ -210,7 +225,9 @@ export default function Les_troubles_neuro_visuels({ article }: Les_troubles_neu
 }
 
 export async function getStaticProps() {
-  const article = articlesData.find((a) => a.slug === "les_troubles_neuro_visuels");
+  const article = articlesData.find(
+    (a) => a.slug === "les_troubles_neuro_visuels"
+  );
 
   if (!article) {
     return {

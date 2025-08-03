@@ -35,7 +35,7 @@ export default function Inclusion({ article }: InclusionProps) {
   return (
     <Body>
       <Section title={article.title}>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <p>
             <b style={{ fontSize: 20 }}>
               L’inclusion est un terme que l’on utilise souvent dans notre vie
@@ -65,7 +65,7 @@ export default function Inclusion({ article }: InclusionProps) {
           scolarisé, étudier, travailler, avoir une vie sentimentale, affective
           et sexuelle, accéder à la culture …
         </p>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={inclusion}
             alt="inclusion"
@@ -98,7 +98,7 @@ export default function Inclusion({ article }: InclusionProps) {
             .
           </li>
         </ul>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <i>
             Selon l’INSEE « 41% de jeunes handicapés affirment souffrir de
             discrimination, notamment dans le milieu professionnel ».
@@ -124,7 +124,7 @@ export default function Inclusion({ article }: InclusionProps) {
             acte de séparer, est très présente dans notre société actuelle.
           </li>
         </ul>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={separation}
             alt="separation"
@@ -153,7 +153,7 @@ export default function Inclusion({ article }: InclusionProps) {
             .{" "}
           </li>
         </ul>
-        <div className="centered-content">
+        <div className="flex justify-center my-4">
           <Image
             src={integration}
             alt="integration"
@@ -175,7 +175,7 @@ export default function Inclusion({ article }: InclusionProps) {
           ultime.
         </p>
         <br />
-        <div className="centered-content" style={{ fontSize: 20 }}>
+        <div className="flex justify-center my-4" style={{ fontSize: 20 }}>
           <b>
             L’inclusion est encore loin d’être généralisée. Depuis des années,
             la société incite la personne en situation de handicap à s’adapter à
