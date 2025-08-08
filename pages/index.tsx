@@ -49,7 +49,11 @@ export default function Home({ datas }: HomeProps) {
       <Modal datas={datas} />
       <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres} />
       <Body>
-        <Section id="home" backgroundImage="/pictures/fond-presentation-coralie-andrietti.png" className="h-screen">
+        <Section
+          id="home"
+          backgroundImage="/pictures/fond-presentation-coralie-andrietti.png"
+          className="h-screen"
+        >
           <Presentation openModalPres={toggleContactModal} />
         </Section>
         <ImageGrid />
