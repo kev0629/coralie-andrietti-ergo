@@ -2,7 +2,7 @@ import Body from "../../components/Body";
 import Section from "../../components/Section";
 import articlesData from "../api/articles.json";
 import Image from "next/image";
-import arrow from "../../public/pictures/arrow-right.svg";
+import arrow from "../../public/pictures/fleche-droite.svg";
 import trouble1 from "../../public/pictures/articles/trouble1.jpg";
 import trouble2 from "../../public/pictures/articles/trouble2.jpg";
 

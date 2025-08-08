@@ -9,7 +9,7 @@ export default function Presentation({ openModalPres }: PresentationProps) {
   return (
     <div className="flex flex-col justify-center items-center h-full">
       <Image
-        src="/pictures/logo-home.svg"
+        src="/pictures/logo-coralie-andrietti-ergo-accueil.svg"
         alt="Logo Coralie Andrietti"
         width={500} // Adjust width as needed
         height={500} // Adjust height as needed

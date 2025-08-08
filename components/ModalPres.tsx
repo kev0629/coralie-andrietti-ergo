@@ -1,7 +1,7 @@
 import ReactModal from "react-modal";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import parcours from "../public/pictures/parcours.png";
+import parcours from "../public/pictures/parcours-coralie-andrietti-ergotherapeute.png";
 
 const customStyles = {
   content: {

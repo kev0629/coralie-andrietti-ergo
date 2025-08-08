@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
 
 html,
