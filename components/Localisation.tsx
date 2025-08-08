@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import cabinet_picture from "../public/pictures/office.png";
+import cabinet_picture from "../public/pictures/photo-cabinet-ergotherapie-exterieur.png";
 
 const GoogleMapEmbed = () => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""; // Fallback to empty string
@@ -10,6 +9,7 @@ const GoogleMapEmbed = () => {
   return (
     <div className="relative w-full h-full min-h-[400px] rounded-xl overflow-hidden shadow-lg">
       <iframe
+        title="Google Map Coralie Andrietti"
         width="100%"
         height="100%"
         style={{ border: 0 }}

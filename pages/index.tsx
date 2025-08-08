@@ -2,6 +2,7 @@ import Head from "next/head";
 import Section from "../components/Section";
 import Body from "../components/Body";
 import Presentation from "../components/Presentation";
+import ImageGrid from "../components/ImageGrid";
 import What from "../components/What";
 import Who from "../components/Who";
 import When from "../components/When";
@@ -48,9 +49,10 @@ export default function Home({ datas }: HomeProps) {
       <Modal datas={datas} />
       <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres} />
       <Body>
-        <Section id="home" backgroundImage="/pictures/presentation-background.png" className="h-screen">
+        <Section id="home" backgroundImage="/pictures/fond-presentation-coralie-andrietti.png" className="h-screen">
           <Presentation openModalPres={toggleContactModal} />
         </Section>
+        <ImageGrid />
         <Section title="Actualités" id="actu">
           <News />
         </Section>

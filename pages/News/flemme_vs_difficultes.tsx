@@ -11,7 +11,7 @@ interface Article {
   description: string;
 }
 import Image from "next/image";
-import arrow from "../../public/pictures/arrow-right.svg";
+import arrow from "../../public/pictures/fleche-droite.svg";
 import flemme1 from "../../public/pictures/articles/flemme1.png";
 import flemme2 from "../../public/pictures/articles/flemme2.jpg";
 import flemme3 from "../../public/pictures/articles/flemme3.jpg";

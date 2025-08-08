@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
-import logo_title from "../public/pictures/Logo_title.png";
+import logo_title from "../public/pictures/logo-coralie-andrietti-ergotherapeute.png";
 
 // Custom NavLink to handle smooth scroll on home page vs. regular links on other pages
 interface NavLinkProps {
@@ -62,6 +62,7 @@ const Navbar = () => {
 
   const navLinks = [
     { to: "home", href: "/#home", label: "Présentation" },
+    { to: "faq", href: "/#faq", label: "Questions" },
     { to: "actu", href: "/#actu", label: "Actualités" },
     { to: "What", href: "/#What", label: "Qu'est-ce que c'est ?" },
     { to: "Who", href: "/#Who", label: "Pour qui ?" },
