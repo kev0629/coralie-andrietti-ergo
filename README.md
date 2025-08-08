@@ -1,54 +1,72 @@
-# Coralie Andrietti Ergo
+# Coralie Andrietti - Ergothérapeute
 
-Ce projet a pour but de créer un site web pour Coralie Andrietti ergothérapeute. Il permettra aux patients de consulter les informations de contact de Mme Coralie Andrietti, de lire des articles sur l'ergothérapies proposées et de consulter des informations sur les séances.
+![Logo Coralie Andrietti](/public/pictures/logo-coralie-andrietti-ergotherapeute.svg)
 
-## Fonctionnalités
+Site vitrine et blog pour Coralie Andrietti, ergothérapeute.
 
-Informations de contact (adresse, numéro de téléphone, e-mail)
-Section "Présentation" avec une description de l'ergothérapeute et de son parcours professionnel
-Section "Actualité"avec des articles sur l'ergothérapie. 
-Section "Qu'est-ce que c'est ?" avec une description de l'ergothérapie en génerale.
-Section "Pour qui ?" avec une description pour qui l'ergothérapie est adressé.
-Section "Quand consulter ?" avec une description qui explique quand devons nous voir un ergothérapeute.
-Section "Accompagnement" avec une description qui comment se passe les séances.
-Section "Localisation" avec une description qui explique où se trouve le cabinet.
-Blog avec des articles sur l'ergothérapies et la santé en général.
+## Aperçu
 
-## Technologies utilisées
+Ce projet est construit avec [Next.js](https://nextjs.org/) et utilise [Tailwind CSS](https://tailwindcss.com/) pour le style. Il a pour but de présenter l'activité de Coralie Andrietti, de fournir des informations sur l'ergothérapie et de publier des articles de blog.
 
-- HTML
-- CSS
-- JavaScript
-- React / NextJS
+## Prérequis
+
+Avant de commencer, assurez-vous d'avoir installé [Node.js](https://nodejs.org/) et [pnpm](https://pnpm.io/).
 
 ## Installation
-Téléchargez ou clonez le dépôt sur votre ordinateur.
 
-### Avec npm
+1.  Clonez le dépôt :
+    ```bash
+    git clone https://github.com/votre-utilisateur/votre-repo.git
+    ```
+2.  Naviguez dans le dossier du projet :
+    ```bash
+    cd coralie-andrietti-ergo
+    ```
+3.  Installez les dépendances :
+    ```bash
+    pnpm install
+    ```
+
+## Lancement du serveur de développement
+
+Pour lancer le serveur de développement, exécutez la commande suivante :
 
 ```bash
-npm install
-npm run dev
-```
-
-### Avec yarn
-
-```bash
-yarn install
-yarn dev
-```
-
-### Avec pnpm
-
-```bash
-pnpm install
 pnpm dev
 ```
 
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur pour voir le résultat.
 
-## Contribution
-Les contributions sont les bienvenues ! Pour proposer des améliorations, veuillez créer une branche à partir de la branche master et faire une demande de tirage.
+## Scripts disponibles
 
-## License
-Ce projet est sous licence MIT.
+Dans le fichier `package.json`, vous trouverez les scripts suivants :
+
+-   `dev`: Lance l'application en mode développement.
+-   `build`: Construit l'application pour la production.
+-   `start`: Démarre un serveur de production.
+-   `lint`: Lance l'analyseur de code [ESLint](https://eslint.org/).
+
+## Technologies utilisées
+
+-   [Next.js](https://nextjs.org/) - Le framework React pour la production.
+-   [React](https://reactjs.org/) - Une bibliothèque JavaScript pour la construction d'interfaces utilisateur.
+-   [TypeScript](https://www.typescriptlang.org/) - Un surensemble de JavaScript qui ajoute des types statiques.
+-   [Tailwind CSS](https://tailwindcss.com/) - Un framework CSS "utility-first".
+-   [pnpm](https://pnpm.io/) - Un gestionnaire de paquets rapide et efficace en termes d'espace disque.
+
+## Structure du projet
+
+```
+.
+├── components/      # Composants React réutilisables
+├── pages/           # Pages de l'application et routes API
+│   ├── api/         # Routes de l'API Next.js
+│   └── News/        # Pages des articles de blog
+├── public/          # Fichiers statiques (images, polices, etc.)
+├── styles/          # Fichiers de style globaux
+├── .env.example     # Exemple de fichier de variables d'environnement
+├── next.config.js   # Fichier de configuration de Next.js
+├── package.json     # Dépendances et scripts du projet
+└── tsconfig.json    # Configuration de TypeScript
+```
 
