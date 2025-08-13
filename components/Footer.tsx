@@ -41,8 +41,8 @@ const FooterNavLink = ({ to, href, label }: FooterNavLinkProps) => {
 
 export default function Footer() {
   const navLinks = [
-    { to: "home", href: "/#home", label: "Présentation" },
-    { to: "actu", href: "/#actu", label: "Actualités" },
+    { to: "home", href: "/#home", label: "Accueil" },
+    { to: "actu", href: "/#actu", label: "Parlons-en" },
     { to: "What", href: "/#What", label: "Qu'est-ce que c'est ?" },
     { to: "Who", href: "/#Who", label: "Pour qui ?" },
     { to: "When", href: "/#When", label: "Quand consulter ?" },
