@@ -61,9 +61,9 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { to: "home", href: "/#home", label: "Présentation" },
+    { to: "home", href: "/#home", label: "Accueil" },
     { to: "faq", href: "/#faq", label: "Questions" },
-    { to: "actu", href: "/#actu", label: "Actualités" },
+    { to: "actu", href: "/#actu", label: "Parlons-en" },
     { to: "What", href: "/#What", label: "Qu'est-ce que c'est ?" },
     { to: "Who", href: "/#Who", label: "Pour qui ?" },
     { to: "When", href: "/#When", label: "Quand consulter ?" },

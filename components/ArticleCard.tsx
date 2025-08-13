@@ -39,13 +39,6 @@ export default function ArticleCard({ article }: ArticleCardProps) {
             />
           </div>
           <div className="p-6 flex-grow flex flex-col">
-            <p className="text-sm text-gray-500 mb-2">
-              {new Date(date).toLocaleDateString("fr-FR", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </p>
             <h3 className="text-xl font-bold text-dark mb-3 flex-grow">
               {title}
             </h3>
