@@ -32,14 +32,14 @@ import { useModal } from "../components/ModalContext";
 
 export default function Home({ datas }: HomeProps) {
   const { toggleContactModal } = useModal();
-  const [modalPresIsOpen, setPresIsOpen] = React.useState(false);
+  const [modalPresIsOpen, setModalPresIsOpen] = React.useState(false);
 
   function openModalPres() {
-    setPresIsOpen(true);
+    setModalPresIsOpen(true);
   }
 
   function closeModalPres() {
-    setPresIsOpen(false);
+    setModalPresIsOpen(false);
   }
   return (
     <div>

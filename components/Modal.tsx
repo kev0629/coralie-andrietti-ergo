@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactModal from "react-modal";
 import { useAppContext } from "./AppContext";
 import { motion } from "framer-motion";
