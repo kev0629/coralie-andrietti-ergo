@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import PillarCard from "./PillarCard";
 import { FiUser, FiActivity, FiHome } from "react-icons/fi";
-import veloPic from "../public/pictures/velo-ergotherapie-enfant.png";
 
 export default function What() {
   return (

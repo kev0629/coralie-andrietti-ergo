@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
-import logo_title from "../public/pictures/logo-coralie-andrietti-ergotherapeute.png";
+import logo_title from "../public/pictures/logo-ergo.svg";
 
 // Custom NavLink to handle smooth scroll on home page vs. regular links on other pages
 interface NavLinkProps {
@@ -91,10 +91,10 @@ const Navbar = () => {
           <a className="cursor-pointer">
             <Image
               src={logo_title}
-              width={150}
-              height={45}
+              width={75}
+              height={75}
               alt="Coralie Andrietti logo"
-              className="transition-all duration-500"
+              className="h-auto w-12 transition-all duration-500 md:w-[75px]"
             />
           </a>
         </Link>
