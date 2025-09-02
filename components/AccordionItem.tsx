@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaQuestionCircle } from 'react-icons/fa';
 import { FiChevronDown } from 'react-icons/fi';
 
 interface AccordionItemProps {
@@ -16,10 +17,14 @@ export default function AccordionItem({ title, children }: AccordionItemProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center py-5 px-6 text-left focus:outline-none"
       >
-        <h3 className="text-xl font-semibold text-dark">{title}</h3>
+        <div className="flex items-center gap-4">
+          <FaQuestionCircle className="w-6 h-6 text-primary" />
+          <h3 className="text-xl font-semibold text-dark">{title}</h3>
+        </div>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
+          className="pt-1"
         >
           <FiChevronDown className={`w-6 h-6 text-primary ${isOpen ? 'text-opacity-100' : 'text-opacity-70'}`} />
         </motion.div>
