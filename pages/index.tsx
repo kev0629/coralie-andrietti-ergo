@@ -2,7 +2,7 @@ import Head from "next/head";
 import Section from "../components/Section";
 import Body from "../components/Body";
 import Presentation from "../components/Presentation";
-import ImageGrid from "../components/ImageGrid";
+import FaqAccordion from "../components/FaqAccordion";
 import What from "../components/What";
 import Who from "../components/Who";
 import When from "../components/When";
@@ -56,11 +56,7 @@ export default function Home({ datas }: HomeProps) {
         >
           <Presentation openModalPres={toggleContactModal} />
         </Section>
-        <ImageGrid />
-        <Section title="Actualités" id="actu">
-          <News />
-        </Section>
-        <Section title="Qu'est-ce que l'ergothérapie ?" id="What">
+        <Section title="Qu'est-ce que c'est ?" id="What">
           <What />
         </Section>
         <Section title="Pour qui ?" id="Who">
@@ -71,6 +67,12 @@ export default function Home({ datas }: HomeProps) {
         </Section>
         <Section title="Accompagnement ergothérapeutique" id="Follow">
           <Following />
+        </Section>
+        <Section title="Parlons-en" id="actu">
+          <News />
+        </Section>
+        <Section title="Questions fréqentes" id="faq">
+          <FaqAccordion />
         </Section>
         <Section title="Localisation" id="Localisation">
           <Localisation />

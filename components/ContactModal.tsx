@@ -42,7 +42,7 @@ const ContactModal: React.FC = () => {
               href="tel:+33612345678"
               className="hover:text-primary transition-colors"
             >
-              06 12 34 56 78
+              06 64 43 62 60
             </a>
           </div>
           <div className="flex items-center">
