@@ -44,7 +44,32 @@ export default function Home({ datas }: HomeProps) {
   return (
     <div>
       <Head>
-        <title>Coralie Andrietti ergothérapeute</title>
+        <title>Ergothérapeute au Cannet, Cannes (06) | Rééducation de l'écriture</title>
+        <meta name="description" content="Cabinet d'ergothérapie au Cannet (06). Prise en charge des troubles de l'écriture (dysgraphie) et de la motricité fine pour enfant et adulte." />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "OccupationalTherapist",
+            "name": "Coralie Andrietti - Ergothérapeute",
+            "description": "Cabinet d'ergothérapie au Cannet (06). Prise en charge des troubles de l'écriture (dysgraphie) et de la motricité fine pour enfant et adulte.",
+            "url": "https://coralie-andrietti-ergo.com",
+            "telephone": "+33664436260",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "5 chemin de garibondy, le parc victoria",
+              "addressLocality": "Le Cannet",
+              "postalCode": "06110",
+              "addressCountry": "FR"
+            },
+            "areaServed": [
+              "Le Cannet",
+              "Cannes",
+              "Vallauris",
+              "Mandelieu-la-Napoule"
+            ],
+            "openingHours": "Mo-Fr 08:30-19:30"
+          }`}
+        </script>
       </Head>
       <Modal datas={datas} />
       <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres} />
