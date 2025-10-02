@@ -3,7 +3,6 @@ import ReactModal from "react-modal";
 import { useModal } from "./ModalContext";
 import { motion } from "framer-motion";
 import { FiX, FiPhone, FiMail } from "react-icons/fi";
-import Localisation from "./Localisation";
 
 const ContactModal: React.FC = () => {
   const { isContactModalOpen, toggleContactModal } = useModal();

@@ -9,9 +9,9 @@ import When from "../components/When";
 import Following from "../components/Following";
 import Localisation from "../components/Localisation";
 import Modal from "../components/Modal";
-import News from "../components/News";
-import ModalPres from "../components/ModalPres";
+import Instagram from "../components/Instagram";
 import React from "react";
+import ContactModal from "../components/ContactModal";
 
 import { Client } from "@notionhq/client";
 
@@ -32,20 +32,17 @@ import { useModal } from "../components/ModalContext";
 
 export default function Home({ datas }: HomeProps) {
   const { toggleContactModal } = useModal();
-  const [modalPresIsOpen, setModalPresIsOpen] = React.useState(false);
 
-  function openModalPres() {
-    setModalPresIsOpen(true);
-  }
-
-  function closeModalPres() {
-    setModalPresIsOpen(false);
-  }
   return (
     <div>
       <Head>
-        <title>Ergothérapeute au Cannet, Cannes (06) | Rééducation de l'écriture</title>
-        <meta name="description" content="Cabinet d'ergothérapie au Cannet (06). Prise en charge des troubles de l'écriture (dysgraphie) et de la motricité fine pour enfant et adulte." />
+        <title>
+          Ergothérapeute au Cannet, Cannes (06) | Rééducation de l&apos;écriture
+        </title>
+        <meta
+          name="description"
+          content="Cabinet d'ergothérapie au Cannet (06). Prise en charge des troubles de l'écriture (dysgraphie) et de la motricité fine pour enfant et adulte."
+        />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
@@ -72,7 +69,7 @@ export default function Home({ datas }: HomeProps) {
         </script>
       </Head>
       <Modal datas={datas} />
-      <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres} />
+      <ContactModal />
       <Body>
         <Section
           id="home"
@@ -93,8 +90,8 @@ export default function Home({ datas }: HomeProps) {
         <Section title="Accompagnement ergothérapeutique" id="Follow">
           <Following />
         </Section>
-        <Section title="Parlons-en" id="actu">
-          <News />
+        <Section title="Suivez-nous sur Instagram" id="instagram">
+          <Instagram />
         </Section>
         <Section title="Questions fréqentes" id="faq">
           <FaqAccordion />

@@ -1,31 +1,67 @@
 import "../styles/globals.css";
-import "../styles/style_modal.css";
-import React from "react";
+import type { AppProps } from "next/app";
+import { ModalProvider } from "../components/ModalContext";
+import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import AppContext from "../components/AppContext";
-import Head from "next/head";
-import dynamic from 'next/dynamic';
-import { ModalProvider } from '../components/ModalContext';
-
-import { AppProps } from 'next/app';
-
-const DynamicContactModal = dynamic(() => import('../components/ContactModal'), {
-  ssr: false
-});
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [mainModalIsOpen, setMainModalIsOpen] = React.useState(true);
+  const [mainModalIsOpen, setMainModalIsOpen] = useState(true);
+  const [isCookieAccepted, setIsCookieAccepted] = useState(true);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    const isAccepted = getCookieConsentValue("coralie-andrietti-ergo-cookie-consent");
+    setIsCookieAccepted(isAccepted === "true");
+  }, []);
+
+  useEffect(() => {
+    if (isClient && !isCookieAccepted) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isClient, isCookieAccepted]);
+
   return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-      <AppContext.Provider value={{ mainModalIsOpen, setMainModalIsOpen }}>
-        <ModalProvider>
-          <Component {...pageProps} />
-          <DynamicContactModal />
-        </ModalProvider>
-      </AppContext.Provider>
-    </>
+    <AppContext.Provider value={{ mainModalIsOpen, setMainModalIsOpen }}>
+      <ModalProvider>
+        {isClient && !isCookieAccepted && (
+          <div
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              zIndex: 1000,
+            }}
+          />
+        )}
+        <Component {...pageProps} />
+        <CookieConsent
+          location="bottom"
+          buttonText="J'accepte"
+          declineButtonText="Je refuse"
+          cookieName="coralie-andrietti-ergo-cookie-consent"
+          style={{ background: "#2B373B", zIndex: 1001 }}
+          buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+          declineButtonStyle={{ fontSize: "13px" }}
+          expires={150}
+          enableDeclineButton
+          onAccept={() => setIsCookieAccepted(true)}
+        >
+          Ce site utilise des cookies pour améliorer l&apos;expérience
+          utilisateur.
+          <Link href="/politique-de-confidentialite" style={{ color: "#a9d6e5" }}>
+            En savoir plus
+          </Link>
+        </CookieConsent>
+      </ModalProvider>
+    </AppContext.Provider>
   );
 }
 
