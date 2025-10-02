@@ -1,6 +1,6 @@
 import React from "react";
-import Body from "../components/Body";
-import Section from "../components/Section";
+import Body from "@/components/layout/Body";
+import Section from "@/components/ui/Section";
 import Head from "next/head";
 
 const PrivacyPolicy = () => {

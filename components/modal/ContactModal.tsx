@@ -1,6 +1,6 @@
 import React from "react";
 import ReactModal from "react-modal";
-import { useModal } from "./ModalContext";
+import { useModal } from "@/context/ModalContext";
 import { motion } from "framer-motion";
 import { FiX, FiPhone, FiMail } from "react-icons/fi";
 
