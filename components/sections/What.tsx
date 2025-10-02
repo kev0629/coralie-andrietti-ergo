@@ -1,5 +1,5 @@
 import React from "react";
-import PillarCard from "./PillarCard";
+import PillarCard from "@/components/ui/PillarCard";
 import { FiUser, FiActivity, FiHome } from "react-icons/fi";
 
 export default function What() {

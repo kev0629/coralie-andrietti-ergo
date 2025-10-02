@@ -1,17 +1,17 @@
 import Head from "next/head";
-import Section from "../components/Section";
-import Body from "../components/Body";
-import Presentation from "../components/Presentation";
-import FaqAccordion from "../components/FaqAccordion";
-import What from "../components/What";
-import Who from "../components/Who";
-import When from "../components/When";
-import Following from "../components/Following";
-import Localisation from "../components/Localisation";
-import Modal from "../components/Modal";
-import Instagram from "../components/Instagram";
+import Section from "@/components/ui/Section";
+import Body from "@/components/layout/Body";
+import Presentation from "@/components/sections/Presentation";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import What from "@/components/sections/What";
+import Who from "@/components/sections/Who";
+import When from "@/components/sections/When";
+import Following from "@/components/sections/Following";
+import Localisation from "@/components/sections/Localisation";
+import Modal from "@/components/ui/Modal";
+import Instagram from "@/components/sections/Instagram";
 import React from "react";
-import ContactModal from "../components/ContactModal";
+import ContactModal from "@/components/modal/ContactModal";
 
 import { Client } from "@notionhq/client";
 
@@ -28,7 +28,7 @@ interface HomeProps {
   datas: DataItem[];
 }
 
-import { useModal } from "../components/ModalContext";
+import { useModal } from "@/context/ModalContext";
 
 export default function Home({ datas }: HomeProps) {
   const { toggleContactModal } = useModal();

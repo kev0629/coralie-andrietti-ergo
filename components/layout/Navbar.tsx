@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
-import logo_title from "../public/pictures/logo-ergo.svg";
+import logo_title from "@/public/pictures/logo-ergo.svg";
+import { useModal } from "@/context/ModalContext";
 
 // Custom NavLink to handle smooth scroll on home page vs. regular links on other pages
 interface NavLinkProps {
@@ -43,8 +44,6 @@ const NavLink = ({ to, href, children }: NavLinkProps) => {
     </Link>
   );
 };
-
-import { useModal } from "./ModalContext";
 
 const Navbar = () => {
   const { toggleContactModal } = useModal();

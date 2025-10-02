@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo_title from "../public/pictures/logo-coralie-andrietti-ergotherapeute-blanc.svg";
+import logo_title from "@/public/pictures/logo-coralie-andrietti-ergotherapeute-blanc.svg";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
 

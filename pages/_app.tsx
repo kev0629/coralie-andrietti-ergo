@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { ModalProvider } from "../components/ModalContext";
+import { ModalProvider } from "@/context/ModalContext";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
-import AppContext from "../components/AppContext";
+import AppContext from "@/context/AppContext";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 

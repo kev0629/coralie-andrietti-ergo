@@ -1,5 +1,5 @@
 import React from "react";
-import TargetCard from "./TargetCard";
+import TargetCard from "@/components/ui/TargetCard";
 import { FiUsers, FiHeart, FiShield, FiActivity } from "react-icons/fi";
 
 export default function Who() {
