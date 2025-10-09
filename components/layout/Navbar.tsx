@@ -93,7 +93,7 @@ const Navbar = () => {
               width={75}
               height={75}
               alt="Coralie Andrietti logo"
-              className="h-auto w-12 transition-all duration-500 md:w-[75px]"
+              className="w-12 h-12 transition-all duration-500 md:w-[75px] md:h-[75px]"
             />
           </a>
         </Link>

@@ -68,8 +68,9 @@ const Instagram = () => {
             <Image
               src="/pictures/photo-coralie-andrietti-ergotherapeute.jpeg"
               alt="Coralie Andrietti"
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="3.5rem"
+              className="object-cover"
             />
           </div>
           <div>
@@ -121,9 +122,9 @@ const Instagram = () => {
                 <Image
                   src={post.media_url}
                   alt={post.caption || "Post Instagram"}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 ease-in-out group-hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 83.33vw, (max-width: 1024px) 40vw, 28.57vw"
+                  className="transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent" />
                 <div className="absolute bottom-4 left-4 z-10 flex items-center space-x-2">
@@ -131,8 +132,9 @@ const Instagram = () => {
                     <Image
                       src="/pictures/photo-coralie-andrietti-ergotherapeute.jpeg"
                       alt="Coralie Andrietti"
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      sizes="2rem"
+                      className="object-cover"
                     />
                   </div>
                   <div className="flex items-center space-x-1">
