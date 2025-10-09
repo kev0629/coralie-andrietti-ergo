@@ -5,17 +5,39 @@ import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import AppContext from "@/context/AppContext";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import Script from "next/script";
+import * as gtag from "../lib/gtag";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [mainModalIsOpen, setMainModalIsOpen] = useState(true);
-  const [isCookieAccepted, setIsCookieAccepted] = useState(true);
+  const [isCookieAccepted, setIsCookieAccepted] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setIsClient(true);
     const isAccepted = getCookieConsentValue("coralie-andrietti-ergo-cookie-consent");
-    setIsCookieAccepted(isAccepted === "true");
+    if (isAccepted === "true") {
+      setIsCookieAccepted(true);
+    }
   }, []);
+
+  useEffect(() => {
+    if (!isCookieAccepted) return;
+
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("hashChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("hashChangeComplete", handleRouteChange);
+    };
+  }, [router.events, isCookieAccepted]);
 
   useEffect(() => {
     if (isClient && !isCookieAccepted) {
@@ -28,6 +50,30 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppContext.Provider value={{ mainModalIsOpen, setMainModalIsOpen }}>
       <ModalProvider>
+        {/* Google Analytics Scripts - Chargés uniquement si les cookies sont acceptés */}
+        {isCookieAccepted && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+            />
+            <Script
+              id="gtag-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gtag.GA_TRACKING_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+
         {isClient && !isCookieAccepted && (
           <div
             style={{
@@ -53,6 +99,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           expires={150}
           enableDeclineButton
           onAccept={() => setIsCookieAccepted(true)}
+          onDecline={() => setIsCookieAccepted(false)}
         >
           Ce site utilise des cookies pour améliorer l&apos;expérience
           utilisateur.
