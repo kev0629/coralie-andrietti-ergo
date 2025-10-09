@@ -5,7 +5,6 @@ import Image from "next/image";
 import { FaInstagram, FaHeart, FaComment } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 
-// Interface pour les données du post Instagram
 interface InstagramPost {
   id: string;
   caption: string;
@@ -16,12 +15,11 @@ interface InstagramPost {
   comments_count: number;
 }
 
-// Interface pour les données du post Instagram
-
 const Instagram = () => {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const url = "https://www.instagram.com/coralie_andrietti_ergo";
 
   useEffect(() => {
     const fetchInstagramPosts = async () => {
@@ -59,7 +57,7 @@ const Instagram = () => {
       {/* En-tête */}
       <div className="flex items-center justify-between mb-8">
         <a
-          href="https://www.instagram.com/coralie_andrietti_ergo"
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center space-x-3"
@@ -81,7 +79,7 @@ const Instagram = () => {
           </div>
         </a>
         <a
-          href="https://www.instagram.com/coralie_andrietti_ergo"
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-500 text-white font-semibold py-2 px-5 rounded-lg text-base hover:bg-blue-600 transition-colors hidden sm:block"
