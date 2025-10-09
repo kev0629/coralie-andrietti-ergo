@@ -1,3 +1,7 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -200,4 +204,26 @@ box-sizing: border-box; /*3*/
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
   }
+}
+
+/* Custom Swiper Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important; /* White arrows */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+  border-radius: 50%; /* Make them circular */
+  width: 40px !important; /* Custom width */
+  height: 40px !important; /* Custom height */
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important; /* Smaller arrow icon */
+  font-weight: 900;
 }

@@ -28,11 +28,9 @@ export default async function handler(
   const userId = process.env.INSTAGRAM_USER_ID || "me"; // Default to 'me' if no user ID is provided
 
   if (!accessToken) {
-    return res
-      .status(500)
-      .json({
-        error: "Instagram access token not found in environment variables.",
-      });
+    return res.status(500).json({
+      error: "Instagram access token not found in environment variables.",
+    });
   }
 
   const fields = "id,caption,media_url,media_type,permalink,timestamp";
@@ -40,15 +38,14 @@ export default async function handler(
 
   try {
     const response = await fetch(url);
+    console.log("Instagram API response status:", response);
     if (!response.ok) {
       const errorData = await response.json();
       console.error("Error fetching from Instagram API:", errorData);
-      return res
-        .status(response.status)
-        .json({
-          error: "Failed to fetch data from Instagram.",
-          details: errorData,
-        });
+      return res.status(response.status).json({
+        error: "Failed to fetch data from Instagram.",
+        details: errorData,
+      });
     }
 
     const data: InstagramAPIResponse = await response.json();
