@@ -27,7 +27,7 @@ export default function Home({ datas }) {
   return (
     <div>
       <Head>
-        <title>Coralie Andriettie ergothérapeute</title>
+        <title>Coralie Andrietti ergothérapeute</title>
       </Head>
       <Modal datas={datas} />
       <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres} />
