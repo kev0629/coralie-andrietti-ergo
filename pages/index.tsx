@@ -1,17 +1,17 @@
 import Head from "next/head";
-import Section from "../components/Section";
-import Body from "../components/Body";
-import Presentation from "../components/Presentation";
-import FaqAccordion from "../components/FaqAccordion";
-import What from "../components/What";
-import Who from "../components/Who";
-import When from "../components/When";
-import Following from "../components/Following";
-import Localisation from "../components/Localisation";
-import Modal from "../components/Modal";
-import News from "../components/News";
-import ModalPres from "../components/ModalPres";
+import Section from "@/components/ui/Section";
+import Body from "@/components/layout/Body";
+import Presentation from "@/components/sections/Presentation";
+import FaqAccordion from "@/components/sections/FaqAccordion";
+import What from "@/components/sections/What";
+import Who from "@/components/sections/Who";
+import When from "@/components/sections/When";
+import Following from "@/components/sections/Following";
+import Localisation from "@/components/sections/Localisation";
+import Modal from "@/components/ui/Modal";
+import Instagram from "@/components/sections/Instagram";
 import React from "react";
+import ContactModal from "@/components/modal/ContactModal";
 
 import { Client } from "@notionhq/client";
 
@@ -28,26 +28,48 @@ interface HomeProps {
   datas: DataItem[];
 }
 
-import { useModal } from "../components/ModalContext";
+import { useModal } from "@/context/ModalContext";
 
 export default function Home({ datas }: HomeProps) {
   const { toggleContactModal } = useModal();
-  const [modalPresIsOpen, setModalPresIsOpen] = React.useState(false);
 
-  function openModalPres() {
-    setModalPresIsOpen(true);
-  }
-
-  function closeModalPres() {
-    setModalPresIsOpen(false);
-  }
   return (
     <div>
       <Head>
-        <title>Coralie Andrietti ergothérapeute</title>
+        <title>
+          Ergothérapeute au Cannet, Cannes (06) | Rééducation de l&apos;écriture
+        </title>
+        <meta
+          name="description"
+          content="Cabinet d'ergothérapie au Cannet (06). Prise en charge des troubles de l'écriture (dysgraphie) et de la motricité fine pour enfant et adulte."
+        />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "OccupationalTherapist",
+            "name": "Coralie Andrietti - Ergothérapeute",
+            "description": "Cabinet d'ergothérapie au Cannet (06). Prise en charge des troubles de l'écriture (dysgraphie) et de la motricité fine pour enfant et adulte.",
+            "url": "https://coralie-andrietti-ergo.com",
+            "telephone": "+33664436260",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "5 chemin de garibondy, le parc victoria",
+              "addressLocality": "Le Cannet",
+              "postalCode": "06110",
+              "addressCountry": "FR"
+            },
+            "areaServed": [
+              "Le Cannet",
+              "Cannes",
+              "Vallauris",
+              "Mandelieu-la-Napoule"
+            ],
+            "openingHours": "Mo-Fr 08:30-19:30"
+          }`}
+        </script>
       </Head>
       <Modal datas={datas} />
-      <ModalPres isOpen={modalPresIsOpen} closeModalPres={closeModalPres} />
+      <ContactModal />
       <Body>
         <Section
           id="home"
@@ -68,8 +90,8 @@ export default function Home({ datas }: HomeProps) {
         <Section title="Accompagnement ergothérapeutique" id="Follow">
           <Following />
         </Section>
-        <Section title="Parlons-en" id="actu">
-          <News />
+        <Section title="Suivez-nous sur Instagram" id="actu">
+          <Instagram />
         </Section>
         <Section title="Questions fréqentes" id="faq">
           <FaqAccordion />

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import cabinet_picture from "../public/pictures/photo-cabinet-ergotherapie-exterieur.png";
+import cabinet_picture from "@/public/pictures/photo-cabinet-ergotherapie-exterieur.png";
 
 const GoogleMapEmbed = () => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""; // Fallback to empty string
@@ -49,8 +49,9 @@ export default function Localisation() {
             <Image
               src={cabinet_picture}
               alt="Photo du cabinet d'ergothérapie"
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
             />
           </div>
         </div>

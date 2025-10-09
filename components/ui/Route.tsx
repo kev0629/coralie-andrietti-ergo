@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
@@ -12,8 +12,7 @@ interface RouteProps {
 
 export default function Route({ to, link, nav, children }: RouteProps) {
   const router = useRouter();
-  if (nav == true) {
-  }
+
   return (
     <>
       {router.asPath == "/" ? (

@@ -1,4 +1,11 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useMemo,
+  useCallback,
+} from "react";
 
 interface ModalContextType {
   isContactModalOpen: boolean;
@@ -22,13 +29,16 @@ interface ModalProviderProps {
 export const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
-  const toggleContactModal = () => {
-    setIsContactModalOpen(prev => !prev);
-  };
+  const toggleContactModal = useCallback(() => {
+    setIsContactModalOpen((prev) => !prev);
+  }, []);
+
+  const value = useMemo(
+    () => ({ isContactModalOpen, toggleContactModal }),
+    [isContactModalOpen, toggleContactModal]
+  );
 
   return (
-    <ModalContext.Provider value={{ isContactModalOpen, toggleContactModal }}>
-      {children}
-    </ModalContext.Provider>
+    <ModalContext.Provider value={value}>{children}</ModalContext.Provider>
   );
 };

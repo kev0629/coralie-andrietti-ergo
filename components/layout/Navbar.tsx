@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
-import logo_title from "../public/pictures/logo-ergo.svg";
+import logo_title from "@/public/pictures/logo-ergo.svg";
+import { useModal } from "@/context/ModalContext";
 
 // Custom NavLink to handle smooth scroll on home page vs. regular links on other pages
 interface NavLinkProps {
@@ -44,8 +45,6 @@ const NavLink = ({ to, href, children }: NavLinkProps) => {
   );
 };
 
-import { useModal } from "./ModalContext";
-
 const Navbar = () => {
   const { toggleContactModal } = useModal();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,7 +65,7 @@ const Navbar = () => {
     { to: "Who", href: "/#Who", label: "Pour qui ?" },
     { to: "When", href: "/#When", label: "Quand consulter ?" },
     { to: "Follow", href: "/#Follow", label: "Accompagnement" },
-    { to: "actu", href: "/#actu", label: "Parlons-en" },
+    { to: "actu", href: "/#actu", label: "Suivez-nous" },
     { to: "faq", href: "/#faq", label: "Questions" },
     { to: "Localisation", href: "/#Localisation", label: "Localisation" },
   ];
@@ -94,13 +93,13 @@ const Navbar = () => {
               width={75}
               height={75}
               alt="Coralie Andrietti logo"
-              className="h-auto w-12 transition-all duration-500 md:w-[75px]"
+              className="w-12 h-12 transition-all duration-500 md:w-[75px] md:h-[75px]"
             />
           </a>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 cursor-pointer">
           {navLinks.map((link) => (
             <NavLink key={link.to} to={link.to} href={link.href}>
               {link.label}
