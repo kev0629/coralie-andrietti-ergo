@@ -31,7 +31,6 @@ const Instagram = () => {
           throw new Error("Échec de la récupération des posts Instagram.");
         }
         const data = await response.json();
-        console.log("data:", data);
         setPosts(
           data.data
             .filter(
@@ -54,8 +53,6 @@ const Instagram = () => {
 
     fetchInstagramPosts();
   }, []);
-
-  console.log("posts:", posts);
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
