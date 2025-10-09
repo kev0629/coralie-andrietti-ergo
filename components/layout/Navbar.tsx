@@ -99,7 +99,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 cursor-pointer">
           {navLinks.map((link) => (
             <NavLink key={link.to} to={link.to} href={link.href}>
               {link.label}

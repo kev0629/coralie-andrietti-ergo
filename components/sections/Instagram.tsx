@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/navigation";
 import Image from "next/image";
+import { FaInstagram, FaHeart, FaComment } from "react-icons/fa";
+import { MdVerified } from "react-icons/md";
 
 // Interface pour les données du post Instagram
 interface InstagramPost {
@@ -16,22 +16,7 @@ interface InstagramPost {
   comments_count: number;
 }
 
-// Icône Instagram
-const InstagramIcon = () => (
-  <svg
-    className="w-6 h-6 drop-shadow-md"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="white"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-  </svg>
-);
+// Interface pour les données du post Instagram
 
 const Instagram = () => {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
@@ -144,7 +129,7 @@ const Instagram = () => {
                   className="transition-transform duration-300 ease-in-out group-hover:scale-105"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black to-transparent" />
-                <div className="absolute bottom-2 left-2 z-10">
+                <div className="absolute bottom-4 left-4 z-10 flex items-center space-x-2">
                   <div className="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-white">
                     <Image
                       src="/pictures/photo-coralie-andrietti-ergotherapeute.jpeg"
@@ -153,46 +138,30 @@ const Instagram = () => {
                       objectFit="cover"
                     />
                   </div>
+                  <div className="flex items-center space-x-1">
+                    <p className="text-white font-bold text-sm drop-shadow-lg">
+                      coralie_andrietti_ergo
+                    </p>
+                    <MdVerified className="text-blue-500" />
+                  </div>
                 </div>
                 <div className="absolute bottom-2 right-2 z-10">
-                  <InstagramIcon />
+                  <FaInstagram className="w-6 h-6 text-white drop-shadow-md" />
                 </div>
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex flex-col items-center justify-center p-4 z-20">
                   <div className="flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-5 m-8">
-                    <InstagramIcon />
+                    <FaInstagram className="text-white w-7 h-7" />
                   </div>
                   <p className="text-white text-center text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-5">
                     {post.caption}
                   </p>
                   <div className="flex justify-center space-x-4 mt-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="flex items-center space-x-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                      <FaHeart />
                       <span>{post.like_count}</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M18 10c0 3.866-3.582 7-8 7a8.836 8.836 0 01-4.43-1.262L3.438 17.45a1 1 0 01-1.34-1.48l1.658-2.53C2.63 12.042 2 10.08 2 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM4.837 13.22c.25.11.51.2.78.27a6.956 6.956 0 004.383 0c.27-.07.53-.16.78-.27a5.013 5.013 0 013.22 0c.25.11.51.2.78.27a6.956 6.956 0 004.383 0c.27-.07.53-.16.78-.27a5.013 5.013 0 013.22 0"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                      <FaComment />
                       <span>{post.comments_count}</span>
                     </div>
                   </div>
