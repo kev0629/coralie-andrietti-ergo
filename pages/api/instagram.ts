@@ -7,6 +7,8 @@ interface InstagramPost {
   media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
   permalink: string;
   timestamp: string;
+  like_count: number;
+  comments_count: number;
 }
 
 interface InstagramAPIResponse {
@@ -33,12 +35,12 @@ export default async function handler(
     });
   }
 
-  const fields = "id,caption,media_url,media_type,permalink,timestamp";
+  const fields =
+    "id,caption,media_url,media_type,permalink,timestamp,like_count,comments_count";
   const url = `https://graph.instagram.com/${userId}/media?fields=${fields}&access_token=${accessToken}`;
 
   try {
     const response = await fetch(url);
-    console.log("Instagram API response status:", response);
     if (!response.ok) {
       const errorData = await response.json();
       console.error("Error fetching from Instagram API:", errorData);
