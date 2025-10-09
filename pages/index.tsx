@@ -90,7 +90,7 @@ export default function Home({ datas }: HomeProps) {
         <Section title="Accompagnement ergothérapeutique" id="Follow">
           <Following />
         </Section>
-        <Section title="Suivez-nous sur Instagram" id="instagram">
+        <Section title="Suivez-nous sur Instagram" id="actu">
           <Instagram />
         </Section>
         <Section title="Questions fréqentes" id="faq">
