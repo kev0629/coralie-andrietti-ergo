@@ -20,20 +20,20 @@ export default function What() {
           <p>
             Chaque personne est unique. L’évaluation tient compte des forces,
             des difficultés et des facteurs psychosociaux qui influencent la
-            capacité à agir au quotidien. 
+            capacité à agir au quotidien.
           </p>
         </PillarCard>
         <PillarCard icon={<FiActivity size={36} />} title="L'Activité">
           <p>
             Vos occupations donnent un sens à votre vie. Nous travaillons
-            ensemble pour réaliser les activités qui vous tiennent à cœur. 
+            ensemble pour réaliser les activités qui vous tiennent à cœur.
           </p>
         </PillarCard>
         <PillarCard icon={<FiHome size={36} />} title="L'Environnement">
           <p>
             L’environnement peut être un obstacle ou un soutien. Son analyse
             permet d’identifier des adaptations et des aménagements favorisant
-            l’autonomie et la participation. 
+            l’autonomie et la participation.
           </p>
         </PillarCard>
       </div>
