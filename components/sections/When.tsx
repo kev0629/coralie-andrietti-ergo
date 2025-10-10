@@ -23,8 +23,8 @@ export default function When() {
               d’intérêt pour les activités, jeux atypiques…).
             </li>
             <li>
-              Les acquisitions motrices (difficultés de préhension, de
-              gestualité, de dextérité…).
+              Les acquisitions motrices ((manque de coordination, maladresse,
+              difficultés à manipuler certains objets …).).
             </li>
             <li>
               L’intégration sensorielle (hypo ou hypersensibilité à certains
