@@ -93,7 +93,7 @@ export default function Home({ datas }: HomeProps) {
         <Section title="Suivez-nous sur Instagram" id="actu">
           <Instagram />
         </Section>
-        <Section title="Questions fréqentes" id="faq">
+        <Section title="Questions fréquentes" id="faq">
           <FaqAccordion />
         </Section>
         <Section title="Localisation" id="Localisation">
