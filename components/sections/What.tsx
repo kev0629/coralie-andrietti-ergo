@@ -26,15 +26,14 @@ export default function What() {
         <PillarCard icon={<FiActivity size={36} />} title="L'Activité">
           <p>
             Vos occupations donnent un sens à votre vie. Nous travaillons
-            ensemble pour vous permettre de réaliser les activités qui vous
-            tiennent à cœur.
+            ensemble pour réaliser les activités qui vous tiennent à cœur. 
           </p>
         </PillarCard>
         <PillarCard icon={<FiHome size={36} />} title="L'Environnement">
           <p>
-            L&apos;environnement peut être un obstacle ou un facilitateur. Nous
-            l&apos;analysons pour trouver des solutions et des aménagements
-            adaptés.
+            L’environnement peut être un obstacle ou un soutien. Son analyse
+            permet d’identifier des adaptations et des aménagements favorisant
+            l’autonomie et la participation. 
           </p>
         </PillarCard>
       </div>
@@ -45,10 +44,11 @@ export default function What() {
             Trouver des solutions pour relever les défis du quotidien
           </h3>
           <p>
-            Si une blessure, une maladie, une déficience ou un autre problème
-            limite vos capacités à travailler, étudier, effectuer vos soins
-            personnels, vous déplacer ou vous divertir, l&apos;ergothérapie peut
-            vous aider.
+            Qu’il s’agisse d’une blessure, d’une maladie, d’une déficience ou
+            d’un simple retard de développement, l’ergothérapie accompagne toute
+            personne dont les capacités à agir au quotidien sont limitées — pour
+            travailler, étudier, se déplacer, prendre soin de soi ou simplement
+            profiter de ses activités.
           </p>
           <p>
             Notre rôle est de trouver avec vous des solutions pour surmonter ces
