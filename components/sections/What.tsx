@@ -18,9 +18,9 @@ export default function What() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <PillarCard icon={<FiUser size={36} />} title="La Personne">
           <p>
-            Chaque personne est unique. J&apos;évalue vos forces, vos faiblesses
-            et les facteurs psychosociaux qui influencent votre capacité
-            d&apos;agir.
+            Chaque personne est unique. L’évaluation tient compte des forces,
+            des difficultés et des facteurs psychosociaux qui influencent la
+            capacité à agir au quotidien. 
           </p>
         </PillarCard>
         <PillarCard icon={<FiActivity size={36} />} title="L'Activité">
