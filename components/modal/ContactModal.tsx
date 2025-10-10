@@ -31,7 +31,7 @@ const ContactModal: React.FC = () => {
 
         <div className="flex items-center mb-6">
           <div className="bg-primary/10 text-primary rounded-full p-3 mr-4"></div>
-          <h2 className="text-2xl font-bold text-dark">Me Contacter</h2>
+          <h2 className="text-2xl font-bold text-dark">Prendre contact</h2>
         </div>
 
         <div className="text-gray-600 space-y-4">

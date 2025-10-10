@@ -109,7 +109,7 @@ const Navbar = () => {
             onClick={toggleContactModal}
             className="bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-dark transition-colors"
           >
-            Me contacter
+            Prendre contact
           </button>
         </div>
 
@@ -161,7 +161,7 @@ const Navbar = () => {
               }}
               className="bg-primary text-white px-4 py-2 rounded-full hover:bg-primary-dark transition-colors w-full"
             >
-              Me contacter
+              Prendre contact
             </button>
           </li>
         </ul>
