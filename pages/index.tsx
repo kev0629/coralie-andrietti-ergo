@@ -78,7 +78,7 @@ export default function Home({ datas }: HomeProps) {
         >
           <Presentation openModalPres={toggleContactModal} />
         </Section>
-        <Section title="Qu'est-ce que c'est ?" id="What">
+        <Section title="L’ergothérapie" id="What">
           <What />
         </Section>
         <Section title="Pour qui ?" id="Who">
