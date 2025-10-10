@@ -6,9 +6,13 @@ export default function What() {
   return (
     <div className="max-w-5xl mx-auto text-center">
       <p className="text-lg text-gray-700 mb-10">
-        L&apos;ergothérapie est une profession de santé qui vise à maintenir et
-        restaurer l&apos;autonomie des personnes. Elle se fonde sur le lien
-        essentiel entre les activités quotidiennes, la santé et le bien-être.
+        L’ergothérapeute est un professionnel de santé intervenant dans les
+        secteurs sanitaire, médico-social et social pour aider toute personne,
+        quel que soit son âge ou sa situation, à maintenir, restaurer ou
+        développer son autonomie dans ses activités quotidiennes. Il agit à
+        travers l’activité, l’adaptation de l’environnement, la rééducation et
+        le conseil afin que la personne puisse faire ce qu’elle veut ou doit
+        faire, de façon sûre, efficace et indépendante.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
