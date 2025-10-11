@@ -93,13 +93,13 @@ const Navbar = () => {
               width={75}
               height={75}
               alt="Coralie Andrietti logo"
-              className="w-12 h-12 transition-all duration-500 md:w-[75px] md:h-[75px]"
+              className="w-12 h-12 transition-all duration-500 xl:w-[75px] xl:h-[75px]"
             />
           </a>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8 cursor-pointer">
+        <div className="hidden xl:flex items-center space-x-8 cursor-pointer">
           {navLinks.map((link) => (
             <NavLink key={link.to} to={link.to} href={link.href}>
               {link.label}
@@ -114,7 +114,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-dark focus:outline-none"
@@ -139,7 +139,7 @@ const Navbar = () => {
 
       {/* Mobile Menu (Drawer) */}
       <div
-        className={`md:hidden absolute top-0 left-0 w-full bg-white shadow-lg transition-transform duration-300 ease-in-out ${
+        className={`xl:hidden absolute top-0 left-0 w-full bg-white shadow-lg transition-transform duration-300 ease-in-out ${
           menuOpen ? "transform-none" : "-translate-y-full"
         }`}
       >
