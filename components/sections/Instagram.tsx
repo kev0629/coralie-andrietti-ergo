@@ -19,7 +19,9 @@ const Instagram = () => {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const url = "https://www.instagram.com/coralie_andrietti_ergo";
+
+  const username = "coralie_andrietti_ergo";
+  const url = `https://www.instagram.com/${username}`;
 
   useEffect(() => {
     const fetchInstagramPosts = async () => {
@@ -72,9 +74,7 @@ const Instagram = () => {
             />
           </div>
           <div>
-            <p className="font-bold text-lg text-gray-800">
-              coralie_andrietti_ergo
-            </p>
+            <p className="font-bold text-lg text-gray-800">{username}</p>
             <p className="text-sm text-gray-500">Suivez-moi sur Instagram</p>
           </div>
         </a>
@@ -137,7 +137,7 @@ const Instagram = () => {
                   </div>
                   <div className="flex items-center space-x-1">
                     <p className="text-white font-bold text-sm drop-shadow-lg">
-                      coralie_andrietti_ergo
+                      {username}
                     </p>
                     <MdVerified className="text-blue-500" />
                   </div>

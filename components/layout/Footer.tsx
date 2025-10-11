@@ -4,6 +4,8 @@ import Link from "next/link";
 import logo_title from "@/public/pictures/logo-coralie-andrietti-ergotherapeute-blanc.svg";
 import { Link as ScrollLink } from "react-scroll";
 import { useRouter } from "next/router";
+import { navLinks } from "@/constants/navigation";
+import { contactInfo } from "@/constants/contactInfo";
 
 interface FooterNavLinkProps {
   to: string;
@@ -40,16 +42,6 @@ const FooterNavLink = ({ to, href, label }: FooterNavLinkProps) => {
 };
 
 export default function Footer() {
-  const navLinks = [
-    { to: "home", href: "/#home", label: "Accueil" },
-    { to: "actu", href: "/#actu", label: "Parlons-en" },
-    { to: "What", href: "/#What", label: "Qu'est-ce que c'est ?" },
-    { to: "Who", href: "/#Who", label: "Pour qui ?" },
-    { to: "When", href: "/#When", label: "Quand consulter ?" },
-    { to: "Follow", href: "/#Follow", label: "Accompagnement" },
-    { to: "Localisation", href: "/#Localisation", label: "Localisation" },
-  ];
-
   return (
     <footer className="bg-dark text-light">
       <div className="mx-auto py-12 px-6 text-center">
@@ -83,21 +75,21 @@ export default function Footer() {
         <div className="mb-8 space-y-2 text-gray-300">
           <div>
             <a
-              href="mailto:coralie.andrietti@gmail.com"
+              href={`mailto:${contactInfo.email}`}
               className="hover:text-white transition-colors"
             >
-              coralie.andrietti@gmail.com
+              {contactInfo.email}
             </a>
             <span className="text-gray-500 mx-3">•</span>
             <a
-              href="tel:0664436260"
+              href={contactInfo.phoneHref}
               className="hover:text-white transition-colors"
             >
-              06 64 43 62 60
+              {contactInfo.phone}
             </a>
           </div>
           <div>
-            <p>5 Chemin de Garibondy, 06110 Le Cannet</p>
+            <p>{contactInfo.address}</p>
           </div>
         </div>
 

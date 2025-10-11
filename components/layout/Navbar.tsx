@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
 import logo_title from "@/public/pictures/logo-ergo.svg";
 import { useModal } from "@/context/ModalContext";
+import { navLinks } from "@/constants/navigation";
 
 // Custom NavLink to handle smooth scroll on home page vs. regular links on other pages
 interface NavLinkProps {
@@ -58,17 +59,6 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const navLinks = [
-    { to: "home", href: "/#home", label: "Accueil" },
-    { to: "What", href: "/#What", label: "L’ergothérapie" },
-    { to: "Who", href: "/#Who", label: "Pour qui ?" },
-    { to: "When", href: "/#When", label: "Quand consulter ?" },
-    { to: "Follow", href: "/#Follow", label: "Accompagnement" },
-    { to: "actu", href: "/#actu", label: "Suivez-nous" },
-    { to: "faq", href: "/#faq", label: "Questions" },
-    { to: "Localisation", href: "/#Localisation", label: "Localisation" },
-  ];
 
   const isHomePageTop = !isScrolled && router.pathname === "/";
 

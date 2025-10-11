@@ -1,6 +1,6 @@
 import React from "react";
 import TargetCard from "@/components/ui/TargetCard";
-import { FiUsers, FiHeart, FiShield, FiActivity } from "react-icons/fi";
+import { targetCards } from "@/constants/content/whoContent";
 
 export default function Who() {
   return (
@@ -11,33 +11,15 @@ export default function Who() {
         réaliser. Que ce soit pour :
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <TargetCard icon={<FiUsers size={48} />} title="Enfants & Adolescents">
-          <p>
-            Du bébé à l’adolescent, ayant un simple retard de développement ou
-            des troubles avérés.
-          </p>
-        </TargetCard>
-
-        <TargetCard icon={<FiHeart size={48} />} title="Personnes Âgées">
-          <p>Pour les personnes avançant en âge.</p>
-        </TargetCard>
-
-        <TargetCard
-          icon={<FiShield size={48} />}
-          title="Prévention des risques"
-        >
-          <p>
-            Pour prévenir et limiter les risques et les impacts des aléas de la
-            vie.
-          </p>
-        </TargetCard>
-
-        <TargetCard icon={<FiActivity size={48} />} title="Handicap & Maladie">
-          <p>
-            Pour les personnes présentant des déficiences acquises (maladie ou
-            accident) ou de naissance.
-          </p>
-        </TargetCard>
+        {targetCards.map((card) => (
+          <TargetCard
+            key={card.id}
+            icon={<card.icon size={48} />}
+            title={card.title}
+          >
+            <p>{card.content}</p>
+          </TargetCard>
+        ))}
       </div>
       <p className="text-center text-sm text-gray-500 mt-12 max-w-3xl mx-auto">
         Ce listing est loin d’être exhaustif. N’hésitez pas à nous contacter

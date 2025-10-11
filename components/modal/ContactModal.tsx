@@ -3,6 +3,7 @@ import ReactModal from "react-modal";
 import { useModal } from "@/context/ModalContext";
 import { motion } from "framer-motion";
 import { FiX, FiPhone, FiMail } from "react-icons/fi";
+import { contactInfo } from "@/constants/contactInfo";
 
 const ContactModal: React.FC = () => {
   const { isContactModalOpen, toggleContactModal } = useModal();
@@ -38,19 +39,19 @@ const ContactModal: React.FC = () => {
           <div className="flex items-center">
             <FiPhone className="text-primary mr-3" size={20} />
             <a
-              href="tel:+33612345678"
+              href={contactInfo.phoneHref}
               className="hover:text-primary transition-colors"
             >
-              06 64 43 62 60
+              {contactInfo.phone}
             </a>
           </div>
           <div className="flex items-center">
             <FiMail className="text-primary mr-3" size={20} />
             <a
-              href="mailto:coralie.andrietti@gmail.com"
+              href={`mailto:${contactInfo.email}`}
               className="hover:text-primary transition-colors"
             >
-              coralie.andrietti@gmail.com
+              {contactInfo.email}
             </a>
           </div>
         </div>
