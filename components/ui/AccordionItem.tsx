@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaQuestionCircle } from 'react-icons/fa';
-import { FiChevronDown } from 'react-icons/fi';
+import { ReactNode, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaQuestionCircle } from "react-icons/fa";
+import { FiChevronDown } from "react-icons/fi";
 
 interface AccordionItemProps {
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function AccordionItem({ title, children }: AccordionItemProps) {
@@ -18,7 +18,7 @@ export default function AccordionItem({ title, children }: AccordionItemProps) {
         className="w-full flex justify-between items-center py-5 px-6 text-left focus:outline-none"
       >
         <div className="flex items-center gap-4">
-          <FaQuestionCircle className="w-6 h-6 text-primary" />
+          <FaQuestionCircle className="w-6 h-6 text-primary flex-shrink-0" />
           <h3 className="text-xl font-semibold text-dark">{title}</h3>
         </div>
         <motion.div
@@ -26,7 +26,11 @@ export default function AccordionItem({ title, children }: AccordionItemProps) {
           transition={{ duration: 0.3 }}
           className="pt-1"
         >
-          <FiChevronDown className={`w-6 h-6 text-primary ${isOpen ? 'text-opacity-100' : 'text-opacity-70'}`} />
+          <FiChevronDown
+            className={`w-6 h-6 text-primary ${
+              isOpen ? "text-opacity-100" : "text-opacity-70"
+            }`}
+          />
         </motion.div>
       </button>
       <AnimatePresence initial={false}>
@@ -37,15 +41,13 @@ export default function AccordionItem({ title, children }: AccordionItemProps) {
             animate="open"
             exit="collapsed"
             variants={{
-              open: { opacity: 1, height: 'auto' },
+              open: { opacity: 1, height: "auto" },
               collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
             className="overflow-hidden"
           >
-            <div className="pb-6 px-6 text-gray-600 space-y-2">
-              {children}
-            </div>
+            <div className="pb-6 px-6 text-gray-600 space-y-2">{children}</div>
           </motion.div>
         )}
       </AnimatePresence>
