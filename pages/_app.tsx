@@ -17,7 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     setIsClient(true);
-    const isAccepted = getCookieConsentValue("coralie-andrietti-ergo-cookie-consent");
+    const isAccepted = getCookieConsentValue(
+      "coralie-andrietti-ergo-cookie-consent"
+    );
     if (isAccepted === "true") {
       setIsCookieAccepted(true);
     }
@@ -26,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (!isCookieAccepted) return;
 
-    const handleRouteChange = (url: URL) => {
+    const handleRouteChange = (url: string) => {
       gtag.pageview(url);
     };
 
@@ -51,11 +53,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     <AppContext.Provider value={{ mainModalIsOpen, setMainModalIsOpen }}>
       <ModalProvider>
         {/* Google Analytics Scripts - Chargés uniquement si les cookies sont acceptés */}
-        {isCookieAccepted && (
+        {isCookieAccepted && gtag.GA_MEASUREMENT_ID && (
           <>
             <Script
               strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_MEASUREMENT_ID}`}
             />
             <Script
               id="gtag-init"
@@ -65,7 +67,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${gtag.GA_TRACKING_ID}', {
+                  gtag('config', '${gtag.GA_MEASUREMENT_ID}', {
                     page_path: window.location.pathname,
                   });
                 `,
@@ -102,8 +104,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           onDecline={() => setIsCookieAccepted(false)}
         >
           Ce site utilise des cookies pour améliorer l&apos;expérience
-          utilisateur.
-          <Link href="/politique-de-confidentialite" style={{ color: "#a9d6e5" }}>
+          utilisateur.{" "}
+          <Link
+            href="/politique-de-confidentialite"
+            style={{ color: "#a9d6e5" }}
+          >
             En savoir plus
           </Link>
         </CookieConsent>
