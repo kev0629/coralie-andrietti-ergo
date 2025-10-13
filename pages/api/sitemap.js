@@ -5,17 +5,7 @@ const EXTERNAL_DATA_URL = 'https://coralie-andrietti-ergo.com';
 // This list should be updated if new static pages are added outside of the News folder.
 const staticPages = [
   '/',
-  '/News/autonomie',
-  '/News/equilibre_occupationnel',
-  '/News/flemme_vs_difficultes',
-  '/News/inclusion',
-  '/News/le_repere_des_3',
-  '/News/Les_troubles_neuro_visuels',
-  '/News/pap_pps',
-  '/News/placer_sa_feuille',
-  '/News/quand_consulter',
-  '/News/timer',
-  '/News'
+  '/politique-de-confidentialite',
 ];
 
 function generateSiteMap(pages) {
