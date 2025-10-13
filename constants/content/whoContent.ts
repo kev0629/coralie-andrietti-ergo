@@ -6,7 +6,7 @@ export const targetCards = [
     icon: FiUsers,
     title: "Enfants & Adolescents",
     content:
-      "Du bébé à l’adolescent, ayant un simple retard de développement ou des troubles avérés.",
+      "Du bébé à l’adolescent, pour un simple retard de développement, des difficultés scolaires (dysgraphie, troubles de l'écriture) ou des troubles avérés.",
     id: 0,
   },
   {

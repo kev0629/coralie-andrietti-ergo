@@ -26,6 +26,7 @@ export const solutions = {
   paragraphs: [
     "Qu’il s’agisse d’une blessure, d’une maladie, d’une déficience ou d’un simple retard de développement, l’ergothérapie accompagne toute personne dont les capacités à agir au quotidien sont limitées — pour travailler, étudier, se déplacer, prendre soin de soi ou simplement profiter de ses activités.",
     "Notre rôle est de trouver avec vous des solutions pour surmonter ces barrières, vous permettre d'agir, de retrouver votre rôle social et ainsi de mener une vie plus satisfaisante.",
+    "Par exemple, pour un enfant ayant des difficultés à écrire, l'ergothérapeute va analyser l'ensemble de l'activité : la posture, la tenue du crayon, la formation des lettres, mais aussi l'environnement scolaire et les exigences de la tâche. Cette approche globale permet de proposer une rééducation du geste graphique personnalisée et efficace."
   ],
   citation:
     "D’après l'Association Nationale Française des Ergothérapeutes (ANFE).",
