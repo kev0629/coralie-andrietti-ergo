@@ -45,6 +45,16 @@ export default function Localisation() {
               <p>06110 Le Cannet, France</p>
             </a>
           </div>
+          <div>
+            <h3 className="text-2xl font-bold text-dark mb-2">
+              Zone d&apos;intervention
+            </h3>
+            <p className="text-lg text-gray-600">
+              Les consultations se font au cabinet. Des interventions dans les
+              écoles sont également possibles sur les secteurs du Cannet,
+              Cannes, Mandelieu, Mougins et Pegomas.
+            </p>
+          </div>
           <div className="relative w-full h-64 rounded-xl overflow-hidden shadow-md">
             <Image
               src={cabinet_picture}
