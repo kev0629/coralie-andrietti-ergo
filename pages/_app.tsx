@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "./../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ModalProvider } from "@/context/ModalContext";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
@@ -12,6 +12,7 @@ import * as gtag from "../lib/gtag";
 function MyApp({ Component, pageProps }: AppProps) {
   const [mainModalIsOpen, setMainModalIsOpen] = useState(true);
   const [isCookieAccepted, setIsCookieAccepted] = useState(false);
+  const [cookieChoiceMade, setCookieChoiceMade] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const router = useRouter();
 
@@ -22,6 +23,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     );
     if (isAccepted === "true") {
       setIsCookieAccepted(true);
+      setCookieChoiceMade(true);
+    } else if (isAccepted === "false") {
+      setCookieChoiceMade(true);
     }
   }, []);
 
@@ -42,12 +46,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events, isCookieAccepted]);
 
   useEffect(() => {
-    if (isClient && !isCookieAccepted) {
+    if (isClient && !cookieChoiceMade) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
-  }, [isClient, isCookieAccepted]);
+  }, [isClient, cookieChoiceMade]);
 
   return (
     <AppContext.Provider value={{ mainModalIsOpen, setMainModalIsOpen }}>
@@ -76,7 +80,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </>
         )}
 
-        {isClient && !isCookieAccepted && (
+        {isClient && !cookieChoiceMade && (
           <div
             style={{
               position: "fixed",
@@ -100,8 +104,14 @@ function MyApp({ Component, pageProps }: AppProps) {
           declineButtonStyle={{ fontSize: "13px" }}
           expires={150}
           enableDeclineButton
-          onAccept={() => setIsCookieAccepted(true)}
-          onDecline={() => setIsCookieAccepted(false)}
+          onAccept={() => {
+            setIsCookieAccepted(true);
+            setCookieChoiceMade(true);
+          }}
+          onDecline={() => {
+            setIsCookieAccepted(false);
+            setCookieChoiceMade(true);
+          }}
         >
           Ce site utilise des cookies pour améliorer l&apos;expérience
           utilisateur.{" "}
